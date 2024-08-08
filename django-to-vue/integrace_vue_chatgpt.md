@@ -1,6 +1,5 @@
 # Obsah:
 [*zpět na readme*](../README.md)   
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/README.md#28-7-2024)   
 
 [• Úvodní kroky pro integraci Vue do Django projektu](#dotaz-1)  
 [• Kontrola instalace Node.js a npm](#dotaz-2)  
