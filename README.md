@@ -74,7 +74,7 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• Použití příkazu npm install vue@latest](django-to-vue/integrace_vue_chatgpt.md#03)  
 [• Řešení chyby při spuštění vue create frontend](django-to-vue/integrace_vue_chatgpt.md#04)  
 [• Průvodce nastavením při vue create frontend](django-to-vue/integrace_vue_chatgpt.md#05)  
-[• Výběr funkcí při tvorbě projektu ve Vue](django-to-vue/integrace_vue_chatgpt.md#06)  
+[• Výběr funkcí při tvorbě projektu ve Vue](django-to-vue/integrace_vue_chatgpt.md#dotaz-x:)  
 [• Pozdější aktivace funkcí ve Vue](django-to-vue/integrace_vue_chatgpt.md#07)  
 [• Dopad výběru jednotlivých funkcí ve Vue](django-to-vue/integrace_vue_chatgpt.md#08)  
 [• Shrnutí volby funkcí a další otázky](django-to-vue/integrace_vue_chatgpt.md#09)  
