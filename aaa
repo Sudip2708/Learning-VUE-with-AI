@@ -1,0 +1,22 @@
+## Dotaz:
+
+Je dobré mít pro VUE nainstalované globálně i toto:
+
+    npm install -g @vue/cli
+
+?
+
+
+## Dotaz:
+
+Když teď chci vytvořit projekt VUE pro frontend pro můj projekt, tak kde je ideální místo pro jeho vytvoření?
+
+Projekt Django mám ve složce main. Tam je i například manage.py:
+
+C:\Users\Sudip2708\Dropbox\__DjangoBlogWeb\main\manage.py
+
+
+## Dotaz:
+
+Jaké je pořadí terminálových příkazů pro vytvoření frontendu pro první možnost?
+
