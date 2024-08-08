@@ -1,4 +1,6 @@
 # Obsah:
+[*zpět na readme*](../README.md) 
+[*zpět na readme*](README.md) 
 
 [• Úvodní kroky pro integraci Vue do Django projektu](#dotaz-1)  
 [• Kontrola instalace Node.js a npm](#dotaz-2)  
