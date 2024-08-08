@@ -1,4 +1,4 @@
-## Dotaz: {#dotaz-01.invisible}
+## Dotaz: {#01}
 
 Ahojky :-)
 
@@ -125,7 +125,7 @@ ALLOWED_HOSTS = ['yourdomain.com']
 Toto jsou základní kroky pro integraci Vue.js do Django projektu. Jakmile budeš mít stromovou strukturu projektu, můžeme se podívat na konkrétní kroky a detaily. Pokud máš nějaké otázky nebo nejasnosti, neváhej se zeptat!
 
 
-## Dotaz: {#dotaz-02}
+## Dotaz: {#02}
 
 OK, začneme tedy prvním bodem. Zde mi vypiš vše co bych měl zkontrolovat a jak. K práci používám PyCharm a terminál powershlell a dle mého Node.js a npm nainstalované mám, ale i to bych chtěl ověřit.
 
@@ -222,7 +222,7 @@ Otevři prohlížeč a zadej adresu `http://localhost:8080/`, kde bys měl vidě
 Tímto jsme dokončili první bod a ověřili, že máš správně nastavené prostředí pro práci s Vue.js. Pokud máš jakékoli otázky nebo narazíš na problém, dej vědět!
 
 
-## Dotaz: {#dotaz-03}
+## Dotaz: {#03}
 
 Když jsem si skoušel dělat nějaké projekty ve VUE podle výukových videí, tk tam se začínalo příkazem: npm instal vue@latest
 
@@ -292,7 +292,7 @@ Tento ruční proces je flexibilnější, ale také složitější a náchylněj
 Příkaz `npm install vue@latest` je užitečný pro ruční správu závislostí nebo aktualizaci stávajících projektů. Pro nové projekty je však použití Vue CLI doporučeno, protože poskytuje robustní nástroje a usnadňuje celý proces vývoje.
 
       
-## Dotaz: {#dotaz-04}
+## Dotaz: {#04}
 
 Proč jsem dostal tuto chybu:
       
@@ -354,7 +354,7 @@ Set-ExecutionPolicy Restricted
 Chyba, kterou jsi obdržel, je způsobena omezením spouštění skriptů v PowerShellu. Nastavením politiky spouštění na `RemoteSigned` můžeš tento problém vyřešit a pokračovat v práci s Vue CLI. Pokud máš jakékoli další otázky nebo narazíš na další problémy, dej vědět!
 
 
-## Dotaz: {#dotaz-05}
+## Dotaz: {#05}
 
 Můžeš mi napsat manuál pro průvodce pro vytvoření fronendu, který se mi objeví po zadání příkazu: vue create frontend
 
@@ -506,7 +506,7 @@ Vyber si preferované řešení pro end-to-end testování.
 Tento průvodce ti umožňuje přizpůsobit nový Vue projekt podle tvých potřeb a preferencí. Každá možnost ti umožňuje rozhodnout se pro konkrétní funkce a nástroje, které chceš mít ve svém projektu. Výběr závisí na konkrétních požadavcích tvého projektu a tvých preferencích v oblasti vývojových nástrojů. Pokud máš nějaké další otázky nebo potřebuješ další vysvětlení, dej vědět!
 
 
-## Dotaz: {#dotaz-06}
+## Dotaz: {#06}
 
 Podle čeho se mám rozhodnout v tomto kroku:
 
@@ -620,7 +620,7 @@ Rozhodnutí závisí na povaze tvého projektu, velikosti týmu, rozsahu aplikac
 
 Při rozhodování se zaměř na potřeby tvého projektu a na to, co ti pomůže dosáhnout nejlepších výsledků. Pokud máš další otázky nebo potřebuješ další rady, dej vědět!
 
-## Dotaz: {#dotaz-07}
+## Dotaz: {#07}
 
 Dají se tyto možnosti později zapnout, když je teď nevyberu?
 
@@ -705,7 +705,7 @@ Vue CLI poskytuje pluginy, které umožňují přidat většinu funkcí později
 Pokud máš konkrétní otázky nebo potřebuješ podrobnější návod pro přidání některých z těchto funkcí, dej vědět!
 
 
-## Dotaz: {#dotaz-08}
+## Dotaz: {#08}
 
 Napiš mi ještě ke každé volbě features, co se jejím vybráním mění pro mě. Například když bych vybral TypeScript, v čem by se mi změnil zápis kódu a uveď mi i nějaké příklady.
 
@@ -932,7 +932,7 @@ describe('My First Test', () => {
 Výběr jednotlivých funkcí při vytváření Vue projektu ovlivní, jak budeš psát a organizovat svůj kód. Pokud některé funkce nevybereš nyní, můžeš je přidat později pomocí Vue CLI nebo ručně. Výběr závisí na potřebách a složitosti tvého projektu.
 
 
-## Dotaz: {#dotaz-09}
+## Dotaz: {#09}
 
 Takže z toho co píšeš jsem si udělal závěr:
 
@@ -997,7 +997,7 @@ Tvůj závěr dává smysl a je vidět, že jsi dobře zvážil své potřeby. P
 
 Pokud stále váháš ohledně Vuex a CSS Pre-processors, můžeš je vyzkoušet v malém měřítku a zjistit, zda ti usnadňují práci. Pokud zjistíš, že je nepotřebuješ, vždy je můžeš přestat používat nebo odstranit.
 
-## Dotaz: {#dotaz-10}
+## Dotaz: {#10}
 
 Podle čeho se mám rozhodnout teď?
 
@@ -1086,7 +1086,7 @@ body
 Pokud nemáš silné preference nebo specifické požadavky, doporučuji vybrat **Sass/SCSS** s dart-sass, protože je nejpoužívanější a nabízí skvělou kombinaci funkcionality a podpory.
 
 
-## Dotaz: {#dotaz-11}
+## Dotaz: {#11}
 
 A podle čeho se mám rozhodnout teď:
 
@@ -1160,7 +1160,7 @@ Pro většinu projektů **ESLint + Prettier** poskytuje dobrou rovnováhu mezi p
 Pokud se rozhodneš pro jednu z těchto možností, budeš mít dobře nastavený linting a formátování, což ti pomůže udržet kvalitu kódu a zjednodušit vývojový proces.
 
 
-## Dotaz: {#dotaz-12}
+## Dotaz: {#12}
 
 A podle čeho se mám rozhodnout teď:
 
@@ -1216,7 +1216,7 @@ Pokud chceš mít co nejméně rušení při psaní kódu a zároveň mít zaji�
 Pokud máš pouze jednu možnost, **"Lint and Fix on Commit"** může být výhodná, pokud chceš mít zajištěno, že všechny změny, které jsou odeslány do verzovacího systému, jsou správně formátované a bez chyb.
 
 
-## Dotaz: {#dotaz-13}
+## Dotaz: {#13}
 
 A co teď:
 
@@ -1265,7 +1265,7 @@ Při rozhodování o umístění konfiguračních souborů pro Babel, ESLint a d
 Pokud se zaměřuješ na čistotu a udržovatelnost projektu, doporučuji **"In Dedicated Config Files"**. To ti umožní mít samostatné soubory pro každý nástroj a snadněji spravovat jednotlivá nastavení. Tento přístup také usnadňuje práci v týmu, kde každý může snadno upravit pouze konkrétní konfigurační soubor, který se týká jeho oblasti.
 
 
-## Dotaz: {#dotaz-14}
+## Dotaz: {#14}
 
 Tak nyní mám vytvořené základní prostředí pro vue a čím teda pokračovat, co bych měl nyní udělat jako první a co po tom?
 
