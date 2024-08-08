@@ -505,7 +505,6 @@ Vyber si preferované řešení pro end-to-end testování.
 ### Shrnutí
 Tento průvodce ti umožňuje přizpůsobit nový Vue projekt podle tvých potřeb a preferencí. Každá možnost ti umožňuje rozhodnout se pro konkrétní funkce a nástroje, které chceš mít ve svém projektu. Výběr závisí na konkrétních požadavcích tvého projektu a tvých preferencích v oblasti vývojových nástrojů. Pokud máš nějaké další otázky nebo potřebuješ další vysvětlení, dej vědět!
 
-<a name="dotaz_06"></a>
 ## Dotaz:
 
 Podle čeho se mám rozhodnout v tomto kroku:
