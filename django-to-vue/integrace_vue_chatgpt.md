@@ -507,6 +507,13 @@ Tento průvodce ti umožňuje přizpůsobit nový Vue projekt podle tvých potř
 
 
 ## Dotaz: {#06}
+## Dotaz: {#06.invisible}
+{#06}
+{#06.invisible}
+
+{#06}
+
+{#06.invisible}
 
 Podle čeho se mám rozhodnout v tomto kroku:
 
