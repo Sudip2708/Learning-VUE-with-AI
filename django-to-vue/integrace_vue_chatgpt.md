@@ -18,6 +18,7 @@
 
 
 ## Dotaz:
+[*zpět na obsah*](#obsah)  
 
 Ahojky :-)
 
@@ -143,7 +144,7 @@ ALLOWED_HOSTS = ['yourdomain.com']
 
 Toto jsou základní kroky pro integraci Vue.js do Django projektu. Jakmile budeš mít stromovou strukturu projektu, můžeme se podívat na konkrétní kroky a detaily. Pokud máš nějaké otázky nebo nejasnosti, neváhej se zeptat!
 
-
+[*zpět na obsah*](#obsah) 
 ## Dotaz:
 
 OK, začneme tedy prvním bodem. Zde mi vypiš vše co bych měl zkontrolovat a jak. K práci používám PyCharm a terminál powershlell a dle mého Node.js a npm nainstalované mám, ale i to bych chtěl ověřit.
