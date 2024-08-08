@@ -1,4 +1,4 @@
-## Dotaz: {#dotaz-01}
+## Dotaz: {#dotaz-01.invisible}
 
 Ahojky :-)
 
