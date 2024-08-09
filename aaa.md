@@ -2,13 +2,20 @@
 
 # Obsah:
 
-[• *Seznámení se stromovou strukturou projektu*](#dotaz)  
-[• *Analýza aplikace a struktury templates pro Vue*](#dotaz-1)  
-[• *První kroky po analýze projektu*](#dotaz-2)  
-[• *První komponenty a routování ve Vue*](#dotaz-3)  
-[• *Obsah souboru App.vue*](#dotaz-4)  
-[• *Řešení chyb ESLint a Prettier ve Vue*](#dotaz-5)  
-[• *Význam export default v App.vue*](#dotaz-6)  
+[• *Přenos základní šablony z Django do Vue*](#dotaz)  
+[• *Význam chybových hlášení*](#dotaz-1)  
+[• *Další význam chybových hlášení*](#dotaz-2)  
+[• *Doporučený postup při oddělení frontendu z Django do Vue*](#dotaz-3)  
+[• *Výběr umístění statických souborů ve Vue*](#dotaz-4)  
+[• *Návrh umístění souborů z Django static a media ve Vue*](#dotaz-5)  
+[• *Přenesení nastavení z Django HEAD do Vue*](#dotaz-6)  
+[• *Ponechání noscript tagu v public/index.html*](#dotaz-7)  
+[• *Kontrola struktury souboru pro rozčlenění*](#dotaz-8)  
+[• *Zajištění integrity odkazů pro externí zdroje*](#dotaz-9)  
+[• *Přenos hlavičky a struktury navigace z Django do Vue*](#dotaz-10)  
+[• *Převod šablon do Vue a oddělení komponent*](#dotaz-11)  
+[• *Dočasné vypnutí sémantických chyb od Prettier*](#dotaz-12)  
+[• *Dočasné vypnutí chyb od ESLint*](#dotaz-13)  
 
 ### 2) Oprava gramatiky a překlepů v otázkách
 
@@ -16,58 +23,22 @@
 
 **Dotaz:**
 
-OK, tak tady už je asi dobré, aby jsi věděl něco více o mém projektu.
+OK, takže jsem zatím přenesl jen statiku s tím, že soubory z media budou přístupné přes Django, takže jsem je zatím neřešil. Teď tedy mám přetaženou statiku a počítám, že jako první bych měl asi zapracovat na kořenu stránky, čímž myslím nastavení v HEAD:
 
-Zde je stromová struktura projektu s vysvětlením jednotlivých složek:
-
-Vem si na prozkoumání těchto dvou struktur klidně i více času a rád bych potom nejprve slyšel slovní rozbor obou struktur, abych věděl, že jsi je pochopil, a poté se budu ptát dál.
+Co z tohoto bych měl přenést a kam?
 
 ---
 
 **Dotaz:**
 
-Nejprve mi prosím popiš mou aplikaci dle toho, co dokážeš ze stromové struktury vyčíst.
-A poté mi zhodnoť i strukturu pro templates a zda pro Vue bude struktura podobná.
+Paráda, tak toto bychom měli, a nyní se můžeme pustit do hlavičky. Zde je můj aktuální kód z Django:
+
+S tím, že tady je ještě pro doplnění stromová struktura souborů pro navigaci a vyklápěcí tlačítko:
 
 ---
 
 **Dotaz:**
 
-Takže jsem si App.vue zjednodušil na tento zápis:
-    
-    <template>
-      <div>
-        <header>
-          <p>Header</p>
-        </header>
-        <main>
-          <p>Main</p>
-        </main>
-        <footer>
-          <p>Footer</p>
-        </footer>
-      </div>
-    </template>
-    
-    <script>
-    export default {
-      name: "App",
-    };
-    </script>
-    
-    <style scoped>
-    p {
-      font-size: 20px;
-    }
-    </style>
-
-
-A nejprve by mě zajímalo, co znamená:
-
-    export default {
-      name: "App",
-    };
-
-???
+Jak mohu dočasně vypnout ukazování sémantických chyb od Prettier?
 
 ---

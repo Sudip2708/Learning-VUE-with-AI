@@ -99,7 +99,21 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Význam export default v App.vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-6)  
 
 ### 29. 7. 2024
-[• Převod základní šablony](django-to-vue/zacatek_prace_na_projektu_02.md)  
+[**Převod základní šablony**](django-to-vue/zacatek_prace_na_projektu_02.md)  
+[• *Přenos základní šablony z Django do Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz)  
+[• *Význam chybových hlášení*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-1)  
+[• *Další význam chybových hlášení*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-2)  
+[• *Doporučený postup při oddělení frontendu z Django do Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-3)  
+[• *Výběr umístění statických souborů ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-4)  
+[• *Návrh umístění souborů z Django static a media ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-5)  
+[• *Přenesení nastavení z Django HEAD do Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-6)  
+[• *Ponechání noscript tagu v public/index.html*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-7)  
+[• *Kontrola struktury souboru pro rozčlenění*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-8)  
+[• *Zajištění integrity odkazů pro externí zdroje*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-9)  
+[• *Přenos hlavičky a struktury navigace z Django do Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-10)  
+[• *Převod šablon do Vue a oddělení komponent*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-11)  
+[• *Dočasné vypnutí sémantických chyb od Prettier*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-12)  
+[• *Dočasné vypnutí chyb od ESLint*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-13)  
 
 ### 30. 7. 2024
 [• Práce s terminálem](django-to-vue/zacatek_prace_na_projektu_03.md)  

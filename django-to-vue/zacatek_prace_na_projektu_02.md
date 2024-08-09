@@ -1,3 +1,22 @@
+# Převod základní šablony
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)   
+
+## Obsah:
+[• *Přenos základní šablony z Django do Vue*](#dotaz)  
+[• *Význam chybových hlášení*](#dotaz-1)  
+[• *Další význam chybových hlášení*](#dotaz-2)  
+[• *Doporučený postup při oddělení frontendu z Django do Vue*](#dotaz-3)  
+[• *Výběr umístění statických souborů ve Vue*](#dotaz-4)  
+[• *Návrh umístění souborů z Django static a media ve Vue*](#dotaz-5)  
+[• *Přenesení nastavení z Django HEAD do Vue*](#dotaz-6)  
+[• *Ponechání noscript tagu v public/index.html*](#dotaz-7)  
+[• *Kontrola struktury souboru pro rozčlenění*](#dotaz-8)  
+[• *Zajištění integrity odkazů pro externí zdroje*](#dotaz-9)  
+[• *Přenos hlavičky a struktury navigace z Django do Vue*](#dotaz-10)  
+[• *Převod šablon do Vue a oddělení komponent*](#dotaz-11)  
+[• *Dočasné vypnutí sémantických chyb od Prettier*](#dotaz-12)  
+[• *Dočasné vypnutí chyb od ESLint*](#dotaz-13)  
+
 ## Dotaz:
 
 Toto je moje úplně základní šablona z Django projektu:
@@ -267,6 +286,7 @@ Pokud máte styly specifické pro různé části (header, footer, atd.), může
 
 Takto přenášíte vaši Django šablonu do struktury Vue.js aplikace, kde se používá komponentový přístup a dynamické routování.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Co mi oznamuje tato chyba:
@@ -422,7 +442,7 @@ p {
 
 Po těchto úpravách by měly být chyby odstraněny a aplikace by měla fungovat správně.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Co mi říká tato chyba:
@@ -642,6 +662,7 @@ Stejný postup použijte na všechny ostatní soubory, které mají podobné chy
 
 Po těchto krocích by měly být chyby odstraněny a váš kód by měl být ve správném formátu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Takže mám vytvořenou základní šablonu VUE a nyní bych měl asi začít přenášet styl a logiku z Django. 
@@ -813,7 +834,7 @@ Pokud máte dynamický obsah v Django šablonách, musíte se rozhodnout, jak te
 
 Tímto postupem byste měli být schopni efektivně oddělit frontend z Django projektu do Vue.js.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 A podle čeho si mám vybrat, zda statiku překopírovat do public nebo src/assets?
@@ -876,7 +897,7 @@ div {
 
 Tímto způsobem můžete využít oba způsoby umístění statických souborů podle jejich použití a potřeby v rámci vaší aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Tady je obsah složek static a media z mého projektu v Django:
@@ -1048,9 +1069,10 @@ Zde je doporučená struktura složek pro vaše statické a mediální soubory v
 
 Tímto způsobem byste měli být schopni efektivně přenést vaši statiku a logiku z Django projektu do Vue projektu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
-OK, takže jsem zatím přenesl jen statiku s tím, že soubory z media budou přístupné přes Django, takže jsem je zatím neřešil. Teď tedy mám přetahanou statiku a počítám, že jeko první bych měl asi zapracovat na kořenu stránky, čímž myslím nastavení v HEAD:
+OK, takže jsem zatím přenesl jen statiku s tím, že soubory z media budou přístupné přes Django, takže jsem je zatím neřešil. Teď tedy mám přetaženou statiku a počítám, že jako první bych měl asi zapracovat na kořenu stránky, čímž myslím nastavení v HEAD:
 
       <!-- Page head for basic page settings -->
       <!-- For 0_base/00__base__.html -->
@@ -1204,7 +1226,7 @@ export default {
 
 Tímto způsobem nastavíte `<head>` pro vaši Vue aplikaci a zajistíte, že všechny potřebné soubory budou správně zahrnuty.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Mám v public/index.html nechat v body toto:
@@ -1262,7 +1284,7 @@ Tento kód:
 
 Tímto způsobem bude vaše aplikace připravena pro uživatele s povoleným i vypnutým JavaScriptem, a zároveň budete mít všechny potřebné soubory zahrnuté ve `<head>`.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Můžeš mi zkontrolovat tento soubor:
@@ -1408,7 +1430,7 @@ Zde je aktualizovaná verze s těmito úpravami:
 
 Tento přístup udržuje vše v jednom souboru pro snadnou správu, a zároveň je připraven na případné budoucí rozdělení podle potřeby.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Co znamená tento bod:
@@ -1499,10 +1521,10 @@ Přidání atributů integrity a crossorigin k odkazům na externí zdroje:
 
 Takto zajistíš, že externí zdroje budou načteny bezpečně a integrita souborů bude ověřena prohlížečem.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
-Paráda, tak toto bychom měli a nyní se můžeme pustit do hlavičky. Zde je můj aktuální kod z Django:
+Paráda, tak toto bychom měli, a nyní se můžeme pustit do hlavičky. Zde je můj aktuální kód z Django:
 
       <!-- Page header with basic navigation elements -->
       <!-- For 0_base/00__base__.html -->
@@ -1525,7 +1547,7 @@ Paráda, tak toto bychom měli a nyní se můžeme pustit do hlavičky. Zde je m
           </div>
       </nav>
 
-S tím že tady je ještě pro doplnění stromová struktura souborů pro navigaci a vyklápěcí tlašítko:
+S tím, že tady je ještě pro doplnění stromová struktura souborů pro navigaci a vyklápěcí tlačítko:
 
     │  │  └─ _header
     │  │	 ├─ __dropdown_display__.html
@@ -1713,7 +1735,7 @@ src/
 
 Tento postup by měl zajistit, že budete mít vaši hlavičku správně přenesenou a strukturovanou v novém projektu Vue. Můžete postupovat podobně i pro další části vašeho projektu.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 Nyní tedy  budeme pracovat na souboru frontend\src\components\RootHeader\NavigationHeader.vue
@@ -2103,10 +2125,10 @@ export default {
 
 Tento přístup vám umožní mít dobře strukturované a přehledné komponenty, které budou snadno spravovatelné a rozšiřitelné.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
-Jak mohu dočasně vypnout ukazování sématických chyb od Pretier?
+Jak mohu dočasně vypnout ukazování sémantických chyb od Prettier?
 
 ## ChatGPT:
 
@@ -2173,7 +2195,7 @@ Pokud chcete dočasně upravit nastavení Prettier, můžete to udělat v konfig
 
 Po provedení těchto kroků by měl být Prettier dočasně vypnut nebo konfigurován podle vašich potřeb.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
 ## Dotaz:
 
 A pro eslint?
@@ -2255,3 +2277,4 @@ Pokud chcete dočasně upravit nastavení ESLint, můžete to udělat v konfigur
 
 Po provedení těchto kroků by měl být ESLint dočasně vypnut nebo konfigurován podle vašich potřeb.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#29-7-2024)  
