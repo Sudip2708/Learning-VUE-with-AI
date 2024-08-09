@@ -1,3 +1,24 @@
+# Práce s terminálem
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024)   
+
+## Obsah:
+[• *Vliv více spuštěných terminálů na běh systému*](#dotaz)  
+[• *Přehled kroků k propojení Vue a Django pro výpis článků*](#dotaz-1)  
+[• *Vysvětlení procesu komunikace mezi Django a Vue*](#dotaz-2)  
+[• *Jak se Vue dozví o adrese serveru Django*](#dotaz-3)  
+[• *Shrnutí postupu pro propojení Django a Vue*](#dotaz-4)  
+[• *Detaily pro nastavení django-cors-headers*](#dotaz-5)  
+[• *Kontrola nastavení a umístění konfigurace v settings.py*](#dotaz-6)  
+[• *Kde umístit nastavení URL pro spolupráci s Vue*](#dotaz-7)  
+[• *Význam URL endpointů v Django a jejich použití*](#dotaz-8)  
+[• *Návrh na úpravu Django view pro vracení JSON dat*](#dotaz-9)  
+[• *Konfigurace URL API endpointů ve Vue.js*](#dotaz-10)  
+[• *Kroky pro přidání nové stránky ve Vue*](#dotaz-11)  
+[• *Umístění souborů ve Vue do src/views vs. src/components*](#dotaz-12)  
+[• *Analýza chyby při načítání dat z API ve Vue*](#dotaz-13)  
+[• *Problém s lomítkem na konci URL ve Vue*](#dotaz-14)  
+[• *Shrnutí propojení Django s Vue*](#dotaz-15)  
+
 ## Dotaz:
 
 Tak nyní mám spuštěný v jednom terminálu Django a v druhém Vue. Zajímalo by mě jestli je nějaké omezení na to, kolik mohu na svém počítači najednou spustit terminálů a jestli více spuštěných terminálů má nějaký výrazný podíl na běh systému?
@@ -38,7 +59,7 @@ Počet terminálů, které můžeš na svém počítači spustit, není přímo 
 
 S tvým hardwarem (CPU i7 920 a 12 GB RAM) bys měl být schopen pohodlně běžet několik terminálů najednou, včetně běžících serverů Django a Vue. Výrazné zpomalení systému bys měl pocítit pouze tehdy, pokud bys provozoval mnoho náročných aplikací nebo úloh současně. Pravidelné monitorování systémových zdrojů ti pomůže udržet výkon na optimální úrovni.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Super a díky :-)
@@ -198,7 +219,7 @@ To zní jako skvělý projekt! Připojení Vue.js k backendu Django pro zobrazen
 
 Pokud se během procesu objeví nějaké problémy nebo otázky, neváhej se ozvat. Hodně štěstí s projektem!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Takže k propojení Djanga a Vue stačí nainstalovat django-cors-headers a povolit ho v settings.py, pak zadat cestu v urls.py, která začíná 'api/' a navázat na ní pohled, který bude předávat data v Json slovníku.
@@ -274,13 +295,11 @@ Samozřejmě, rád ti vysvětlím, jak funguje propojení mezi Django a Vue.js, 
 
 Tento přístup ti umožňuje efektivně oddělit frontendovou část (Vue.js) od backendové logiky (Django), což přináší flexibilitu a čistotu v designu aplikace. Pokud máš další otázky nebo potřebuješ více detailů, dej vědět!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
-Takže Vue s Django komunikuje tím, že odesílá požadavek na adresu servru django http://localhost:8000/api/articles/
-Ale jek se VUE o této adrese dozví? Jak ví že má posílat požadavek na http://localhost:8000/api/articles/
-???
-
+Takže Vue s Django komunikuje tím, že odesílá požadavek na adresu serveru Django http://localhost:8000/api/articles/
+Ale jak se Vue o této adrese dozví? Jak ví, že má posílat požadavek na http://localhost:8000/api/articles/?
 
 ## ChatGPT:
 
@@ -549,6 +568,7 @@ Pokud používáš knihovnu jako `axios`, můžeš také nastavit základní URL
 
 Vue.js se o adrese API dozví z kódu, který specifikuje, kam posílat požadavky. Tímto způsobem Vue.js získává data z Django backendu a zobrazuje je uživatelskému rozhraní. Pokud máš další otázky, neváhej se ptát!
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Takže postup pro dnešní den by se dal shrnout do těchto kroků:
@@ -596,7 +616,7 @@ Ano, to vypadá jako solidní plán na dnešní den! Tvůj přehled kroků je do
 
 Pokud budeš mít nějaké dotazy nebo narazíš na problémy během implementace, neváhej se na mě obrátit. Přeji hodně úspěchů při práci na projektu!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Super, napiš mi všechno co potřebuji znát a nastavit pro první bod seznamu.
@@ -729,7 +749,7 @@ Ověř, že CORS nastavení fungují správně tím, že:
 
 Tímto způsobem zajistíš, že tvé Django API bude schopné správně komunikovat s frontendovou aplikací Vue.js a umožníš bezpečný přístup k API z jiných domén. Pokud máš další dotazy nebo narazíš na problémy, dej vědět!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Zkontroluj mi prosím tyto úryvky z settings.py, jestli je mám dobře takto na prvním místě a nebo jestli bych je měl posunout až za jiné prvky:
@@ -951,13 +971,13 @@ CORS_ALLOW_HEADERS = [
 
 Pokud máš další otázky nebo potřebuješ další pomoc, dej vědět!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
-Super, tak můžeme jít na další krok:
+Tak se můžeme pustit do dalšího kroku:
 Přidat URL endpoint do urls.py, který bude mapovat na toto view.
 
-první co by mě zajímalo, zda je lepší pro tuto chvíli umístit nastavení pro url, která bude spolupracovat s VUE v souboru main/urls.py:
+První, co by mě zajímalo, je, zda je lepší pro tuto chvíli umístit nastavení pro URL, která bude spolupracovat s Vue, v souboru main/urls.py:
 
       from django.contrib import admin
       from django.urls import path, include
@@ -1015,7 +1035,7 @@ první co by mě zajímalo, zda je lepší pro tuto chvíli umístit nastavení 
           urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-A nebo v souboru articles/urls/articles.py:
+Nebo v souboru articles/urls/articles.py:
 
       from django.urls import path
       
@@ -1139,7 +1159,7 @@ if settings.DEBUG:
 
 Pokud máš další otázky nebo potřebuješ další vysvětlení, dej vědět!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Takže když jsi mi vytvořil tento bod:
@@ -1157,10 +1177,9 @@ Přidej URL endpoint do urls.py, který bude mapovat na toto view.
           # ostatní URL patterny
       ]
 
-Kde k definici url používáš formulaci: 'api/articles/'
+Kde k definici URL používáš formulaci: 'api/articles/'
 
-Tak to neznamená to, co jsem si po té původně myslel, že definice url adresy musí začínat v Django slovem 'api/', ale prakticky své nastavení mohu nechat tak jak je a slovo 'api' zde bylo jen pro ilustrační charakter?
-
+To neznamená to, co jsem si původně myslel, že definice URL adresy musí začínat v Django slovem 'api/', ale prakticky své nastavení mohu nechat tak, jak je, a slovo 'api' zde bylo jen pro ilustrační charakter?
 
 ## ChatGPT:
 
@@ -1200,7 +1219,7 @@ Ano, správně. Použití prefixu `api/` v URL patternu je v tomto kontextu spí
 
 Pokud potřebujete další vysvětlení nebo máte další otázky ohledně URL a konfigurace, dejte vědět!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 OK, a super :-)
@@ -1375,7 +1394,7 @@ urlpatterns = [
 
 Tento přístup umožňuje vaší Django aplikaci vracet JSON data, které mohou být spotřebovány vaším frontendem ve Vue.js. Tímto způsobem můžete snadno integrovat vaše API s frontend aplikací a manipulovat s daty přímo v JavaScriptu.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 OK takže tímto bych měl mít zajištěno, že když VUE pošle požadavek na data pro stránku articles/, pak dostane json soubor se všemi potřebnými daty ke všem článkům z databáze.
@@ -1513,7 +1532,7 @@ Pokud se rozhodnete použít `axios`, tady je základní návod, jak ho integrov
 
 Pokud máte další dotazy ohledně integrace s Vue.js nebo jiných aspektů vývoje, dejte vědět!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Napiš mi seznam kroků ve VUE když chci přidat novou stránku pro /articles/
@@ -1660,7 +1679,7 @@ Když chcete přidat novou stránku ve Vue.js pro zobrazení seznamu článků z
 
 Tímto způsobem byste měli mít novou stránku ve Vue.js, která načítá a zobrazuje seznam článků z API, které jste nakonfigurovali v Django.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 A neměl bych spíše než v src/components/ vytvořit soubor zobrazující stránku articles ve src/views ?
@@ -1799,7 +1818,7 @@ Pokud `ArticleList` představuje stránku (celý pohled), je lepší ji umístit
 
 Tímto způsobem máte vše dobře organizované a připravené na zobrazení seznamu článků na nové stránce v aplikaci Vue.js.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Tak jsem nakonec změnil soubor frontend\src\axios.js tak že jsem z adrsy baseURL odebral /api/ protože to mám definované bez něj i u sebe v aplikaci. Stránka se mi načte ale data z databáze se nenačtou a v konzoli je uvedené toto:
@@ -1955,7 +1974,7 @@ export default {
 
 Doufám, že tyto kroky vám pomohou najít a opravit problém.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
 Podle mě je chyba už v tom, že když kliknu na odkaz pro stránku http://localhost:8080/articles/all, tak v konzoli se objeví, že se snaží přihlásit na stránku http://localhost:8000/articles/all/  a přitom by se měla snažit přihlásit na stránku http://localhost:8000/articles/all (to znamená bez posledního lomítka).
@@ -2051,17 +2070,17 @@ Pokud používáte knihovny jako Axios, mohou mít vlastní konfigurace pro zák
 
 Tímto způsobem byste měli být schopni odstranit chybu a zajistit, že váš frontend Vue správně komunikuje s backendem Django.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024) 
 ## Dotaz:
 
-Tak se mi chybu povedlo dohledat. Díky našemu společnému rozboru jsem zjistil, že v definici pohledu pro stránku se všemi články ve VUE jsem v tomto řádku:
+Tak se mi chybu povedlo dohledat. Díky našemu společnému rozboru jsem zjistil, že v definici pohledu pro stránku se všemi články ve Vue jsem v tomto řádku:
 const response = await api.get('articles/all');
-měl na konci adresy skutečně ode mě zapsané lomítka a to bylo to, co způsobilo problém.
-Nyní se mi stránka už načetla a dokonce i s názvy článků z databáze, takže VUE a Djando jsou propojené a pracují dohromady.
-Což je tedy paráda a děkuji za pomoc. Pro dnešek máme splněno.
-A na závěr bych chtěl jen od tebe takové poslední shrnutí k tématu propojení Django s VUE.
-Podle toho co jsem za dnešek pochopil, tak v django si normálně rozjedu server, který hlídá na localhost portu 8000, zda nebude zadaná nějaká adresa, či požadavek, který umí zpracovat - to pozná podle url adresy, že se shoduje s url adresou definované v jeho kodu.
-Vue pak do toho vstupuje tak, že je spuštěné na vlastním serveru lokalhost 8080 a když kliknu na odkaz na stránku se všemi články, axios ve VUE nejprve předělá tento požadavek na adresu localhost portu 8000 a tam ho odešle a čeká na odpověď v podobje json souboru. Po té co odpověď příjde a obdrží data, předá je dál pro vytváření stránky se všemi články na lokalhost 8080 dle kodu uvedeného ve VUE.
+měl na konci adresy skutečně ode mě zapsané lomítko a to bylo to, co způsobilo problém.
+Nyní se mi stránka už načetla a dokonce i s názvy článků z databáze, takže Vue a Django jsou propojené a pracují dohromady.
+Což je tedy paráda, a děkuji za pomoc. Pro dnešek máme splněno.
+A na závěr bych chtěl od tebe jen takové poslední shrnutí k tématu propojení Django s Vue.
+Podle toho, co jsem za dnešek pochopil, tak v Django si normálně rozjedu server, který hlídá na localhost portu 8000, zda nebude zadána nějaká adresa, či požadavek, který umí zpracovat – to pozná podle URL adresy, že se shoduje s URL adresou definovanou v jeho kódu.
+Vue pak do toho vstupuje tak, že je spuštěné na vlastním serveru localhost 8080 a když kliknu na odkaz na stránku se všemi články, axios ve Vue nejprve předělá tento požadavek na adresu localhost portu 8000 a tam ho odešle a čeká na odpověď v podobě JSON souboru. Poté co odpověď přijde a obdrží data, předá je dál pro vytváření stránky se všemi články na localhost 8080 dle kódu uvedeného ve Vue.
 Je to tak?
 
 
@@ -2107,3 +2126,5 @@ Ano, vaše shrnutí je velmi přesné. Tady je rekapitulace toho, jak Django a V
 - **CORS** zajišťuje, že frontend a backend mohou bezpečně komunikovat i když běží na různých portech.
 
 Pokud máte jakékoli další dotazy nebo potřebujete další pomoc, neváhejte se ozvat. Skvělá práce s nastavením Django a Vue! 🎉
+
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#30-7-2024)  

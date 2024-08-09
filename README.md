@@ -116,7 +116,23 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Dočasné vypnutí chyb od ESLint*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-13)  
 
 ### 30. 7. 2024
-[• Práce s terminálem](django-to-vue/zacatek_prace_na_projektu_03.md)  
+[**Práce s terminálem**](django-to-vue/zacatek_prace_na_projektu_03.md)  
+[• *Vliv více spuštěných terminálů na běh systému*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz)  
+[• *Přehled kroků k propojení Vue a Django pro výpis článků*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-1)  
+[• *Vysvětlení procesu komunikace mezi Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-2)  
+[• *Jak se Vue dozví o adrese serveru Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-3)  
+[• *Shrnutí postupu pro propojení Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-4)  
+[• *Detaily pro nastavení django-cors-headers*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-5)  
+[• *Kontrola nastavení a umístění konfigurace v settings.py*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-6)  
+[• *Kde umístit nastavení URL pro spolupráci s Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-7)  
+[• *Význam URL endpointů v Django a jejich použití*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-8)  
+[• *Návrh na úpravu Django view pro vracení JSON dat*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-9)  
+[• *Konfigurace URL API endpointů ve Vue.js*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-10)  
+[• *Kroky pro přidání nové stránky ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-11)  
+[• *Umístění souborů ve Vue do src/views vs. src/components*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-12)  
+[• *Analýza chyby při načítání dat z API ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-13)  
+[• *Problém s lomítkem na konci URL ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-14)  
+[• *Shrnutí propojení Django s Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-15)  
 
 ### 31. 7. 2024
 [• Vytváření opakovaně použitelných komponent](django-to-vue/zacatek_prace_na_projektu_04.md)  
