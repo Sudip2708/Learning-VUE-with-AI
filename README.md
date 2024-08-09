@@ -18,14 +18,14 @@ Zatím ji neovládám, ale rozumím konstrukci hlubokého učení a plánuju se 
 Z uživatelského pohledu mi AI vstoupila do života na začátku roku 2024, kdy jsem ji aktivně začal používat pro učení se Django.  
 
 ### Můj pohled na AI:
-AI je pro mě silný statistický nástroj se schopností porozumět kontextu.  
+AI je pro mě silný statistický nástroj se schopností porozumět kontextu a dorozumět se s uživatelem.  
 Na mé cestě je mi asistentem a zdrojem nezměrného množství dat.  
 
 ### Způsob práce s AI:
 Tak trochu doufám, že to bude cítit i z níže přidaných dokumentů, ale tím hlavním, čím mě AI získala, je,
-že jejím prostřednictvím mám možnost, kterou jsem dosud neměl - a to rozebírat určitou věc tak dlouho, dokud ji neporozumím.  
+že jejím prostřednictvím mám možnost rozebírat určitou věc tak dlouho, dokud ji neporozumím.  
 Toto je velká přednost, kterou AI nabízí, a dovolil bych si tipnout, že ve školství bude AI v budoucnu hrát velkou roli.  
-Používáním AI člověk získává schopnost rozvíjet své znalosti rychleji a zároveň i hlouběji.  
+Používáním AI člověk rozvíjí své znalosti rychleji a zároveň i hlouběji.  
 
 ### Co je to VUE:
 VUE je stavebnice, ze které se dá poskládat viditelná část webových stránek.  
