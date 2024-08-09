@@ -67,6 +67,37 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 
 ### 27. 7. 2024
 [• Integrace VUE do Django - úvod od ChatGPT](django-to-vue/integrace_vue_chatgpt.md)  
+• Úvodní kroky pro integraci Vue do Django projektu
+• Kontrola instalace Node.js a npm
+• Použití příkazu npm install vue@latest
+• Řešení chyby při spuštění vue create frontend
+• Průvodce nastavením při vue create frontend
+• Výběr funkcí při tvorbě projektu ve Vue!
+• Pozdější aktivace funkcí ve Vue
+• Dopad výběru jednotlivých funkcí ve Vue
+• Shrnutí volby funkcí a další otázky
+• Výběr CSS pre-processoru ve Vue
+• Výběr linter/formatter konfigurace
+• Volba linting funkcí
+• Umístění konfiguračních souborů
+• Další kroky po vytvoření základního prostředí ve Vue
+
+Integrace VUE do Django - úvod od ChatGPT
+[• Úvodní kroky pro integraci Vue do Django projektu](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-1)  
+[• Kontrola instalace Node.js a npm](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-2)  
+[• Použití příkazu npm install vue@latest](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-3)  
+[• Řešení chyby při spuštění vue create frontend](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-4)  
+[• Průvodce nastavením při vue create frontend](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-5)  
+[• Výběr funkcí při tvorbě projektu ve Vue!](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-6)  
+[• Pozdější aktivace funkcí ve Vue](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-7)  
+[• Dopad výběru jednotlivých funkcí ve Vue](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-8)  
+[• Shrnutí volby funkcí a další otázky](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-9)  
+[• Výběr CSS pre-processoru ve Vue](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-10)  
+[• Výběr linter/formatter konfigurace](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-11)  
+[• Volba linting funkcí](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-12)  
+[• Umístění konfiguračních souborů](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-13)  
+[• Další kroky po vytvoření základního prostředí ve Vue](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-14)  
+
 [• Integrace VUE do Django - úvod od Claude](django-to-vue/integrace_vue_claude.md)  
 
 ### 28. 7. 2024
