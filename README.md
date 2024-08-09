@@ -257,6 +257,21 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Oprava chybu v kódu Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-13)
 
 ### 7. 8. 2024
-[• Stránka pro detail článku 2/2](django-to-vue/zacatek_prace_na_projektu_10.md)  
+[**Stránka pro detail článku 2/2**](django-to-vue/zacatek_prace_na_projektu_10.md)  
+[• *Serializer pro pole s HTML obsahem v TinyMCE*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz)  
+[• *Výběr mezi CharField a TextField pro dlouhé texty*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-1)  
+[• *Použití TextField pro krátké texty v Django Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-2)  
+[• *Varování v PyCharmu u TextField v Django Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-3)  
+[• *Účel specifikace polí v Serializeru a validační možnosti*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-4)  
+[• *Výhody a nevýhody specifikace polí v Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-5)  
+[• *Základní Vue komponenta pro vykreslení pole content*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-6)  
+[• *Přidání polí pro předchozí a následující článek do pohledu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-7)  
+[• *Základní Vue kód pro komponentu ConnectedArticles*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-8)  
+[• *Přidání tagů do komponenty s tagy v článku*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-9)  
+[• *Chyba při použití TaggableManager v Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-10)  
+[• *Optimalizace dotazů pro získání tagů a dat článku*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-11)  
+[• *Význam a řešení chyb v konzoli*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-12)  
+[• *Chyba s bullet-icon.svg v HTML obsahu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-13)  
+[• *Řešení problému s bullet-icon.svg a úprava odrážek*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-14)  
 
 

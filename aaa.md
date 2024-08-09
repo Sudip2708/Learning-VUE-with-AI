@@ -1,144 +1,147 @@
 ## Dotaz:
 
 Ahojky :-)
-Učíme se VUE tím, že do něj předělávám frontend pro svůj projekt psaný čistě v Django.
-Už máme za sebou stránku s výpisem všech článků a dneska bych chtěl začít se stránkou pro výpis jednoho článku.
+Učím se VUE a nyní si do něj převádím projekt psaný v Django. Projekt je webová sránka pro prohlížení a správu multimediálních článků a do VUE už mám přenesenou stránku s výpisem všech článků a nyní pracuji na stránce pro jeden článek.
+Včera už jsme úspěšně rozchodili tuto stránku, takže se mi přenáší a vykreslují data z databáze v Django.
 
-To první, s čím bych chtěl začít je definovat k kartičce pro náhled jednoho článku pro stránku s  výpisem článků, aby část ArticleCardBody celá byla odkazem na:
+Dnes začneme tím, co jsme včera už nestihli, a to vykreslení hlavního obsahu článku. Ten je vytvářen modulem TinyMCE a je teda v html souboru. V modelu je definovaný takto:
 
-Zde je kod pro tuto komponentu:
+To první co by mě asi zajímalo je, jaký serializer mám pro totopole použít? Zda CharField a nebo nějaké jiné.
 
-S tím že hodnota pro slug je uložena pod klíčem 'slug'
+K tomuto dotazu bude ještě pod dotaz, a to, zda záleží, a jak moc, na to jaké použiji seliarizéry pro jednotlivá pole. Chápu že z databáze si vytahuji pouze řetězce, takže čistě teoreticky by na vše měl stačit serializers.CharField(), tak jak je to teď, ale zajímalo by mě zda je dobré více specifikovat jednotlivá pole a případně i návrhy jak.
 
-## Dotaz:
+Zde je můj aktuální kod pro pohled v Django pro stránku s detailem článku:
 
-Super a díky :-)
-Teď bych po tobě potřeboval dopsat kod pro pohled ve VUE pro stránku s jedním článkem, který by mi zatím jen zobrazil hlavní obrázek: frontend\src\views\ArticleDetailView.vue
-
-Tady je její momentální podoba:
-
+A toto je kod pro jeho serializer:
 
 ## Dotaz:
 
-Nepodařilo se mi zobrazit stránku pro jeden článek a tak jsem skusil minimalizovat možné příčiny a pro vykreslení stránky použít jen tento kod:
-
-Ale i tak je stránka naprosto prázdná a nikde v terminálu nevidím žádnou chybu. Takže počítám, že špatně bude něco s mým nastavením.
-
-Zde je pro jistotu kod pro soubor frontend\src\router\index.js: 
-
-Ten je ale podle mě v pořádku, protože nikde v terminálu a  ani konzoli nevidím žádný chybový oznam.
-
-Na co jiného bych se měl zaměřit aby se mi povedlo zobrazit na stránce pro detail článku ty velká AAA?
+Zajímalo by mě ještě kde je hranice kdy se rozhodnout mezi CharField() a TextField() v kontextu například s polem content. Díval jsem se na jeden článek v databázi a ten obsahuje v tomto poli 208490 znaků.
 
 ## Dotaz:
 
-Tak AAA se mi už zobrazuje, takže na stránku se dostanu - za to dík. Ale stále se mi nezobrazují data pro článek. 
-Skusil jsem si do pohledu v Django dát skušební tisk:
-
-Ale v terminálu se nic neobjevilo a tak počítám, že chyba bude někde ve volání z VUE na Django
-
-Potřeboval bych tedy postupně projít celou cestu a chybu dohledat.
-
-Začneme rozborem kodu, kterým je volaná stránka, a to odkazem uvnitř kartičky náhledu článku:
-frontend\src\components\ArticlesListView\ArticleCard\ArticleCardBody.vue
-
-Kde je tento kod:
-
-A podle mě by mohla být chyba v samotném odkazu, protože mi příjde, že se chce přihlásit na stránku /article/${this.slug}/ což tedy vypadá v pořádku, akorát si řikám, že když je v frontend\src\router\index.js nastaveno:
-
-Nemělo by se toto volání stránky provádět jinak?
+A měl bych tedy použít TextField pro pole overview, které má u kontrolovaného článku 648 znaků?
 
 ## Dotaz:
 
-Tak zatím bez úspěchu. Zkusíme jít naprosto pomalu a krok po kroku.
-První - kontrola volání.
+Proč když zapíšu tento kod:
 
-Na stránce se všemi články je v kartě pro článek část body (frontend\src\components\ArticlesListView\ArticleCard\ArticleCardBody.vue)
+from rest_framework import serializers class ArticleDetailSerializer(serializers.Serializer): id = serializers.IntegerField() slug = serializers.SlugField() main_picture_url = serializers.URLField() published = serializers.DateTimeField() title = serializers.CharField() overview = serializers.CharField() content = serializers.TextField() category_name = serializers.CharField() category_slug = serializers.SlugField() author_name = serializers.CharField() author_slug = serializers.SlugField() author_profile_picture_url = serializers.URLField()
 
-Která má v sobě zahrnut router-link pro volání stránky:
+Tak mi PyCharm zažlutí tento text: TextField
 
-po kliknutí na tento odkaz, se podle mě zavolá frontend\src\router\index.js:
-
-A dohledá se cesta s názvem ArticleDetailView:
-
-Takže až sem to funguje, protože se mi skutečně objeví prázdná stránka s AAA.
-
-Nyní bych od tebe chtěl zapsat sem kod, který udělá pouze to, že zavolá Django přes localhost8000/article/(+slug)/
-A po obdržení dat je vytiskne do konzole.
+?
 
 ## Dotaz:
 
-Tak už asi vím kde je chyba. Ty počítáš s tím, že pro VUE používám předponu api, což momentálně v django nastavené nemám.
-Ale uznávám, že bych to měl asi napravit, protože rozumím tomu, že se mi tím v django oddělí kod pro vue.
-
-Ve svém projektu mám url ve více modulech.
-
-Základní url je zde: main/urls.py
-
-A má tento obsah:
-
-A mě by zajímalo jak se zde správně definuje předpona api, a to tak aby mi ideálně zůstali i adresy, které používám pro django, jestli to tedy ničemu nevadí.
+Takže to chápu tak, že pokud nemám na pole v serializéru žádné validační požadavky - seliarizér slouží pouze pro předání dat z Django databáze do VUE - tak v tu chvíli by teoreticky mohli být všechny pole CharField, a když bych chtěl definovat serializér, který by se používal pro převod dat od uživatele do databáze, pak přesná specifika polí mi pomůže s validací. Je to tak?
+Pokud ano, napiš mi všechny druhy serializéru z rest_framework, které mohu použít a co se dá vše validovat v serializeru. A jestli je to tak, že když příjdou špatná data jsou vrácena, podobně jako z formuláře Django a jeho metody clean()?
 
 ## Dotaz:
 
-Tak api opraveno ale chybu to nevyřešilo.
+A jen abych měl klid.
+Plyne nějaká výhoda z toho, kdyby serializer pro stránku která pouze vykresluje data z databáze měl blíže specifikované pole, tak jak je to zde:
 
-Koukal jsem se na kod pro stránku se všemi články a a příjde mi, že tam je navíc tato část:
+A nebo v případě, kdy se jedná pouze o přenos dat z databáze do vue, tak je lepší použít pro všechna pole (kromě id) čistě jen CharField() ?
 
-Která v nově vytvářeném kodu chybí.
-Stránka provšechny články mi funguje dobře a dobře načítá a zobrazuje data z django, takže si říkám, jestli to, že se mi na stránce pro detail článku nic neobjeví, nemůže být kuli tomu, že zde chybí tato část?
-
-## Dotaz:
-
-AHojky :-)
-Dělám projekt ve VUE a nyní jsem přejmenovával nějaké komponenty a cesty a dostal jsem tuto chybu:
-
-Nedokážeš z ní vyčíst, co mi ji působí?
+Jaké jsou zaběhlé postupy a výhody a nevýhody obou přístupů?
 
 ## Dotaz:
 
-OK, tady je kod pro frontend\src\router\index.js:
+Super toto pomohlo :-)
 
-Tady je kod pro frontend\src\views\ArticlesListView.vue:
-
-Tady je kod pro frontend\src\components\ArticlesListView\Pagination.vue:
-
-Vydíš v nich něco, co by to mohlo působit?
+teď bych po tobě chtěl vytvořit základní kod pro VUE komponentu, která by vykreslovala pole content.
 
 ## Dotaz:
 
-Když mám ve VUE v souboru frontend\src\router\index.js takto definovanou cestu:
+Super a díky.
+Teď bych potřeboval přidat obsah z dalších dvou polí modelu Article:
 
-Jak nyní správně vytvořit kod pro router-link, který by ji volal?
+Jedná se o pole pro případný předchozí a následující článek.
+Počítám, že pro jeho vykreslení budu potřebovat pouze pole article.title a pro jeho volání budu potřebovat pole article.slug.
 
-## Dotaz:
-
-Toto je kod pro vue, který mi zobrazuje všechny články:
-
-A já nyní vytvářím kod pro zobrazení aktuálního článku a zatím mám jen vytvořenou stránku bez vnitřní logiky:
-
-mohl by jsi mi na základě předchozího kodu, napsat kod pro tuto stránku, který by získal data z api/article/slug/ (slug je možné získat z adresy vue stránky)
-
-A po té mi jen na stránce zobrazil název článku {{ article.title }}
+Můžeš mi tato pole připsat do tohoto pohledu:
 
 ## Dotaz:
 
-Tak namísto názvu mám text: Načítání článku...
+Super a díky.
 
-A v konzoli tento oznam:
+Napiš mi prosím základní VUE kod pro komponentu ConnectedArticles, která bude vypadat následovně:
+Na jedné lince budou dvě obdelníková pole jedno přichycené nalevo a jedno na pravo.
 
-Co se dá z toho oznamu vyčíst?
+Tyto dvě pole by také klidně mohli být vnitřní komponenty komponentu ConnectedArticles, ale to jen pokud je dobré to takto ještě rozdělit.
+
+Levá komponenta se bude skládat:
+Na levé straně šipka do leva, která je zároveň odkazem na předchozí článek.
+Za šipkou pak zbytek pole rozdělit na dva řádky, kde:
+Nahoře bude text: Previouse Article 
+A pod ním bude název článku
+
+Pravá komponenta bude zrcadlově přetočaná napravo as bude sloužit pro následující článek, takže text komponenty bude znít: Next Article
+
+Komponenty by měli mít kontrolu, zda je předchozí a následující článek obsažen, a pokud ne, tak tlačítko, nebo tlačítka nezobrazovat.
+
+A následně mi prosím komponent ConnectedArticles vlož do VUE pohledu pro detail článku:
 
 ## Dotaz:
 
-Takže to podle výpisů v konzoli a v terminálu vypadá, že už jsem se provolal až do souboru na serveru django, který maá na starosti vypracování kodu pohledu articles/views/article_detail_api.py:
+Super a díky.
 
-Ale zde se něco stane a v konzoli mám toto:
+Nyní bych potřeboval přidat komponentu s tagama.
+Každý článek má tak kolem 5-ti tagů a představoval bych si to tedy tak, že tagy budou v jednom řádku. Tagy budou do budoucna i klikací, že se objeví stránka se všemi články pro daný tag, ale tu zatím nemá, takže si je jen takto předpřipravím.
 
-Dokážeš z toho něco vyčíst?
+V modelu Article je pole pro tagy definované takto:
+
+A od tedy bych zase potřeboval nejprve upravit strukturu dotazu a serializer.
+
+Zde je aktuální podoba dotazu:
+
+A zde aktuální podoba serializeru:
 
 ## Dotaz:
 
-Proč na tento kod:
+Na tento kod:
 
-Dostávám tuto chybu:
+Jsem dostal tuto chybu:
+
+která je podle mě způsobena tím, že pole pro tag jsou cizí klíč pro taggit:
+from taggit.managers import TaggableManager
+
+A tak je asi potřeba je získat jinak, než je uvedeno nyní v kodu.
+Nebo je ta chyba o něčem jiným?
+
+## Dotaz:
+
+Rozumím tedy tomu tak, že seznam tagů si nemůžu vytáhnou najednou se všemi daty a rozumím i tvému návrhu, nejprve si vytáhnout instance článků a pak pro ně hledat tagy.
+
+S čím si ale nejsem jistý, jestli toto rozdělení dotazu nejde proti tomu, co bych primárně chtěl, a to maximálně optimalizovat dotaz, tak aby působil co nejmenší zátěž. A tady podle tohoto navrhnutého postupu, bych si udělal představu, že nejprve dojde k vytvoření instance - což je jeden dotaz, a následně bude tato instance použita k vytažení tagů, což je druhé volání, a následně dojde z této instance k vyselektováni polí, což je další dotaz. Tedy jestli si ten proces představuji správně.
+
+Kdyby to bylo možné a i výhodné, tak by se mi více líbil první přístup, který vytáhne rovnou všechny potřebná data do slovníku. A následně by dle id došlo k dohledání seznamu jmen tagů, které by se přidali do již vytvořeného slovníku.
+Takto by to byli dotazy jenom dva.
+
+Dává to smysl?
+
+## Dotaz:
+
+Co znamenají tyto dvě chyby v konzoli:
+
+## Dotaz:
+
+Takže Violation oznam zatím řešit nebudu, ale díval jsem se více na tu chybu s bullet-icon.svg.
+Zjistil jsem že chybu způsobuje html obsah pro pole content, kde se vyskytují podobné řádky jako je i tento:
+
+Z toho, co bych usoudil se jedná o nějaký znak, či něco podobného.
+
+Články jsou dumpt data a přebrané z wikipedie, takže je možné že tento odkaz už nefunguje.
+
+Nedokážeš z tohoto vyčíst k čemu tato bullet-icon.svg měla být a případně co bych s tím měl dělat? Jestli třeba by stačilo jen tyto řádky smazat?
+
+Zde je pro ilustraci pár výskytů:
+
+## Dotaz:
+
+Super. Vybral jsem si variantu nahrazení odkazů změnou stylu na 'disc' a je po problému. Stejně podle mě šlo jen o odrážku. I když si jistý nejsem. 
+
+Každopádně stránku pro jeden článek máme hotovou na mě je ji už jen destilovat dle předlohy.
+
+Takže pro toto vlákno moc díky a ozvu se zase v novém :-)

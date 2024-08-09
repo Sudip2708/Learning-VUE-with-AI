@@ -1,10 +1,31 @@
+# Stránka pro detail článku 2/2
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)   
+
+## Obsah:
+[• *Serializer pro pole s HTML obsahem v TinyMCE*](#dotaz)  
+[• *Výběr mezi CharField a TextField pro dlouhé texty*](#dotaz-1)  
+[• *Použití TextField pro krátké texty v Django Serializeru*](#dotaz-2)  
+[• *Varování v PyCharmu u TextField v Django Serializeru*](#dotaz-3)  
+[• *Účel specifikace polí v Serializeru a validační možnosti*](#dotaz-4)  
+[• *Výhody a nevýhody specifikace polí v Serializeru*](#dotaz-5)  
+[• *Základní Vue komponenta pro vykreslení pole content*](#dotaz-6)  
+[• *Přidání polí pro předchozí a následující článek do pohledu*](#dotaz-7)  
+[• *Základní Vue kód pro komponentu ConnectedArticles*](#dotaz-8)  
+[• *Přidání tagů do komponenty s tagy v článku*](#dotaz-9)  
+[• *Chyba při použití TaggableManager v Django*](#dotaz-10)  
+[• *Optimalizace dotazů pro získání tagů a dat článku*](#dotaz-11)  
+[• *Význam a řešení chyb v konzoli*](#dotaz-12)  
+[• *Chyba s bullet-icon.svg v HTML obsahu*](#dotaz-13)  
+[• *Řešení problému s bullet-icon.svg a úprava odrážek*](#dotaz-14)  
+
+
 ## Dotaz:
 
 Ahojky :-)
-Učím se VUE a nyní si do něj převádím projekt psaný v Django. Projekt je webová sránka pro prohlížení a správu multimediálních článků a do VUE už mám přenesenou stránku s výpisem všech článků a nyní pracuji na stránce pro jeden článek.
-Včera už jsme úspěšně rozchodili tuto stránku, takže se mi přenáší a vykreslují data z databáze v Django.
+Učím se VUE a nyní převádím projekt psaný v Django. Projekt je webová stránka pro prohlížení a správu multimediálních článků, a do VUE už mám přenesenou stránku s výpisem všech článků. Nyní pracuji na stránce pro jeden článek.
+Včera jsme úspěšně rozchodili tuto stránku, takže se mi přenáší a vykreslují data z databáze v Django.
 
-Dnes začneme tím, co jsme včera už nestihli, a to vykreslení hlavního obsahu článku. Ten je vytvářen modulem TinyMCE a je teda v html souboru. V modelu je definovaný takto:
+Dnes začneme tím, co jsme včera nestihli, a to vykreslením hlavního obsahu článku. Ten je vytvářen modulem TinyMCE a je v HTML formátu. V modelu je definován takto:
 
     content = HTMLField(
         verbose_name='Article Content',
@@ -12,11 +33,11 @@ Dnes začneme tím, co jsme včera už nestihli, a to vykreslení hlavního obsa
         null=True,
     )
 
-To první co by mě asi zajímalo je, jaký serializer mám pro totopole použít? Zda CharField a nebo nějaké jiné.
+To první, co by mě asi zajímalo, je, jaký serializer mám pro toto pole použít? Mám použít CharField, nebo nějaké jiné?
 
-K tomuto dotazu bude ještě pod dotaz, a to, zda záleží, a jak moc, na to jaké použiji seliarizéry pro jednotlivá pole. Chápu že z databáze si vytahuji pouze řetězce, takže čistě teoreticky by na vše měl stačit serializers.CharField(), tak jak je to teď, ale zajímalo by mě zda je dobré více specifikovat jednotlivá pole a případně i návrhy jak.
+K tomuto dotazu bude ještě poddotaz, zda záleží, a jak moc, na tom, jaké použiji serializéry pro jednotlivá pole. Chápu, že z databáze si vytahuji pouze řetězce, takže teoreticky by na vše měl stačit serializers.CharField(), jak je to teď, ale zajímalo by mě, zda je dobré více specifikovat jednotlivá pole a případně i návrhy jak.
 
-Zde je můj aktuální kod pro pohled v Django pro stránku s detailem článku:
+Zde je můj aktuální kód pro pohled v Django pro stránku s detailem článku:
 
     from django.db import models
     from rest_framework.views import APIView
@@ -87,7 +108,7 @@ Zde je můj aktuální kod pro pohled v Django pro stránku s detailem článku:
                 print("########### Article.DoesNotExist exception for slug:", slug)
                 return Response({"detail": "Article not found"}, status=404)
 
-A toto je kod pro jeho serializer:
+A toto je kód pro jeho serializer:
 
     from rest_framework import serializers
     
@@ -300,9 +321,10 @@ Tyto specifické serializéry vám pomohou zajistit, že data jsou ve správném
 
 Chcete-li se na něco z toho zeptat podrobněji nebo potřebujete-li další rady ohledně implementace ve Vue.js, neváhejte se zeptat.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Zajímalo by mě ještě kde je hranice kdy se rozhodnout mezi CharField() a TextField() v kontextu například s polem content. Díval jsem se na jeden článek v databázi a ten obsahuje v tomto poli 208490 znaků.
+Zajímalo by mě ještě, kde je hranice, kdy se rozhodnout mezi CharField() a TextField() v kontextu například s polem content. Díval jsem se na jeden článek v databázi a ten obsahuje v tomto poli 208 490 znaků.
 
 ## Claude:
 
@@ -355,9 +377,10 @@ content = serializers.TextField(max_length=1000000)  # Příklad max. délky 1 m
 
 Závěrem, pro pole `content` s obsahem o délce 208490 znaků je TextField jednoznačně správnou volbou. Poskytuje potřebnou flexibilitu a je v souladu s běžnými postupy pro práci s dlouhými textovými obsahy v Djangu a DRF.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-A měl bych tedy použít TextField pro pole overview, které má u kontrolovaného článku 648 znaků?
+Měl bych tedy použít TextField pro pole overview, které má u kontrolovaného článku 648 znaků?
 
 ## Claude:
 
@@ -419,15 +442,29 @@ Důvody:
 
 Závěrem, pro pole `overview` s 648 znaky bych doporučil CharField s dostatečnou rezervou. Nicméně, konečné rozhodnutí závisí na vašich specifických požadavcích a očekáváném budoucím vývoji aplikace. Pokud předpokládáte, že by overview mohl být v budoucnu výrazně delší, nebo pokud chcete mít naprostou flexibilitu, TextField je také validní volba.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Proč když zapíšu tento kod:
+Proč, když zapíšu tento kód:
 
-from rest_framework import serializers class ArticleDetailSerializer(serializers.Serializer): id = serializers.IntegerField() slug = serializers.SlugField() main_picture_url = serializers.URLField() published = serializers.DateTimeField() title = serializers.CharField() overview = serializers.CharField() content = serializers.TextField() category_name = serializers.CharField() category_slug = serializers.SlugField() author_name = serializers.CharField() author_slug = serializers.SlugField() author_profile_picture_url = serializers.URLField()
+      from rest_framework import serializers 
+      
+      class ArticleDetailSerializer(serializers.Serializer):
+          id = serializers.IntegerField()
+          slug = serializers.SlugField()
+          main_picture_url = serializers.URLField()
+          published = serializers.DateTimeField()
+          title = serializers.CharField()
+          overview = serializers.CharField()
+          content = serializers.TextField()
+          category_name = serializers.CharField()
+          category_slug = serializers.SlugField()
+          author_name = serializers.CharField()
+          author_slug = serializers.SlugField()
+          author_profile_picture_url = serializers.URLField()
 
-Tak mi PyCharm zažlutí tento text: TextField
+Tak mi PyCharm zažloutí tento text: TextField?
 
-?
 
 ## Claude:
 
@@ -471,10 +508,11 @@ Pro vyřešení problému doporučuji začít přidáním explicitního importu.
 
 Pokud by problém přetrvával i po těchto krocích, bylo by užitečné zkontrolovat přesné znění varování nebo chyby, které PyCharm zobrazuje při najetí myší na zvýrazněné slovo `TextField`.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Takže to chápu tak, že pokud nemám na pole v serializéru žádné validační požadavky - seliarizér slouží pouze pro předání dat z Django databáze do VUE - tak v tu chvíli by teoreticky mohli být všechny pole CharField, a když bych chtěl definovat serializér, který by se používal pro převod dat od uživatele do databáze, pak přesná specifika polí mi pomůže s validací. Je to tak?
-Pokud ano, napiš mi všechny druhy serializéru z rest_framework, které mohu použít a co se dá vše validovat v serializeru. A jestli je to tak, že když příjdou špatná data jsou vrácena, podobně jako z formuláře Django a jeho metody clean()?
+Takže to chápu tak, že pokud nemám na pole v serializéru žádné validační požadavky - serializér slouží pouze pro předání dat z Django databáze do VUE - tak v tu chvíli by teoreticky mohla být všechna pole CharField, a když bych chtěl definovat serializér, který by se používal pro převod dat od uživatele do databáze, pak přesná specifika polí mi pomohou s validací. Je to tak?
+Pokud ano, napiš mi všechny druhy serializérů z rest_framework, které mohu použít, a co se dá vše validovat v serializeru. A jestli je to tak, že když přijdou špatná data, jsou vrácena podobně jako z formuláře Django a jeho metody clean()?
 
 ## ChatGPT:
 
@@ -646,11 +684,11 @@ if not serializer.is_valid():
 
 Tento přístup umožňuje robustní validaci dat, ať už jde o data přicházející od uživatele nebo data odesílaná do frontendu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-A jen abych měl klid.
-Plyne nějaká výhoda z toho, kdyby serializer pro stránku která pouze vykresluje data z databáze měl blíže specifikované pole, tak jak je to zde:
-    
+A jen abych měl klid, plyne nějaká výhoda z toho, kdyby serializer pro stránku, která pouze vykresluje data z databáze, měl blíže specifikované pole, jak je to zde:
+
     from rest_framework import serializers
     
     class ArticleDetailSerializer(serializers.Serializer):
@@ -667,7 +705,7 @@ Plyne nějaká výhoda z toho, kdyby serializer pro stránku která pouze vykres
         author_slug = serializers.SlugField()
         author_profile_picture_url = serializers.URLField()
 
-A nebo v případě, kdy se jedná pouze o přenos dat z databáze do vue, tak je lepší použít pro všechna pole (kromě id) čistě jen CharField() ?
+A nebo v případě, kdy se jedná pouze o přenos dat z databáze do Vue, je lepší použít pro všechna pole (kromě id) čistě jen CharField()?
 
 Jaké jsou zaběhlé postupy a výhody a nevýhody obou přístupů?
 
@@ -737,11 +775,11 @@ Tento přístup poskytuje dobrou rovnováhu mezi čitelností a jednoduchostí, 
 
 Použití přesně specifikovaných polí v serializeru přináší několik výhod, zejména v oblasti dokumentace, zajištění správných typů dat a údržby kódu. Pokud však nepotřebujete žádnou speciální validaci nebo transformaci, může být použití `CharField` pro všechna pole jednodušší a rychlejší. Důležité je najít rovnováhu, která vyhovuje vašim potřebám a zajišťuje kvalitní a udržovatelný kód.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Super toto pomohlo :-)
-
-teď bych po tobě chtěl vytvořit základní kod pro VUE komponentu, která by vykreslovala pole content.
+Super, toto pomohlo :-)
+Teď bych po tobě potřeboval vytvořit základní kód pro Vue komponentu, která by vykreslovala pole content.
 
 ## ChatGPT:
 
@@ -911,6 +949,7 @@ Teď máš základní Vue komponentu, která vykresluje obsah článku pomocí p
 
 Doufám, že ti to pomůže! Pokud budeš mít další dotazy nebo potřebuješ další úpravy, dej vědět.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
 Super a díky.
@@ -937,7 +976,7 @@ Teď bych potřeboval přidat obsah z dalších dvou polí modelu Article:
 Jedná se o pole pro případný předchozí a následující článek.
 Počítám, že pro jeho vykreslení budu potřebovat pouze pole article.title a pro jeho volání budu potřebovat pole article.slug.
 
-Můžeš mi tato pole připsat do tohoto pohledu:
+Můžeš mi tato pole připsat do tohoto pohledu?
 
       from django.db import models
       from rest_framework.views import APIView
@@ -1224,26 +1263,26 @@ export default {
 
 Přidali jsme podporu pro předchozí a následující článek v pohledu a serializeru. Vue komponenta nyní vykresluje odkazy na tyto články, pokud existují. Tento postup zajišťuje, že uživatelé mohou snadno navigovat mezi články. Pokud máš další otázky nebo potřebuješ další úpravy, dej vědět!
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
 Super a díky.
+Napiš mi prosím základní Vue kód pro komponentu ConnectedArticles, která bude vypadat následovně:
+Na jedné lince budou dvě obdélníková pole, jedno přichycené nalevo a jedno napravo.
 
-Napiš mi prosím základní VUE kod pro komponentu ConnectedArticles, která bude vypadat následovně:
-Na jedné lince budou dvě obdelníková pole jedno přichycené nalevo a jedno na pravo.
-
-Tyto dvě pole by také klidně mohli být vnitřní komponenty komponentu ConnectedArticles, ale to jen pokud je dobré to takto ještě rozdělit.
+Tyto dvě pole by také klidně mohly být vnitřní komponenty komponentu ConnectedArticles, ale to jen pokud je dobré to takto ještě rozdělit.
 
 Levá komponenta se bude skládat:
-Na levé straně šipka do leva, která je zároveň odkazem na předchozí článek.
+Na levé straně šipka doleva, která je zároveň odkazem na předchozí článek.
 Za šipkou pak zbytek pole rozdělit na dva řádky, kde:
-Nahoře bude text: Previouse Article 
+Nahoře bude text: Previous Article
 A pod ním bude název článku
 
-Pravá komponenta bude zrcadlově přetočaná napravo as bude sloužit pro následující článek, takže text komponenty bude znít: Next Article
+Pravá komponenta bude zrcadlově přetočená napravo a bude sloužit pro následující článek, takže text komponenty bude znít: Next Article.
 
-Komponenty by měli mít kontrolu, zda je předchozí a následující článek obsažen, a pokud ne, tak tlačítko, nebo tlačítka nezobrazovat.
+Komponenty by měly mít kontrolu, zda je předchozí a následující článek obsažen, a pokud ne, tak tlačítko, nebo tlačítka nezobrazovat.
 
-A následně mi prosím komponent ConnectedArticles vlož do VUE pohledu pro detail článku:
+A následně mi prosím komponent ConnectedArticles vlož do Vue pohledu pro detail článku:
 
       <template>
         <div class="my-container">
@@ -1578,12 +1617,12 @@ export default {
 
 Doufám, že ti to pomůže! Pokud máš další otázky nebo potřebuješ další úpravy, dej vědět.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
 Super a díky.
-
-Nyní bych potřeboval přidat komponentu s tagama.
-Každý článek má tak kolem 5-ti tagů a představoval bych si to tedy tak, že tagy budou v jednom řádku. Tagy budou do budoucna i klikací, že se objeví stránka se všemi články pro daný tag, ale tu zatím nemá, takže si je jen takto předpřipravím.
+Nyní bych potřeboval přidat komponentu s tagy.
+Každý článek má tak kolem pěti tagů a představoval bych si to tedy tak, že tagy budou v jednom řádku. Tagy budou do budoucna i klikací, že se objeví stránka se všemi články pro daný tag, ale tu zatím nemá, takže si je jen takto předpřipravím.
 
 V modelu Article je pole pro tagy definované takto:
 
@@ -1592,7 +1631,7 @@ V modelu Article je pole pro tagy definované takto:
         blank=True
     )
 
-A od tedy bych zase potřeboval nejprve upravit strukturu dotazu a serializer.
+A tedy bych zase potřeboval nejprve upravit strukturu dotazu a serializer.
 
 Zde je aktuální podoba dotazu:
 
@@ -1977,9 +2016,10 @@ export default {
 
 Pokud máš další otázky nebo potřebuješ další úpravy, dej vědět.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Na tento kod:
+Na tento kód:
 
       from django.db import models
       from rest_framework.views import APIView
@@ -2098,16 +2138,17 @@ Jsem dostal tuto chybu:
       [07/Aug/2024 12:34:44] "GET /api/article/historie-vesmiru/ HTTP/1.1" 500 103041
       
 
-která je podle mě způsobena tím, že pole pro tag jsou cizí klíč pro taggit:
-from taggit.managers import TaggableManager
+která je podle mě způsobena tím, že pole pro tagy jsou cizí klíč pro taggit.
 
-    tags = TaggableManager(
-        verbose_name='Article Tag',
-        blank=True
-    )
+      from taggit.managers import TaggableManager
+      
+       tags = TaggableManager(
+           verbose_name='Article Tag',
+           blank=True
+       )
 
-A tak je asi potřeba je získat jinak, než je uvedeno nyní v kodu.
-Nebo je ta chyba o něčem jiným?
+A tak je asi potřeba je získat jinak, než je uvedeno nyní v kódu.
+Nebo je ta chyba o něčem jiném?
 
 ## ChatGPT:
 
@@ -2224,14 +2265,15 @@ class ArticleDetailView(APIView):
 
 Tímto způsobem zajistíme, že tagy budou správně zahrnuty v odpovědi API.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Rozumím tedy tomu tak, že seznam tagů si nemůžu vytáhnou najednou se všemi daty a rozumím i tvému návrhu, nejprve si vytáhnout instance článků a pak pro ně hledat tagy.
+Rozumím tedy tomu tak, že seznam tagů si nemůžu vytáhnout najednou se všemi daty, a rozumím i tvému návrhu, nejprve si vytáhnout instance článků a pak pro ně hledat tagy.
 
-S čím si ale nejsem jistý, jestli toto rozdělení dotazu nejde proti tomu, co bych primárně chtěl, a to maximálně optimalizovat dotaz, tak aby působil co nejmenší zátěž. A tady podle tohoto navrhnutého postupu, bych si udělal představu, že nejprve dojde k vytvoření instance - což je jeden dotaz, a následně bude tato instance použita k vytažení tagů, což je druhé volání, a následně dojde z této instance k vyselektováni polí, což je další dotaz. Tedy jestli si ten proces představuji správně.
+S čím si ale nejsem jistý, jestli toto rozdělení dotazu nejde proti tomu, co bych primárně chtěl, a to maximálně optimalizovat dotaz, tak aby působil co nejmenší zátěž. A tady podle tohoto navrhnutého postupu bych si udělal představu, že nejprve dojde k vytvoření instance - což je jeden dotaz, a následně bude tato instance použita k vytažení tagů, což je druhé volání, a následně dojde z této instance k vyselektování polí, což je další dotaz. Tedy jestli si ten proces představuji správně.
 
-Kdyby to bylo možné a i výhodné, tak by se mi více líbil první přístup, který vytáhne rovnou všechny potřebná data do slovníku. A následně by dle id došlo k dohledání seznamu jmen tagů, které by se přidali do již vytvořeného slovníku.
-Takto by to byli dotazy jenom dva.
+Kdyby to bylo možné a i výhodné, tak by se mi více líbil první přístup, který vytáhne rovnou všechny potřebná data do slovníku. A následně by dle id došlo k dohledání seznamu jmen tagů, které by se přidaly do již vytvořeného slovníku.
+Takto by to byly dotazy jenom dva.
 
 Dává to smysl?
 
@@ -2345,14 +2387,15 @@ class ArticleDetailView(APIView):
 
 Tímto způsobem minimalizujeme počet dotazů na databázi na dva: jeden pro získání hlavních informací o článku a druhý pro získání tagů. Tato metoda je efektivnější a optimalizuje výkon aplikace.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
 Co znamenají tyto dvě chyby v konzoli:
 
-[Violation] 'message' handler took 267ms
-historie-vesmiru/:20 
-                
-GET http://localhost:8080/w/skins/Vector/resources/skins.vector.styles/images/bullet-icon.svg?d4515 404 (Not Found)
+      [Violation] 'message' handler took 267ms
+      historie-vesmiru/:20 
+                      
+      GET http://localhost:8080/w/skins/Vector/resources/skins.vector.styles/images/bullet-icon.svg?d4515 404 (Not Found)
 
 ## ChatGPT:
 
@@ -2430,18 +2473,19 @@ Příklad opravy cesty:
 
 Tímto přístupem byste měli být schopni identifikovat a vyřešit oba problémy, které se objevují v konzoli.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Takže Violation oznam zatím řešit nebudu, ale díval jsem se více na tu chybu s bullet-icon.svg.
-Zjistil jsem že chybu způsobuje html obsah pro pole content, kde se vyskytují podobné řádky jako je i tento:
+Takže Violation oznám zatím řešit nebudu, ale díval jsem se více na tu chybu s bullet-icon.svg.
+Zjistil jsem, že chybu způsobuje HTML obsah pro pole content, kde se vyskytují podobné řádky jako je i tento:
 
       <ul style="list-style-image: url('../../../../w/skins/Vector/resources/skins.vector.styles/images/bullet-icon.svg?d4515'); margin: 0.3em 0px 0px 1.6em; padding: 0px; color: #202122; font-family: sans-serif; font-size: 14px; background-color: #ffffff;">
 
-Z toho, co bych usoudil se jedná o nějaký znak, či něco podobného.
+Z toho, co bych usoudil, se jedná o nějaký znak či něco podobného.
 
-Články jsou dumpt data a přebrané z wikipedie, takže je možné že tento odkaz už nefunguje.
+Články jsou dumpovaná data a přebrané z Wikipedie, takže je možné, že tento odkaz už nefunguje.
 
-Nedokážeš z tohoto vyčíst k čemu tato bullet-icon.svg měla být a případně co bych s tím měl dělat? Jestli třeba by stačilo jen tyto řádky smazat?
+Nedokážeš z tohoto vyčíst, k čemu měla `bullet-icon.svg být a případně co bych s tím měl dělat? Jestli třeba by stačilo jen tyto řádky smazat?
 
 Zde je pro ilustraci pár výskytů:
       
@@ -2544,11 +2588,12 @@ ul {
 
 Tímto způsobem můžete efektivně vyřešit problém s chybějícím obrázkem a zlepšit funkčnost a vzhled vašich článků.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
 ## Dotaz:
 
-Super. Vybral jsem si variantu nahrazení odkazů změnou stylu na 'disc' a je po problému. Stejně podle mě šlo jen o odrážku. I když si jistý nejsem. 
+Super. Vybral jsem si variantu nahrazení odkazů změnou stylu na disc a je po problému. Stejně podle mě šlo jen o odrážku. I když si jistý nejsem.
 
-Každopádně stránku pro jeden článek máme hotovou na mě je ji už jen destilovat dle předlohy.
+Každopádně stránku pro jeden článek máme hotovou a je ji už jen destilovat dle předlohy.
 
 Takže pro toto vlákno moc díky a ozvu se zase v novém :-)
 
@@ -2556,3 +2601,4 @@ Takže pro toto vlákno moc díky a ozvu se zase v novém :-)
 
 To zní skvěle! Jsem rád, že se ti podařilo vyřešit problém s odrážkami a že máš stránku pro článek připravenou. Pokud budeš potřebovat další pomoc nebo budeš mít další otázky, neváhej se ozvat. Rád pomohu s čímkoli, co budeš potřebovat. Měj se skvěle a těším se na další spolupráci v novém vlákně! 😊
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#7-8-2024)  
