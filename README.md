@@ -274,4 +274,4 @@ V mém případě vyhrál tento 6 hodinový kurz, který jsem si rozložil do 3 
 [• *Chyba s bullet-icon.svg v HTML obsahu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-13)  
 [• *Řešení problému s bullet-icon.svg a úprava odrážek*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-14)  
 
-
+### 8. - 9. 8. 2024 | Vytvoření této GitHub Repository :-)
