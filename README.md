@@ -84,12 +84,19 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 
 [**Integrace VUE do Django - úvod od Claude**](django-to-vue/integrace_vue_claude.md)  
 [• *Úvodní kroky pro integraci Vue do Django projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz)  
-[• *Instalace Vue CLI globálně*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-1)
-[• *Umístění projektu Vue v rámci struktury Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-2)
-[• *Příkazy pro vytvoření frontendu ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-3)
+[• *Instalace Vue CLI globálně*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-1)  
+[• *Umístění projektu Vue v rámci struktury Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-2)  
+[• *Příkazy pro vytvoření frontendu ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-3)  
 
 ### 28. 7. 2024
-[• Začátek práce na projektu](django-to-vue/zacatek_prace_na_projektu_01.md)  
+[**Začátek práce na projektu**](django-to-vue/zacatek_prace_na_projektu_01.md)  
+[• *Seznámení se stromovou strukturou projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz)  
+[• *Analýza aplikace a struktury templates pro Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-1)  
+[• *První kroky po analýze projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-2)  
+[• *První komponenty a routování ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-3)  
+[• *Obsah souboru App.vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-4)  
+[• *Řešení chyb ESLint a Prettier ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-5)  
+[• *Význam export default v App.vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-6)  
 
 ### 29. 7. 2024
 [• Převod základní šablony](django-to-vue/zacatek_prace_na_projektu_02.md)  

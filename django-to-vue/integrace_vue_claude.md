@@ -3,9 +3,9 @@
 
 ## Obsah:
 [• *Úvodní kroky pro integraci Vue do Django projektu*](#dotaz)  
-[• *Instalace Vue CLI globálně*](#dotaz-1)
-[• *Umístění projektu Vue v rámci struktury Django*](#dotaz-2)
-[• *Příkazy pro vytvoření frontendu ve Vue*](#dotaz-3)
+[• *Instalace Vue CLI globálně*](#dotaz-1)  
+[• *Umístění projektu Vue v rámci struktury Django*](#dotaz-2)  
+[• *Příkazy pro vytvoření frontendu ve Vue*](#dotaz-3)  
 
 
 ## Dotaz:

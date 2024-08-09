@@ -1,6 +1,19 @@
+# Začátek práce na projektu
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)   
+
+## Obsah:
+[• *Seznámení se stromovou strukturou projektu*](#dotaz)  
+[• *Analýza aplikace a struktury templates pro Vue*](#dotaz-1)  
+[• *První kroky po analýze projektu*](#dotaz-2)  
+[• *První komponenty a routování ve Vue*](#dotaz-3)  
+[• *Obsah souboru App.vue*](#dotaz-4)  
+[• *Řešení chyb ESLint a Prettier ve Vue*](#dotaz-5)  
+[• *Význam export default v App.vue*](#dotaz-6)  
+
+
 ## Dotaz:
 
-OK, tak tady už je asi dobré aby jsi věděl něco více o mém projektu.
+OK, tak tady už je asi dobré, aby jsi věděl něco více o mém projektu.
 
 Zde je stromová struktura projektu s vysvětlením jednotlivých složek:
 
@@ -526,18 +539,17 @@ A zde je stromová struktura pro složku templates:
         │  └─ socialaccount	
         │	  └─ login.html
 
-Vem si na prozkoumání těchto dvou struktur klidně i více času a rád bych po tom nejprve slyšel slovní rozbor obou struktur, abych věděl že jsi je pochopil a to té se budu ptát dál.
-
+Vem si na prozkoumání těchto dvou struktur klidně i více času a rád bych potom nejprve slyšel slovní rozbor obou struktur, abych věděl, že jsi je pochopil, a poté se budu ptát dál.
 
 ## ChatGPT:
 
 Díky za podrobnou strukturu projektu. Je zřejmé, že pracuješ na komplexním projektu s více komponenty a funkcionalitami. Jaké konkrétní otázky nebo problémy máš ohledně této struktury? Co potřebuješ konkrétně vyřešit nebo doladit?
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)  
 ## Dotaz:
 
-Nejprve mi prosím popiš mojí aplikaci dle toho co dokážeš ze stromové struktury vyčíst.
-A po té mi zhodnoť i strukturu pro templates a zda pro VUE bude struktura podobná.
+Nejprve mi prosím popiš mou aplikaci dle toho, co dokážeš ze stromové struktury vyčíst.
+A poté mi zhodnoť i strukturu pro templates a zda pro Vue bude struktura podobná.
 
 
 ## ChatGPT:
@@ -594,7 +606,7 @@ Struktura vaší aplikace pro Vue.js by byla velmi podobná tomu, co jste popsal
 
 Celkově vzato, struktura složek a souborů vaší aplikace bude velmi podobná tomu, jak se používá ve Vue.js. Klíčové rozdíly mohou spočívat v tom, že Vue.js používá komponenty s `.vue` příponou, které kombinují HTML, CSS a JavaScript do jednoho souboru, a že Vue Router a Vuex mají specifické struktury a konvence pro konfiguraci.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)  
 ## Dotaz:
 
 Tak co bych teď tedy měl udělat jako úplně první věc?
@@ -658,7 +670,7 @@ Pokud plánujete začít s vývojem aplikace ve Vue.js a máte již připravenou
 
 Tyto kroky by vám měly poskytnout solidní základ pro začátek práce na vaší aplikaci ve Vue.js. Jakmile máte vše nastaveno, můžete začít s implementací specifických funkcí a designu vaší aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)  
 ## Dotaz:
 
 Super :-) Tak Body 1 - 6 mám za sebou a nyní bych od tebe chtěl co nejvíce slyšet k bodu č. 7:
@@ -813,7 +825,7 @@ yarn add vue-router
 
 Tento proces vám pomůže vytvořit základní strukturu vaší aplikace ve Vue.js, a vy budete mít možnost pokračovat v přidávání funkcionality a vylepšení podle potřeby.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)  
 ## Dotaz:
 
 Co by měl obsahovat soubor App.vue?
@@ -955,7 +967,7 @@ footer {
 
 Soubor `App.vue` je klíčovým komponentem, který definuje strukturu vaší aplikace a zahrnuje základní navigaci, rozložení a vzhled. Je to místo, kde se definují globální styly a struktura, která obklopuje ostatní komponenty. Jakmile budete mít tento základní soubor, můžete začít přidávat další komponenty a zpracovávat specifické funkce a vzhled jednotlivých stránek vaší aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)  
 ## Dotaz:
 
 Když dostanu takovouto chybu:
@@ -1122,7 +1134,7 @@ footer {
 
 Pokud budete mít další dotazy nebo problémy s formátováním kódu, dejte mi vědět!
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)  
 ## Dotaz:
 
 Takže jsem si App.vue zjednodušil na tento zápis:
@@ -1154,7 +1166,7 @@ Takže jsem si App.vue zjednodušil na tento zápis:
     </style>
 
 
-A nejprve by mě zajímalo co znamená:
+A nejprve by mě zajímalo, co znamená:
 
     export default {
       name: "App",
@@ -1230,3 +1242,4 @@ export default {
 
 Pokud máte další dotazy ohledně komponent, kódu nebo Vue.js, neváhejte se ptát!
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#28-7-2024)  
