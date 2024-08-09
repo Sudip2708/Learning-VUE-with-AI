@@ -1,10 +1,30 @@
+# Stránka pro detail článku 1/2
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)   
+
+## Obsah:
+[• *Jak nastavit, aby `ArticleCardBody` odkazoval na detail článku*](#dotaz)  
+[• *Jak doplnit zobrazení hlavního obrázku na stránce s detailem článku*](#dotaz-1)  
+[• *Co může způsobovat prázdnou stránku*](#dotaz-2)  
+[• *Jak zobrazit data pro článek na detailní stránce*](#dotaz-3)  
+[• *Jak ověřit a opravit volání API v kódu Vue*](#dotaz-4)  
+[• *Jak přidat předponu `api` k URL v Django*](#dotaz-5)  
+[• *Co může chybět, pokud stránka pro všechny články funguje*](#dotaz-6)  
+[• *Jak diagnostikovat chyby po přejmenování komponent a cest*](#dotaz-7)  
+[• *Jak ověřit chyby v kódu Vue v konkrétních souborech*](#dotaz-8)  
+[• *Jak správně vytvořit `router-link` ve Vue*](#dotaz-9)  
+[• *Zobrazení detailu článku na základě slug a API odpovědi*](#dotaz-10)  
+[• *Co znamená „Načítání článku...“*](#dotaz-11)  
+[• *Oprava zpracování pohledu článku na Django serveru*](#dotaz-12)  
+[• *Oprava chybu v kódu Vue*](#dotaz-13)
+
+
 ## Dotaz:
 
 Ahojky :-)
 Učíme se VUE tím, že do něj předělávám frontend pro svůj projekt psaný čistě v Django.
-Už máme za sebou stránku s výpisem všech článků a dneska bych chtěl začít se stránkou pro výpis jednoho článku.
+Už máme za sebou stránku s výpisem všech článků a dnes bych chtěl začít se stránkou pro výpis jednoho článku.
 
-To první, s čím bych chtěl začít je definovat k kartičce pro náhled jednoho článku pro stránku s  výpisem článků, aby část ArticleCardBody celá byla odkazem na:
+To první, s čím bych chtěl začít, je definovat kartičku pro náhled jednoho článku pro stránku s výpisem článků, aby část ArticleCardBody celá byla odkazem na:
 
       {
         path: "/article/<slug:slug>/",
@@ -12,7 +32,7 @@ To první, s čím bych chtěl začít je definovat k kartičce pro náhled jedn
         component: ArticleView,
       },
 
-Zde je kod pro tuto komponentu:
+Zde je kód pro tuto komponentu:
 
     <template>
       <div class="article-details">
@@ -50,7 +70,7 @@ Zde je kod pro tuto komponentu:
     }
     </style>
 
-S tím že hodnota pro slug je uložena pod klíčem 'slug'
+S tím, že hodnota pro slug je uložena pod klíčem slug.
 
 ## ChatGPT:
 
@@ -309,10 +329,11 @@ urlpatterns = [
 
 Tímto způsobem by měla být stránka s detailem článku dostupná na `/article/<slug:slug>/`.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
 Super a díky :-)
-Teď bych po tobě potřeboval dopsat kod pro pohled ve VUE pro stránku s jedním článkem, který by mi zatím jen zobrazil hlavní obrázek: frontend\src\views\ArticleDetailView.vue
+Teď bych po tobě potřeboval dopsat kód pro pohled ve VUE pro stránku s jedním článkem, který by mi zatím jen zobrazil hlavní obrázek: frontend\src\views\ArticleDetailView.vue.
 
 Tady je její momentální podoba:
 
@@ -402,25 +423,26 @@ export default {
 
 Tímto způsobem bude komponenta `ArticleDetailView` získávat a zobrazovat hlavní obrázek článku podle slugu z URL. Ujistěte se, že API endpoint `/api/article/<slug>/` funguje a vrací správná data.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Nepodařilo se mi zobrazit stránku pro jeden článek a tak jsem skusil minimalizovat možné příčiny a pro vykreslení stránky použít jen tento kod:
+Nepodařilo se mi zobrazit stránku pro jeden článek, a tak jsem zkusil minimalizovat možné příčiny a pro vykreslení stránky použít jen tento kód:
 
-<template>
-  <div class="my-container">
-    <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
-  </div>
-</template>
-
-<script>
-</script>
-
-<style scoped>
-</style>
+    <template>
+      <div class="my-container">
+        <p>AAAAAAAAAAAAAAAAAAAAAAA</p>
+      </div>
+    </template>
+    
+    <script>
+    </script>
+    
+    <style scoped>
+    </style>
 
 Ale i tak je stránka naprosto prázdná a nikde v terminálu nevidím žádnou chybu. Takže počítám, že špatně bude něco s mým nastavením.
 
-Zde je pro jistotu kod pro soubor frontend\src\router\index.js: 
+Zde je pro jistotu kód pro soubor frontend\src\router\index.js:
 
         import { createRouter, createWebHistory } from "vue-router";
         import HomeView from "../views/HomeView.vue";
@@ -453,9 +475,9 @@ Zde je pro jistotu kod pro soubor frontend\src\router\index.js:
         export default router;
 
 
-Ten je ale podle mě v pořádku, protože nikde v terminálu a  ani konzoli nevidím žádný chybový oznam.
+Ten je ale podle mě v pořádku, protože nikde v terminálu ani v konzoli nevidím žádný chybový oznám.
 
-Na co jiného bych se měl zaměřit aby se mi povedlo zobrazit na stránce pro detail článku ty velká AAA?
+Na co jiného bych se měl zaměřit, aby se mi povedlo zobrazit na stránce pro detail článku ty velká AAA?
 
 ## ChatGPT:
 
@@ -546,10 +568,11 @@ export default {
 
 Po těchto úpravách zkontroluj, zda se stránka pro detail článku zobrazuje správně. Měla by zobrazit text "AAAAAAAAAAAAAAAAAAAAAAA" při přístupu na cestu `/article/some-slug/`. Pokud se stále nezobrazuje, zkontroluj konzoli v prohlížeči a ujisti se, že neexistují žádné chyby JavaScriptu nebo problémy s importem.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Tak AAA se mi už zobrazuje, takže na stránku se dostanu - za to dík. Ale stále se mi nezobrazují data pro článek. 
-Skusil jsem si do pohledu v Django dát skušební tisk:
+Tak AAA se mi už zobrazuje, takže na stránku se dostanu - za to dík. Ale stále se mi nezobrazují data pro článek.
+Zkusil jsem si do pohledu v Django přidat testovací tisk:
 
     from django.db import models
     from rest_framework.views import APIView
@@ -618,14 +641,13 @@ Skusil jsem si do pohledu v Django dát skušební tisk:
                 return Response({"detail": "Article not found"}, status=404)
 
 
-Ale v terminálu se nic neobjevilo a tak počítám, že chyba bude někde ve volání z VUE na Django
+Ale v terminálu se nic neobjevilo a tak počítám, že chyba bude někde ve volání z VUE na Django.
 
 Potřeboval bych tedy postupně projít celou cestu a chybu dohledat.
 
-Začneme rozborem kodu, kterým je volaná stránka, a to odkazem uvnitř kartičky náhledu článku:
-frontend\src\components\ArticlesListView\ArticleCard\ArticleCardBody.vue
+Začneme rozborem kódu, kterým je volaná stránka, a to odkazem uvnitř kartičky náhledu článku: frontend\src\components\ArticlesListView\ArticleCard\ArticleCardBody.vue.
 
-Kde je tento kod:
+Kde je tento kód:
 
     <template>
       <router-link :to="articleLink" class="article-details-link">
@@ -680,7 +702,7 @@ Kde je tento kod:
     </style>
 
 
-A podle mě by mohla být chyba v samotném odkazu, protože mi příjde, že se chce přihlásit na stránku /article/${this.slug}/ což tedy vypadá v pořádku, akorát si řikám, že když je v frontend\src\router\index.js nastaveno:
+A podle mě by mohla být chyba v samotném odkazu, protože mi přijde, že se chce přihlásit na stránku /article/${this.slug}/, což tedy vypadá v pořádku, akorát si říkám, že když je v frontend\src\router\index.js nastaveno:
 
     import { createRouter, createWebHistory } from "vue-router";
     import HomeView from "../views/HomeView.vue";
@@ -876,14 +898,13 @@ Ujisti se, že Vue Router správně předává slug jako parametr do `ArticleDet
 
 Pokud stále nemůžeš najít chybu, dej mi vědět, jaké chyby (pokud nějaké) se objeví v konzoli prohlížeče nebo terminálu, a můžeme pokračovat v hledání problému.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
 Tak zatím bez úspěchu. Zkusíme jít naprosto pomalu a krok po kroku.
 První - kontrola volání.
 
-Na stránce se všemi články je v kartě pro článek část body (frontend\src\components\ArticlesListView\ArticleCard\ArticleCardBody.vue)
-
-Která má v sobě zahrnut router-link pro volání stránky:
+Na stránce se všemi články je v kartě pro článek část body (frontend\src\components\ArticlesListView\ArticleCard\ArticleCardBody.vue), která má v sobě zahrnutý router-link pro volání stránky:
 
     <template>
       <router-link :to="{ name: 'ArticleDetailView', params: { slug: slug } }" class="article-details-link">
@@ -933,7 +954,7 @@ Která má v sobě zahrnut router-link pro volání stránky:
     </style>
 
 
-po kliknutí na tento odkaz, se podle mě zavolá frontend\src\router\index.js:
+Po kliknutí na tento odkaz se podle mě zavolá frontend\src\router\index.js:
 
 A dohledá se cesta s názvem ArticleDetailView:
 
@@ -993,8 +1014,8 @@ A dohledá se cesta s názvem ArticleDetailView:
 
 Takže až sem to funguje, protože se mi skutečně objeví prázdná stránka s AAA.
 
-Nyní bych od tebe chtěl zapsat sem kod, který udělá pouze to, že zavolá Django přes localhost8000/article/(+slug)/
-A po obdržení dat je vytiskne do konzole.
+Nyní bych od tebe chtěl zapsat kód, který udělá pouze to, že zavolá Django přes localhost:8000/article/(+slug)/ a po obdržení dat je vytiskne do konzole.
+
 
 ## ChatGPT:
 
@@ -1078,14 +1099,15 @@ Teď by měla být cesta `/api/article/<slug>/` dostupná a připravená pro vol
 
 Po těchto úpravách zkontroluj konzoli v prohlížeči (F12) a podívej se, zda se v ní objeví výstup s obdrženými daty článku. Pokud se v konzoli zobrazí chyby nebo chybové hlášky, dej mi vědět, jaké konkrétní chyby se objevily, a můžeme pokračovat v jejich řešení.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Tak už asi vím kde je chyba. Ty počítáš s tím, že pro VUE používám předponu api, což momentálně v django nastavené nemám.
-Ale uznávám, že bych to měl asi napravit, protože rozumím tomu, že se mi tím v django oddělí kod pro vue.
+Tak už asi vím, kde je chyba. Ty počítáš s tím, že pro VUE používám předponu api, což momentálně v Django nastavené nemám.
+Ale uznávám, že bych to měl asi napravit, protože rozumím tomu, že se mi tím v Django oddělí kód pro VUE.
 
-Ve svém projektu mám url ve více modulech.
+Ve svém projektu mám URL ve více modulech.
 
-Základní url je zde: main/urls.py
+Základní URL je zde: main/urls.py
 
 A má tento obsah:
 
@@ -1139,14 +1161,14 @@ A má tento obsah:
     
     ]
 
-# Přidání URL patternů pro statické a média soubory, pokud je nastavený DEBUG mód
+    # Přidání URL patternů pro statické a média soubory, pokud je nastavený DEBUG mód
 
     if settings.DEBUG:
         urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
         urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
-A mě by zajímalo jak se zde správně definuje předpona api, a to tak aby mi ideálně zůstali i adresy, které používám pro django, jestli to tedy ničemu nevadí.
+A mě by zajímalo, jak se zde správně definuje předpona api, a to tak, aby mi ideálně zůstaly i adresy, které používám pro Django, jestli to tedy ničemu nevadí.
 
 ## ChatGPT:
 
@@ -1271,22 +1293,23 @@ export default {
 
 Po těchto úpravách by mělo být API endpointy správně oddělené a Vue aplikace by měla správně komunikovat s Django backendem přes nové `api` endpointy.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Tak api opraveno ale chybu to nevyřešilo.
+Tak API opraveno, ale chybu to nevyřešilo.
 
-Koukal jsem se na kod pro stránku se všemi články a a příjde mi, že tam je navíc tato část:
+Koukal jsem se na kód pro stránku se všemi články a přijde mi, že tam je navíc tato část:
 
-  // Metoda, která se spustí při vytvoření komponenty
-  created() {
-    // Získá parametr stránky z URL (pokud existuje) a zavolá funkci pro načtení článků
-    const page = parseInt(this.$route.params.page) || 1;
-    console.log("### page", page);
-    this.fetchArticles(page);
-  },
+      // Metoda, která se spustí při vytvoření komponenty
+      created() {
+        // Získá parametr stránky z URL (pokud existuje) a zavolá funkci pro načtení článků
+        const page = parseInt(this.$route.params.page) || 1;
+        console.log("### page", page);
+        this.fetchArticles(page);
+      },
 
-Která v nově vytvářeném kodu chybí.
-Stránka provšechny články mi funguje dobře a dobře načítá a zobrazuje data z django, takže si říkám, jestli to, že se mi na stránce pro detail článku nic neobjeví, nemůže být kuli tomu, že zde chybí tato část?
+Která v nově vytvářeném kódu chybí.
+Stránka pro všechny články mi funguje dobře a dobře načítá a zobrazuje data z Django, takže si říkám, jestli to, že se mi na stránce pro detail článku nic neobjeví, nemůže být kvůli tomu, že zde chybí tato část?
 
 ## ChatGPT:
 
@@ -1356,9 +1379,10 @@ export default {
 
 Pokud i po těchto úpravách stále nevidíš data, zkontroluj síťové požadavky v konzoli prohlížeče (Network tab), zda se API požadavek odesílá správně a zda se vrací očekávaná data.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-AHojky :-)
+Ahojky :-)
 Dělám projekt ve VUE a nyní jsem přejmenovával nějaké komponenty a cesty a dostal jsem tuto chybu:
 
     Uncaught runtime errors:
@@ -1366,7 +1390,7 @@ Dělám projekt ve VUE a nyní jsem přejmenovával nějaké komponenty a cesty 
     ERROR
     No match for {"name":"articlesListView","params":{"page":"2"}} Error: No match for {"name":"articlesListView","params":{"page":"2"}} at createRouterError (webpack-internal:///./node_modules/vue-router/dist/vue-router.mjs:948:19) at Object.resolve (webpack-internal:///./node_modules/vue-router/dist/vue-router.mjs:1480:27) at resolve (webpack-internal:///./node_modules/vue-router/dist/vue-router.mjs:2987:34) at pushWithRedirect (webpack-internal:///./node_modules/vue-router/dist/vue-router.mjs:3073:46) at Object.push (webpack-internal:///./node_modules/vue-router/dist/vue-router.mjs:3036:12) at Proxy.changePage (webpack-internal:///./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/ArticlesListView.vue?vue&type=script&lang=js:65:20) at callWithErrorHandling (webpack-internal:///./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js:358:19) at callWithAsyncErrorHandling (webpack-internal:///./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js:365:17) at emit (webpack-internal:///./node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js:5608:5) at Proxy.changePage (webpack-internal:///./node_modules/babel-loader/lib/index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/components/ArticlesListView/Pagination.vue?vue&type=script&lang=js:17:14)
 
-Nedokážeš z ní vyčíst, co mi ji působí?
+Nedokážeš z ní vyčíst, co mi ji způsobuje?
 
 ## Claude:
 
@@ -1386,9 +1410,10 @@ Chyba naznačuje, že router nemůže najít shodu pro cestu s názvem "articles
 
 Doporučuji projít tyto body a zkontrolovat příslušné části kódu. Pokud byste potřebovali další pomoc, můžete poskytnout relevantní části kódu (např. konfiguraci routeru, komponentu ArticlesListView a Pagination) a já se pokusím problém blíže identifikovat.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-OK, tady je kod pro frontend\src\router\index.js:
+OK, tady je kód pro frontend\src\router\index.js:
 
     import { createRouter, createWebHistory } from "vue-router";
     import HomeView from "../views/HomeView.vue";
@@ -1420,7 +1445,7 @@ OK, tady je kod pro frontend\src\router\index.js:
     
     export default router;
 
-Tady je kod pro frontend\src\views\ArticlesListView.vue:
+Tady je kód pro frontend\src\views\ArticlesListView.vue:
 
     <template>
       <div class="my-container">
@@ -1537,7 +1562,7 @@ Tady je kod pro frontend\src\views\ArticlesListView.vue:
     }
     </style>
 
-Tady je kod pro frontend\src\components\ArticlesListView\Pagination.vue:
+Tady je kód pro frontend\src\components\ArticlesListView\Pagination.vue:
 
     <template>
       <div class="pagination">
@@ -1636,7 +1661,7 @@ Tady je kod pro frontend\src\components\ArticlesListView\Pagination.vue:
     
     </style>
 
-Vydíš v nich něco, co by to mohlo působit?
+Vidíš v nich něco, co by to mohlo způsobit?
 
 ## Claude:
 
@@ -1688,6 +1713,7 @@ Doporučuji použít druhou možnost, protože je obecně dobrou praxí použív
 
 Po provedení této změny by chyba měla zmizet. Pokud by problém přetrvával, dejte mi vědět a můžeme to dále prozkoumat.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
 Když mám ve VUE v souboru frontend\src\router\index.js takto definovanou cestu:
@@ -1698,7 +1724,7 @@ Když mám ve VUE v souboru frontend\src\router\index.js takto definovanou cestu
         component: ArticleDetailView,
       },
 
-Jak nyní správně vytvořit kod pro router-link, který by ji volal?
+Jak nyní správně vytvořit kód pro router-link, který by ji volal?
 
 ## Claude:
 
@@ -1762,9 +1788,10 @@ methods: {
 
 Tímto způsobem vytvoříte správný odkaz na vámi definovanou cestu v routeru.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Toto je kod pro vue, který mi zobrazuje všechny články:
+Toto je kód pro VUE, který mi zobrazuje všechny články:
 
     <template>
       <div class="my-container">
@@ -1881,7 +1908,7 @@ Toto je kod pro vue, který mi zobrazuje všechny články:
     }
     </style>
 
-A já nyní vytvářím kod pro zobrazení aktuálního článku a zatím mám jen vytvořenou stránku bez vnitřní logiky:
+A já nyní vytvářím kód pro zobrazení aktuálního článku a zatím mám jen vytvořenou stránku bez vnitřní logiky:
 
     <template>
       <div class="my-container">
@@ -1901,9 +1928,9 @@ A já nyní vytvářím kod pro zobrazení aktuálního článku a zatím mám j
     <style scoped>
     </style>
 
-mohl by jsi mi na základě předchozího kodu, napsat kod pro tuto stránku, který by získal data z api/article/slug/ (slug je možné získat z adresy vue stránky)
+Mohl bys mi na základě předchozího kódu napsat kód pro tuto stránku, který by získal data z api/article/slug/ (slug je možné získat z adresy VUE stránky)?
 
-A po té mi jen na stránce zobrazil název článku {{ article.title }}
+A poté mi jen na stránce zobrazil název článku {{ article.title }}.
 
 ## Claude:
 
@@ -1997,9 +2024,10 @@ Pokud byste chtěli přidat více informací o článku nebo stylovat stránku, 
 
 Nezapomeňte upravit styly podle potřeby a ošetřit případné chyby při načítání dat.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Tak namísto názvu mám text: Načítání článku...
+Tak namísto názvu mám text: „Načítání článku...“
 
 A v konzoli tento oznam:
 
@@ -2010,6 +2038,8 @@ A v konzoli tento oznam:
     index.js??clonedRuleSet-40.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./src/views/ArticleDetailView.vue?vue&type=script&lang=js:24 Chyba při načítání článku: AxiosError
 
 Co se dá z toho oznamu vyčíst?
+
+## ChatGPT:
 
 Z tohoto oznámení můžeme vyčíst několik důležitých informací:
 
@@ -2048,9 +2078,10 @@ Co můžete udělat:
 
 Pokud byste mohli poskytnout více informací o backendu (např. kód pro zpracování požadavku na detail článku) nebo o konfiguraci Axios ve vašem Vue projektu, mohl bych vám poskytnout konkrétnější radu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Takže to podle výpisů v konzoli a v terminálu vypadá, že už jsem se provolal až do souboru na serveru django, který maá na starosti vypracování kodu pohledu articles/views/article_detail_api.py:
+Takže to podle výpisů v konzoli a v terminálu vypadá, že už jsem se provolal až do souboru na serveru Django, který má na starosti vypracování kódu pohledu articles/views/article_detail_api.py:
 
     from django.db import models
     from rest_framework.views import APIView
@@ -2228,9 +2259,10 @@ Také se ujistěte, že v části `.values()` používáte správné jméno pole
 
 Po provedení těchto změn by měla chyba zmizet a API by mělo být schopné načíst detail článku. Pokud by problém přetrvával, možná budete muset zkontrolovat definici modelu Article a ujistit se, že všechna pole, která používáte v querysetu, skutečně existují v modelu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 ## Dotaz:
 
-Proč na tento kod:
+Proč na tento kód:
 
     <template>
       <div class="my-container">
@@ -2436,5 +2468,5 @@ export default {
 
 Toto řešení poskytuje lepší uživatelskou zkušenost tím, že jasně ukazuje stav načítání a případné chyby.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#6-8-2024)  
 

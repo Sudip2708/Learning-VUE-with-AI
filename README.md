@@ -240,9 +240,23 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [**Dohledání chyby**](django-to-vue/zacatek_prace_na_projektu_08_hledani_chyby.md)  
 
 ### 6. 8. 2024
-[• Stránka pro detail článku 1](django-to-vue/zacatek_prace_na_projektu_09.md)  
+[**Stránka pro detail článku 1/2**](django-to-vue/zacatek_prace_na_projektu_09.md)  
+[• *Jak nastavit, aby `ArticleCardBody` odkazoval na detail článku*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz)  
+[• *Jak doplnit zobrazení hlavního obrázku na stránce s detailem článku*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-1)  
+[• *Co může způsobovat prázdnou stránku*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-2)  
+[• *Jak zobrazit data pro článek na detailní stránce*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-3)  
+[• *Jak ověřit a opravit volání API v kódu Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-4)  
+[• *Jak přidat předponu `api` k URL v Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-5)  
+[• *Co může chybět, pokud stránka pro všechny články funguje*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-6)  
+[• *Jak diagnostikovat chyby po přejmenování komponent a cest*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-7)  
+[• *Jak ověřit chyby v kódu Vue v konkrétních souborech*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-8)  
+[• *Jak správně vytvořit `router-link` ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-9)  
+[• *Zobrazení detailu článku na základě slug a API odpovědi*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-10)  
+[• *Co znamená „Načítání článku...“*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-11)  
+[• *Oprava zpracování pohledu článku na Django serveru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-12)  
+[• *Oprava chybu v kódu Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_09.md#dotaz-13)
 
 ### 7. 8. 2024
-[• Stránka pro detail článku 2](django-to-vue/zacatek_prace_na_projektu_10.md)  
+[• Stránka pro detail článku 2/2](django-to-vue/zacatek_prace_na_projektu_10.md)  
 
 
