@@ -375,11 +375,10 @@ Set-ExecutionPolicy Restricted
 ### Shrnutí
 Chyba, kterou jsi obdržel, je způsobena omezením spouštění skriptů v PowerShellu. Nastavením politiky spouštění na `RemoteSigned` můžeš tento problém vyřešit a pokračovat v práci s Vue CLI. Pokud máš jakékoli další otázky nebo narazíš na další problémy, dej vědět!
 
-[*zpět na obsah*](#obsah) | [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
-[*zpět na obsah*](#obsah) • [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+
 [*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
-[*zpět na obsah*](#obsah) - [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
-[*zpět na obsah*](#obsah) * [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+
+[*zpět na obsah*](#obsah) [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 Můžeš mi napsat manuál pro průvodce pro vytvoření fronendu, který se mi objeví po zadání příkazu: vue create frontend
