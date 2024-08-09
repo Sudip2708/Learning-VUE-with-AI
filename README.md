@@ -1,46 +1,46 @@
 # Učení se VUE za asistence AI
 
-### Smysl tohoto doumentu:
-Tento dokument vzniká hned z několika důvodů:  
-•  Jednak pro mě, aby mi sloužil jakožto záznam mojí cesty pro případné dohledávání nějakých postupů.  
-•  Pak také jako ukázka stylu mojí práce a komunikace a AI potencionálním zadavatelům práce.  
-•  A možná i také jako návod, pro ty co s programováním začínají a rádi by využili možnosti které soudobé AI nabízí.  
+### Smysl tohoto dokumentu:
+Tento dokument vzniká z několika důvodů:  
+•  Jednak pro mě, aby sloužil jako záznam mojí cesty a pro případné dohledávání postupů.  
+•  Také jako ukázka stylu mé práce a komunikace s AI pro potenciální zadavatele.  
+•  A možná i jako návod pro ty, kdo s programováním začínají a rádi by využili možnosti, které současné AI nabízí.  
 
-### O mě:
-Rok jsem se učil čistě Python.   
+### O mně:
+Rok jsem se učil čistě Python.  
 3 měsíce jsem se učil HTML, CSS a základy vývoje webu a práce s databází.  
 4 měsíce jsem se učil Flask a vytvořil v něm svou první webovou aplikaci.  
-6 měsíců jsem se učil Django a vytvořil v něm svojí druhou webovou aplikaci.   
+6 měsíců jsem se učil Django a vytvořil v něm svou druhou webovou aplikaci.  
 
 ### O AI:
-AI byl důvod proč jsem se rozhodl studovat Python.  
-Zatím tedy neovládám, ale rozumím konstrukci hlubokého učení a v mám i v plánu se mu v budoucnu věnovat.  
-Z uživatelského pohledu mi AI vstoupila do života na počátku roku 2024, kdy jsem ji aktivně začal používat pro učení se Django.  
+AI byla důvod, proč jsem se rozhodl studovat Python.  
+Zatím ji neovládám, ale rozumím konstrukci hlubokého učení a plánuju se mu v budoucnu věnovat.  
+Z uživatelského pohledu mi AI vstoupila do života na začátku roku 2024, kdy jsem ji aktivně začal používat pro učení se Django.  
 
 ### Můj pohled na AI:
 AI je pro mě silný statistický nástroj se schopností porozumět kontextu.  
 Na mé cestě je mi asistentem a zdrojem nezměrného množství dat.  
 
 ### Způsob práce s AI:
-Tak trochu doufám, že to bude cítit i z níže přidaných dokumentů, ale tím hlavním čím si mě AI získala je,
-že jejím prostřednictvím mám možnost kterou jsem do teď neměl - a to rozebírat určitou věc tak dlouho, dokud ji neporozumím.  
-Toto je velká přednost kterou AI nabízí a dovolil bych si tipnout, že ve školství bude hrát AI v budoucnu velkou roli.  
-Používáním AI člověk získává schopnost rozvíjet své znalosti rychleji, a zároveň i více do hloubky.  
+Tak trochu doufám, že to bude cítit i z níže přidaných dokumentů, ale tím hlavním, čím mě AI získala, je,
+že jejím prostřednictvím mám možnost, kterou jsem dosud neměl - a to rozebírat určitou věc tak dlouho, dokud ji neporozumím.  
+Toto je velká přednost, kterou AI nabízí, a dovolil bych si tipnout, že ve školství bude AI v budoucnu hrát velkou roli.  
+Používáním AI člověk získává schopnost rozvíjet své znalosti rychleji a zároveň i hlouběji.  
 
 ### Co je to VUE:
 VUE je stavebnice, ze které se dá poskládat viditelná část webových stránek.  
 Výhodou použití VUE oproti vytváření té samé části pomocí šablonového systému Django je modularita a přehlednost založená na komponentovém přístupu.  
 
 ### Jak jsem se k VUE dostal:
-Při hledání práce jsem narazil na nabídku, kde VUE byla podmínku.   
-Od prvního momentu jsem se do VUE zamiloval, protože nabízelo přesně to, co mi v Django vadilo že chybí.  
-Přerušil jsem tedy vytváření testů pro moji aplikaci v Django a začal se naplno věnovat studiu VUE.
-A zde už se dostáváme k samotnému obsahu dohoto dokumentu, jenž má za úkol, celý tento proces zmapovat.
+Při hledání práce jsem narazil na nabídku, kde VUE byla podmínkou.  
+Od prvního momentu jsem se do VUE zamiloval, protože nabízelo přesně to, co mi v Django chybělo.  
+Přerušil jsem tedy vytváření testů pro svou aplikaci v Django a začal se naplno věnovat studiu VUE.  
+A zde už se dostáváme k samotnému obsahu tohoto dokumentu, jenž má za úkol celý tento proces zmapovat.
 
 # 1. krok - Seznámení se s VUE
 
 ### 18. - 20. 7. 2024 | První seznámení + Vytvoření taháků
-(Část zde uvedených materiálů vznikala i během udalších dní, ale pro lepší přehlednost, jsou všechny uvedené zde.)
+(Část zde uvedených materiálů vznikala i během dalších dní, ale pro lepší přehlednost jsou všechny uvedené zde.)
 
 [• Stručný tahák od Aria](preparation/VueCheatSheet_Aria.md)  
 [• Podrobnější tahák od ChatGPT](preparation/VueCheatSheet_ChatGPT.md)  
@@ -53,15 +53,15 @@ A zde už se dostáváme k samotnému obsahu dohoto dokumentu, jenž má za úko
 [• Dotaz na strukturu: Script - Templates - Style](preparation/VueStratSet.md)  
 [• Psaní čárek, středníků a mezer v JavaScriptu a Vue.js](preparation/WritingCommasSemicolonsAndSpaces.md)  
 
-
 # 2. krok - Osahání si VUE
 
 ### 21. - 23. 7. 2024 | Zhlédnutí výukového videa + vytvoření v něm uvedených projektů
 
-Výuková videa jsou výborným zdrojem, kde čerpat základní informace k danému tématu.  
-Pro VUE existuje mnoho různých výukových videí, a tak si člověk má možnost i vybrat to, které mu nejvíce vyhovuje.  
-V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 dní: 
+Výuková videa jsou výborným zdrojem pro základní informace k danému tématu.  
+Pro VUE existuje mnoho různých výukových videí, a tak má člověk možnost vybrat si to, které mu nejvíce vyhovuje.  
+V mém případě vyhrál tento 6 hodinový kurz, který jsem si rozložil do 3 dní:  
 [Laith Academy - The Ultimate Vue 3 Tutorial](https://www.youtube.com/watch?v=I_xLMmNeLDY&t=231s)
+
 
 # 3. Krok - Převod Django na VUE
 
