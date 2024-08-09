@@ -144,11 +144,10 @@ ALLOWED_HOSTS = ['yourdomain.com']
 
 Toto jsou základní kroky pro integraci Vue.js do Django projektu. Jakmile budeš mít stromovou strukturu projektu, můžeme se podívat na konkrétní kroky a detaily. Pokud máš nějaké otázky nebo nejasnosti, neváhej se zeptat!
 
-[*zpět na obsah*](#obsah) 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
-OK, začneme tedy prvním bodem. Zde mi vypiš vše co bych měl zkontrolovat a jak. K práci používám PyCharm a terminál powershlell a dle mého Node.js a npm nainstalované mám, ale i to bych chtěl ověřit.
-
+OK, začneme tedy prvním bodem. Zde mi vypiš vše, co bych měl zkontrolovat a jak. K práci používám PyCharm a terminál PowerShell, a dle mého Node.js a npm nainstalované mám, ale i to bych chtěl ověřit.
 ## ChatGPT:
 
 Skvěle, pojďme začít prvním bodem – přípravou prostředí. Zde jsou podrobné kroky, které bys měl následovat, včetně kontroly aktuální instalace Node.js a npm.
@@ -241,14 +240,13 @@ Otevři prohlížeč a zadej adresu `http://localhost:8080/`, kde bys měl vidě
 ### Shrnutí
 Tímto jsme dokončili první bod a ověřili, že máš správně nastavené prostředí pro práci s Vue.js. Pokud máš jakékoli otázky nebo narazíš na problém, dej vědět!
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)    
 ## Dotaz:
 
-Když jsem si skoušel dělat nějaké projekty ve VUE podle výukových videí, tk tam se začínalo příkazem: npm instal vue@latest
+Když jsem si zkoušel dělat nějaké projekty ve VUE podle výukových videí, tak tam se začínalo příkazem: npm install vue@latest
 
 Ten tedy v tomto procesu nepoužiji?
-Zajímalo by mě proč a kdy je to dobré použít? 
+Zajímalo by mě proč a kdy je to dobré použít?
 
 
 ## ChatGPT:
@@ -312,8 +310,7 @@ Tento ruční proces je flexibilnější, ale také složitější a náchylněj
 ### Shrnutí
 Příkaz `npm install vue@latest` je užitečný pro ruční správu závislostí nebo aktualizaci stávajících projektů. Pro nové projekty je však použití Vue CLI doporučeno, protože poskytuje robustní nástroje a usnadňuje celý proces vývoje.
 
-[*zpět na obsah*](#obsah)    
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 Proč jsem dostal tuto chybu:
@@ -377,13 +374,11 @@ Chyba, kterou jsi obdržel, je způsobena omezením spouštění skriptů v Powe
 
 
 [*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
-
-[*zpět na obsah*](#obsah) [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
-Můžeš mi napsat manuál pro průvodce pro vytvoření fronendu, který se mi objeví po zadání příkazu: vue create frontend
+Můžeš mi napsat manuál pro průvodce pro vytvoření frontendu, který se mi objeví po zadání příkazu: vue create frontend
 
-Tak abych věděl co jednotlivé možnosti znamenají a podle čeho se mám rozhodnout?
+Tak abych věděl, co jednotlivé možnosti znamenají a podle čeho se mám rozhodnout?
 
 ## ChatGPT:
 
@@ -530,8 +525,7 @@ Vyber si preferované řešení pro end-to-end testování.
 ### Shrnutí
 Tento průvodce ti umožňuje přizpůsobit nový Vue projekt podle tvých potřeb a preferencí. Každá možnost ti umožňuje rozhodnout se pro konkrétní funkce a nástroje, které chceš mít ve svém projektu. Výběr závisí na konkrétních požadavcích tvého projektu a tvých preferencích v oblasti vývojových nástrojů. Pokud máš nějaké další otázky nebo potřebuješ další vysvětlení, dej vědět!
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)   
 ## Dotaz:
 
 Podle čeho se mám rozhodnout v tomto kroku:
@@ -646,8 +640,7 @@ Rozhodnutí závisí na povaze tvého projektu, velikosti týmu, rozsahu aplikac
 
 Při rozhodování se zaměř na potřeby tvého projektu a na to, co ti pomůže dosáhnout nejlepších výsledků. Pokud máš další otázky nebo potřebuješ další rady, dej vědět!
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 Dají se tyto možnosti později zapnout, když je teď nevyberu?
@@ -732,8 +725,7 @@ Vue CLI poskytuje pluginy, které umožňují přidat většinu funkcí později
 
 Pokud máš konkrétní otázky nebo potřebuješ podrobnější návod pro přidání některých z těchto funkcí, dej vědět!
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 Napiš mi ještě ke každé volbě features, co se jejím vybráním mění pro mě. Například když bych vybral TypeScript, v čem by se mi změnil zápis kódu a uveď mi i nějaké příklady.
@@ -960,21 +952,20 @@ describe('My First Test', () => {
 ### Shrnutí
 Výběr jednotlivých funkcí při vytváření Vue projektu ovlivní, jak budeš psát a organizovat svůj kód. Pokud některé funkce nevybereš nyní, můžeš je přidat později pomocí Vue CLI nebo ručně. Výběr závisí na potřebách a složitosti tvého projektu.
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)   
 ## Dotaz:
 
 Takže z toho co píšeš jsem si udělal závěr:
 
- (*) Babel >>> Potřebuji
- ( ) TypeScript >>> Přidává víc práce a  asi není tolik potřeba 
- ( ) Progressive Web App (PWA) Support >>> Projekt je webová aplikace, takže nevím, jestli potřebuji nativní off line ovládání
- (*) Router >>> Potřebuji - aplikace má mnoho stránek
- (?) Vuex >>> Tady tedy vůbec nevím, zda jej pro svůj projekt potřebuji. Řekni mi ještě něco více podle čeho bych se mohl rozhodnout.
- (?) CSS Pre-processors >>> Tady tedy vůbec nevím, zda jej pro svůj projekt potřebuji. Řekni mi ještě něco více podle čeho bych se mohl rozhodnout.
- (*) Linter / Formatter >>> Potřebuji
- ( ) Unit Testing >>> Zatím asi nepotřebuji příjdou na řadu až zvládnu základ.
- ( ) E2E Testing >>> Zatím asi nepotřebuji příjdou na řadu až zvládnu základ.
+     (*) Babel >>> Potřebuji
+     ( ) TypeScript >>> Přidává víc práce a  asi není tolik potřeba 
+     ( ) Progressive Web App (PWA) Support >>> Projekt je webová aplikace, takže nevím, jestli potřebuji nativní off line ovládání
+     (*) Router >>> Potřebuji - aplikace má mnoho stránek
+     (?) Vuex >>> Tady tedy vůbec nevím, zda jej pro svůj projekt potřebuji. Řekni mi ještě něco více podle čeho bych se mohl rozhodnout.
+     (?) CSS Pre-processors >>> Tady tedy vůbec nevím, zda jej pro svůj projekt potřebuji. Řekni mi ještě něco více podle čeho bych se mohl rozhodnout.
+     (*) Linter / Formatter >>> Potřebuji
+     ( ) Unit Testing >>> Zatím asi nepotřebuji příjdou na řadu až zvládnu základ.
+     ( ) E2E Testing >>> Zatím asi nepotřebuji příjdou na řadu až zvládnu základ.
 
 Co ty na to?
 
@@ -1027,8 +1018,7 @@ Tvůj závěr dává smysl a je vidět, že jsi dobře zvážil své potřeby. P
 
 Pokud stále váháš ohledně Vuex a CSS Pre-processors, můžeš je vyzkoušet v malém měřítku a zjistit, zda ti usnadňují práci. Pokud zjistíš, že je nepotřebuješ, vždy je můžeš přestat používat nebo odstranit.
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 Podle čeho se mám rozhodnout teď?
@@ -1117,8 +1107,7 @@ body
 ### Doporučení
 Pokud nemáš silné preference nebo specifické požadavky, doporučuji vybrat **Sass/SCSS** s dart-sass, protože je nejpoužívanější a nabízí skvělou kombinaci funkcionality a podpory.
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)   
 ## Dotaz:
 
 A podle čeho se mám rozhodnout teď:
@@ -1192,8 +1181,7 @@ Pro většinu projektů **ESLint + Prettier** poskytuje dobrou rovnováhu mezi p
 
 Pokud se rozhodneš pro jednu z těchto možností, budeš mít dobře nastavený linting a formátování, což ti pomůže udržet kvalitu kódu a zjednodušit vývojový proces.
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)   
 ## Dotaz:
 
 A podle čeho se mám rozhodnout teď:
@@ -1249,8 +1237,7 @@ Pokud chceš mít co nejméně rušení při psaní kódu a zároveň mít zaji�
 
 Pokud máš pouze jednu možnost, **"Lint and Fix on Commit"** může být výhodná, pokud chceš mít zajištěno, že všechny změny, které jsou odeslány do verzovacího systému, jsou správně formátované a bez chyb.
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 A co teď:
@@ -1299,12 +1286,10 @@ Při rozhodování o umístění konfiguračních souborů pro Babel, ESLint a d
 
 Pokud se zaměřuješ na čistotu a udržovatelnost projektu, doporučuji **"In Dedicated Config Files"**. To ti umožní mít samostatné soubory pro každý nástroj a snadněji spravovat jednotlivá nastavení. Tento přístup také usnadňuje práci v týmu, kde každý může snadno upravit pouze konkrétní konfigurační soubor, který se týká jeho oblasti.
 
-[*zpět na obsah*](#obsah) 
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
-Tak nyní mám vytvořené základní prostředí pro vue a čím teda pokračovat, co bych měl nyní udělat jako první a co po tom?
-
+Tak nyní mám vytvořené základní prostředí pro Vue a čím teda pokračovat, co bych měl nyní udělat jako první a co potom?
 ## ChaGPT:
 
 Skvělé, že máš základní prostředí pro Vue vytvořené! Nyní se můžeš pustit do dalšího kroku integrace Vue do tvého projektu. Tady je krok za krokem, co bys měl udělat a jak postupovat:
