@@ -1,3 +1,22 @@
+# Stránkování ve VUE
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024)   
+
+## Obsah:
+[• *Možnosti stránkování v Django a Vue*](#dotaz)  
+[• *Jak stránkování ovlivňuje dotazy na databázi*](#dotaz-1)  
+[• *Zahrnutí čísla stránky do URL*](#dotaz-2)  
+[• *Nekonečné scrollování vs. stránkování*](#dotaz-3)  
+[• *Přínos nekonečného scrollování pro PC*](#dotaz-4)  
+[• *Rozdíl mezi stránkovacími třídami v Django, a příklady kódu pro Axio*](#dotaz-5)
+[• *Kód komponenty pro stránkování v Vue*](#dotaz-6)  
+[• *Použití 'name' v komponentách Vue*](#dotaz-7)  
+[• *Použití 'name' ve všech komponentách Vue*](#dotaz-8)  
+[• *Přidání čísla stránky do URL v Django a Vue*](#dotaz-9)  
+[• *Dvě varianty adres v Django URLs*](#dotaz-10)  
+[• *Rozpis kódu pro stránkování v Django views*](#dotaz-11)  
+[• *Nastavení `page_size` v Django a jeho vliv na `settings.py`*](#dotaz-12)  
+[• *Rozdíl mezi zápisy pro stránkování v `index.js`*](#dotaz-13)
+
 ## Dotaz:
 
 Ahojky :-)
@@ -128,6 +147,7 @@ Na frontendové straně, tj. ve Vue.js, budeš muset:
 
 Doufám, že ti to pomůže! Pokud máš další dotazy, dej vědět.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 A můžeš mi popsat jak funguje celý proces? Jde mi hlavně o to, zda se stránkování promítá i do dotazu na databázi a nebo zda se z databáze načtou všechny články na jeden dotaz a pak se v těchto datech stránkuje. Ptám se proto, že by mi tento druhý přístup přišel značně neekonomický, kdyby načítal z databáze všechny články například pro 10 stránek a uživatel by zhlídnul články pouze z první stránky. Takže bych si spíš představoval systém, kdy po kliknutí na další stránku by se vyslal dotaz na do načtení dat z databáze a tak by se načítali jen ty data, která jsou potřeba.
@@ -233,6 +253,7 @@ Na frontendové straně, tj. ve Vue.js, provedeš dotaz na API a zpracováváš 
 
 Tento přístup zajišťuje efektivní využití zdrojů a rychlou odezvu aplikace, protože se načítá pouze malá část dat na každém dotazu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 A je dobré toto stránkování (číslo stránky na které jsme) promítnout i do URL?
@@ -368,6 +389,7 @@ V tomto příkladu Vue Router zpracovává změny v URL a komponenta `ArticleLis
 
 Promítnutí čísla stránky do URL je doporučený přístup, který zlepšuje uživatelský zážitek a umožňuje snadnou navigaci a sdílení. Na backendu Django REST framework automaticky zpracovává parametry pro stránkování. Na frontendové straně Vue.js můžeš použít Vue Router k zpracování parametrů URL a načítání dat na základě aktuální stránky.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 A jak se dělá to, že když se na stránku díváme na mobilu, tak namísto stránkování máme nekonečný seznam?
@@ -498,6 +520,7 @@ Na frontendové straně implementuješ logiku pro nekonečné scrollování, kte
 
 Tímto způsobem zajistíš, že uživatelé budou mít plynulý zážitek z procházení článků bez nutnosti klikání na stránkovací tlačítka.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 A zkoumalo se někdy jestli je pro uživatele tento přístup přínosný i pro PC a nebo zda na PC lépe působí na uživatelský zážitek přepínání po stránkách?
@@ -558,6 +581,7 @@ Ano, bylo provedeno několik studií a analýz, které porovnávají nekonečné
 
 Když se rozhoduješ mezi nekonečným scrollováním a stránkováním, je důležité vzít v úvahu cílovou skupinu uživatelů, typ obsahu a kontext použití. Na mobilních zařízeních bývá nekonečné scrollování výhodnější, zatímco na desktopu může být tradiční stránkování stále užitečné, zejména pro obsah, kde je důležitá struktura a navigace.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Takže rád bych se pustil do stránkování a mám před tím pár dotazů.
@@ -831,6 +855,7 @@ export default {
 
 Tento přístup zajišťuje, že stránkování bude fungovat jak na backendu, tak na frontendové straně s Vue.js.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Můžeš mi prosím ještě jednou přepsat kod pro vue komponentu s tím, že zde bude jen část pro stránkování:
@@ -1082,6 +1107,7 @@ export default {
 
 Tímto způsobem máš oddělenou komponentu pro stránkování, kterou lze snadno používat a udržovat.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Super a díky :-)
@@ -1139,6 +1165,7 @@ export default {
 
 Použití `name` je více o zlepšení vývojového procesu a udržovatelnosti kódu, než o technické nutnosti. Pokud cítíš, že by ti pojmenování komponent mohlo pomoci při ladění a organizaci projektu, rozhodně ho používej.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Takže z toho, co píšeš usuzuji že je dobré přidat 'name' i do tohoto kodu:
@@ -1341,6 +1368,7 @@ export default {
 
 Celkově je tedy použití `name` ve všech tvých komponentách dobrá praxe a můžeš ho klidně používat.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Teď bych rád aplikoval, aby se mi do URL promítalo číslo stránky.
@@ -1805,24 +1833,25 @@ export default {
    - Přidali jsme watch na `$route` pro sledování změn URL a odpovídající aktualizaci stránky.
    - Metoda `changePage` nyní aktualizuje URL pomocí `$router.push`, což zajistí, že se aktuální stránka promítne do URL.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Promiň jdeme na to moc rychle a já potřebuji trochu zpomalit a udělat si jasno.
 Začneme nejprve pouze kodem v souboru articles/urls/articles.py:
 
-rom django.urls import path
-
-from ..views.article_list_view import ArticleListView
-
-
-# Defining URLs starting with the prefix 'articles/'
-urlpatterns = [
-
-    # Display all articles.
-    path('all/', ArticleListView.as_view(), name='article-list'),
-    # URL path to handle pagination with page number in the path
-    path('all/<int:page>/', ArticleListView.as_view(), name='article-list-page'),
-]
+   from django.urls import path
+   
+   from ..views.article_list_view import ArticleListView
+   
+   
+   # Defining URLs starting with the prefix 'articles/'
+   urlpatterns = [
+   
+       # Display all articles.
+       path('all/', ArticleListView.as_view(), name='article-list'),
+       # URL path to handle pagination with page number in the path
+       path('all/<int:page>/', ArticleListView.as_view(), name='article-list-page'),
+   ]
 
 Je dobré zde mít uvedeny takto dvě varianty adres, jedna s číslem stránky a druhá bez něj?
 Napadlo mě že je to tu třeba proto, kdyby některý obsah měl pouze jednu stránku, ale i tak, by zde mohla být jednička na konci. Pak mě napadlo, že to tak je protože, když bych byl na mobilu a měl nekonečné srolování, tak číslo stránky se neuvádí.
@@ -1883,6 +1912,7 @@ urlpatterns = [
 
 Tímto způsobem se zajistí, že pokud uživatelé přijdou na stránku bez specifikovaného čísla stránky, budou přesměrováni na první stránku.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Ok nyní se můžeme vrhnout na kod soboru articles/views/article_list_view.py.
@@ -1933,7 +1963,7 @@ return paginator.get_paginated_response(serializer.data)
 4. **Serializace dat**: Vybraná data se převedou do formátu JSON pomocí serializátoru.
 5. **Vrácení stránkované odpovědi**: Odpověď se odesílá klientovi, včetně dat a metadat o stránkování.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 A je to tak, že řádek paginator.page_size = 10 přebíjí nastavení v settings.py:
@@ -2019,6 +2049,7 @@ class ArticleListView(APIView):
 
 Tímto způsobem můžete flexibilně přizpůsobit stránkování podle potřeb jednotlivých částí vaší aplikace.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024) 
 ## Dotaz:
 
 Paráda, a nyní se tedy můůžeme vrhnout na kody pro VUE.
@@ -2206,3 +2237,4 @@ export default {
 
 Obě metody jsou platné, a rozhodnutí závisí na specifických požadavcích tvého projektu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#5-8-2024)  

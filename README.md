@@ -221,8 +221,23 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Význam a definice RESTful API*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-13)
 
 ### 5. 8. 2024
-[• Stránkování ve VUE](django-to-vue/zacatek_prace_na_projektu_08.md)  
-[• Dohledání chyby](django-to-vue/zacatek_prace_na_projektu_08_hledani_chyby.md)  
+[**Stránkování ve VUE**](django-to-vue/zacatek_prace_na_projektu_08.md)  
+[• *Možnosti stránkování v Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz)  
+[• *Jak stránkování ovlivňuje dotazy na databázi*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-1)  
+[• *Zahrnutí čísla stránky do URL*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-2)  
+[• *Nekonečné scrollování vs. stránkování*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-3)  
+[• *Přínos nekonečného scrollování pro PC*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-4)  
+[• *Rozdíl mezi stránkovacími třídami v Django, a příklady kódu pro Axio*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-5)
+[• *Kód komponenty pro stránkování v Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-6)  
+[• *Použití 'name' v komponentách Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-7)  
+[• *Použití 'name' ve všech komponentách Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-8)  
+[• *Přidání čísla stránky do URL v Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-9)  
+[• *Dvě varianty adres v Django URLs*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-10)  
+[• *Rozpis kódu pro stránkování v Django views*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-11)  
+[• *Nastavení `page_size` v Django a jeho vliv na `settings.py`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-12)  
+[• *Rozdíl mezi zápisy pro stránkování v `index.js`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_08.md#dotaz-13)
+
+[**Dohledání chyby**](django-to-vue/zacatek_prace_na_projektu_08_hledani_chyby.md)  
 
 ### 6. 8. 2024
 [• Stránka pro detail článku 1](django-to-vue/zacatek_prace_na_projektu_09.md)  
