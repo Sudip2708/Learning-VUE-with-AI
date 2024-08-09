@@ -135,7 +135,18 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Shrnutí propojení Django s Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-15)  
 
 ### 31. 7. 2024
-[• Vytváření opakovaně použitelných komponent](django-to-vue/zacatek_prace_na_projektu_04.md)  
+[**Vytváření opakovaně použitelných komponent**](django-to-vue/zacatek_prace_na_projektu_04.md)  
+[• *Přehled použití vzorových komponent ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz)  
+[• *Stylizace HTML pomocí vlastních tříd vs. Bootstrap*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-1)  
+[• *Použití `:root` a proměnných z CSS ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-2)  
+[• *Kontrola CSS pro třídu `container` a umístění specifických stylů*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-3)  
+[• *Import stylů přímo do komponent*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-4)  
+[• *Vytváření specifických stylů, které obsahují více importů*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-5)  
+[• *Význam stylů pro `*`, `*::before`, `*::after` a `scroll-behavior`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-6)  
+[• *Rozhodování mezi umístěním importu do `main.js` nebo `App.vue`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-7)  
+[• *Určení, zda styly pro `<body>` patří do globálního stylu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-8)  
+[• *Význam stylu pro `<abbr>` s atributem `title`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-9)  
+[• *Vazba stylu na tag `<abbr>` a jeho potřeba v projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-10)  
 
 ### 1. 8. 2024
 [• Přechod na Vue bez závislosti na Bootstrap](django-to-vue/zacatek_prace_na_projektu_05.md)  

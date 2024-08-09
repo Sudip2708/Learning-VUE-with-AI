@@ -1,7 +1,23 @@
+# Vytváření opakovaně použitelných komponent
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)   
+
+## Obsah:
+[• *Přehled použití vzorových komponent ve Vue*](#dotaz)  
+[• *Stylizace HTML pomocí vlastních tříd vs. Bootstrap*](#dotaz-1)  
+[• *Použití `:root` a proměnných z CSS ve Vue*](#dotaz-2)  
+[• *Kontrola CSS pro třídu `container` a umístění specifických stylů*](#dotaz-3)  
+[• *Import stylů přímo do komponent*](#dotaz-4)  
+[• *Vytváření specifických stylů, které obsahují více importů*](#dotaz-5)  
+[• *Význam stylů pro `*`, `*::before`, `*::after` a `scroll-behavior`*](#dotaz-6)  
+[• *Rozhodování mezi umístěním importu do `main.js` nebo `App.vue`*](#dotaz-7)  
+[• *Určení, zda styly pro `<body>` patří do globálního stylu*](#dotaz-8)  
+[• *Význam stylu pro `<abbr>` s atributem `title`*](#dotaz-9)  
+[• *Vazba stylu na tag `<abbr>` a jeho potřeba v projektu*](#dotaz-10)  
+
 ## Dotaz:
 
 Ahojky :-)
-Učím se VUE a teď by mě zajímalo toto:
+Učím se Vue a teď by mě zajímalo toto:
 Takto mám definovaný komponent, který zobrazuje některé položky v horní navigační liště frontend\src\components\RootHeader\NavItems.vue:
 
     <template>
@@ -121,8 +137,8 @@ A takto mám pak definované tyto položky:
 
 
 A teď k mému dotazu:
-Tyto všechny tři kody mají identický základ a jenom se mění proměnné hodnoty. Napadlo mě tedy, jestli by nebylo lepší udělat jeden vzor pro všeobecnou položku navigace a pak tento vzor volat s předáním příslušných proměnných?
-Zajímalo by mě k tomu zejména, jestli se to dělá a je to běžnou praktikou, a pak taky jestli to není tak, že je lepší definovat každý kod zvlášť, tak jak to mám v projektu teď z důvodu rychlejšího načítání. Přeci jenom dosazení proměnných do nějaké šablony je asi delší než nahrání šablony už s proměnnými. Jak to tedy je?
+Tyto všechny tři kódy mají identický základ a jenom se mění proměnné hodnoty. Napadlo mě tedy, jestli by nebylo lepší udělat jeden vzor pro všeobecnou položku navigace a pak tento vzor volat s předáním příslušných proměnných?
+Zajímalo by mě k tomu zejména, jestli se to dělá a je to běžnou praktikou, a pak taky jestli to není tak, že je lepší definovat každý kód zvlášť, tak jak to mám v projektu teď, z důvodu rychlejšího načítání. Přeci jenom dosazení proměnných do nějaké šablony je asi delší než nahrání šablony už s proměnnými. Jak to tedy je?
 
 
 ## ChatGPT:
@@ -231,16 +247,17 @@ Výkonový rozdíl mezi těmito dvěma přístupy je v praxi zanedbatelný. Mode
 
 Doporučuji refaktorovat tvůj kód tak, aby používal opakovaně použitelnou komponentu. Tento přístup zlepší udržovatelnost a čitelnost kódu, což je obzvláště důležité pro větší projekty. Výkonové dopady budou minimální, takže se nemusíš obávat zpomalení aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Nyní bych se chtěl zeptat k stylizování html pomocí tříd. Ve svém projektu jsem používal bootstrap a nyní mi přijde, že v rámci VUE by možná bylo přehlednější vytvořit vlastní css pro každý prvek, aby nedocházelo k tomu, že  v template se mi za každým prvkem bude vytvářet řada bootstrap tříd namísto jedné.
+Nyní bych se chtěl zeptat k stylizování HTML pomocí tříd. Ve svém projektu jsem používal Bootstrap a nyní mi přijde, že v rámci Vue by možná bylo přehlednější vytvořit vlastní CSS pro každý prvek, aby nedocházelo k tomu, že se mi v template za každým prvkem bude vytvářet řada Bootstrap tříd namísto jedné.
 
 Mám k tomu ale pár dotazů:
-1) je to vůbec dobrý nápad předělávat boodstrap třídy na vlastní styl ve style scoped?
-2) pokud je to dobrý nápad, neměl bych pak například ve frontend\src\assets\css vytvořit soubory pro sdílené třídy, které se vyskytují v projektu vícekrát, jako je třeba třída container?
-3) Pokud je dobré vytvořit sdílené třídy, pak mě zajímá, zda ve vue se používá formát jako v Django, kde se udělá jeden soubor pro css a kde jsou všechny kody uvedené, a nebo je ve VUE preferovaný způsob, že se vytvoří samostatné soubory (např. container.css) a ty se pak budou importovat jen do těch souborů, kde jsou potřeba. Teoreticky si totiž říkám, že mít jeden dlouhý soubor a v něm vyhledávat nastavení pro danou třídu, musí být náročnější úkon, než našíst soubor jen s nastavením pro danou třídu - ale nevím, jestli to zase nezbržďuje to otevírání souboru.
-4) Je kromě složky: frontend\src\assets\css, ještě někde v projektu další nějaký základní soubor s css který by ovlivňoval vzhled aplikace?
+
+1) Je to vůbec dobrý nápad předělávat Bootstrap třídy na vlastní styl ve style scoped?  
+2) Pokud je to dobrý nápad, neměl bych pak například ve frontend\src\assets\css vytvořit soubory pro sdílené třídy, které se vyskytují v projektu vícekrát, jako je třeba třída container?  
+3) Pokud je dobré vytvořit sdílené třídy, pak mě zajímá, zda ve Vue se používá formát jako v Django, kde se udělá jeden soubor pro CSS a kde jsou všechny kódy uvedené, nebo je ve Vue preferovaný způsob, že se vytvoří samostatné soubory (např. container.css) a ty se pak budou importovat jen do těch souborů, kde jsou potřeba. Teoreticky si totiž říkám, že mít jeden dlouhý soubor a v něm vyhledávat nastavení pro danou třídu musí být náročnější úkon, než načíst soubor jen s nastavením pro danou třídu - ale nevím, jestli to zase nezpomalí otevírání souboru.  
+4) Je kromě složky: frontend\src\assets\css ještě někde v projektu další nějaký základní soubor s CSS, který by ovlivňoval vzhled aplikace?  
 
 
 ## ChatGPT:
@@ -295,10 +312,10 @@ createApp(App).mount('#app')
 
 Takovýto přístup ti umožní efektivně spravovat a udržovat styly ve tvém Vue projektu.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Tak jsem začal vypreparovávt kod ze souboru static/css/style.default.css kde je uložený bootstrap css. Všiml jsem si že hned na začátku tohoto souboru je položka :root, kde je hromada definovaných proměných:
+Tak jsem začal vypreparovávat kód ze souboru static/css/style.default.css, kde je uložený Bootstrap CSS. Všiml jsem si, že hned na začátku tohoto souboru je položka :root, kde je hromada definovaných proměnných:
 
       :root {
         --bs-blue: #0d6efd;
@@ -366,8 +383,7 @@ Tak jsem začal vypreparovávt kod ze souboru static/css/style.default.css kde j
         }
       }
 
-Dá se tohoto přístupu využít i nějak ve VUE a nebo mám z tohoto souboru hodnoty proměnných vypreparovat a vložit do CSS souborů, kde jsou tyto proměnné použity?
-
+Dá se tohoto přístupu využít i nějak ve Vue, nebo mám z tohoto souboru hodnoty proměnných vypreparovat a vložit do CSS souborů, kde jsou tyto proměnné použity?
 
 ## ChatGPT:
 
@@ -487,10 +503,10 @@ Přístup, který Bootstrap používá s CSS proměnnými (custom properties), j
 
 Tento přístup ti umožní efektivně spravovat styly ve tvém Vue projektu a zároveň využívat výhody CSS proměnných.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Dále se mi povedl vytáhnout všechny styly pro container:
+Dále se mi podařilo vytáhnout všechny styly pro container:
 
       .container,
       .container-fluid,
@@ -544,9 +560,7 @@ Dále se mi povedl vytáhnout všechny styly pro container:
         justify-content: space-between;
       }
 
-Koukni mi prosím na ně, zda takto zapsané jsou v pořádku a zda je budu všechny potřebovat (nejsem si jistý zda tu má být uvedená položka 
-.navbar > .container, zda nemá být uvedena až u kodu kde budu řešit navbar)?
-
+Kouknul by ses prosím na ně, zda jsou takto zapsané v pořádku a zda je budu všechny potřebovat (nejsem si jistý, zda tu má být uvedená položka .navbar > .container, zda nemá být uvedena až u kódu, kde budu řešit navbar)?
 
 ## ChatGPT:
 Styly, které jsi vyextrahoval pro `.container` a jeho varianty, jsou zcela v pořádku. Jsou to standardní styly používané Bootstrapem k definování šířek a responzivních zlomů pro kontejnery. Tato pravidla jsou potřebná k zajištění správného responzivního chování kontejnerů napříč různými velikostmi obrazovek.
@@ -715,10 +729,10 @@ Styly, které jsi vyextrahoval pro `.container` a jeho varianty, jsou zcela v po
 
 Tímto způsobem bude tvůj projekt přehledný, snadno udržovatelný a modulární.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-A nebylo by lepší tyto styly importovat až v komponentách kde jsou použity? 
+A nebylo by lepší tyto styly importovat až v komponentách, kde jsou použity?
 
 
 ## ChatGPT:
@@ -849,10 +863,10 @@ export default {
 
 Importování stylů přímo v komponentách, kde jsou použity, je preferovaný způsob práce, protože zajišťuje lepší modularitu, izolaci stylů a potenciálně lepší výkon díky lazy loadingu. Globální styly, které se používají napříč více komponentami, mohou být stále importovány na vyšší úrovni, například v `main.js` nebo `App.vue`.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-A dá se vytvořit jeden specifický styl pro určitý prvek, který by v sobě obsahoval více importovaných stylů. Myslím tím, že by je byl schopen sdružit tak, aby v samotné třídě elementu by mohl namísto všech globálních stylů týkající se daného prvku, byl uveden jen jeden, který by tyto globální prvky sdružoval a přidával k nim vlastní styly?
+Dá se vytvořit jeden specifický styl pro určitý prvek, který by v sobě obsahoval více importovaných stylů? Myslím tím, že by je byl schopen sdružit tak, aby v samotné třídě elementu mohl být namísto všech globálních stylů týkajících se daného prvku uveden jen jeden, který by tyto globální prvky sdružoval a přidával k nim vlastní styly?
 
 
 ## ChatGPT:
@@ -1080,10 +1094,10 @@ Pokud chceš využít CSS moduly, můžeš to udělat takto:
 
 Ano, můžeš vytvořit jeden specifický styl pro určitý prvek, který bude sdružovat více importovaných stylů a přidávat k nim vlastní styly. Tím se zlepší čitelnost a udržovatelnost tvého kódu. Použití CSS modulů nebo kombinování importovaných stylů přímo ve Vue komponentách jsou skvělé způsoby, jak toho dosáhnout.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Co znamenají tyto dva styly a kde bych je měl mít umístněné:
+Co znamenají tyto dva styly a kde bych je měl mít umístěné?
 
       *,
       *::before,
@@ -1196,10 +1210,10 @@ Tyto dva styly mají specifické účely a mohou být umístěny na různých m�
 
 Oba styly by měly být umístěny v globálním CSS souboru, který je importován v hlavním souboru aplikace, aby byly aplikovány na celou aplikaci.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Podle čeho se mám rozhodnout zda umístit import do main.js a nebo do App.vue?
+Podle čeho se mám rozhodnout, zda umístit import do main.js nebo do App.vue?
 
 
 ## ChatGPT:
@@ -1269,10 +1283,10 @@ export default {
 
 Oba přístupy jsou validní a volba mezi nimi závisí na osobních preferencích a specifikách tvého projektu.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Patří toto také do globálního stylu:
+Patří toto také do globálního stylu?
 
       body {
         margin: 0;
@@ -1369,9 +1383,10 @@ Ano, tento styl pro `body` patří také do globálního stylu. Styly pro `body`
 - **Umístění**: Můžeš je umístit buď v `main.js`, nebo v `App.vue`, v závislosti na tom, kde importuješ své globální styly. Výběr závisí na preferencích a struktuře tvého projektu.
 - **Doporučení**: Vytvoř globální CSS soubor a importuj ho na vhodném místě, aby se aplikoval na celou aplikaci.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Co znamená tento styl:
+Co znamená tento styl?
 
       abbr[title],
       abbr[data-bs-original-title] {
@@ -1448,11 +1463,10 @@ Tento styl se vztahuje na HTML značky `<abbr>` (zkratky) s atributem `title` ne
 
 Tento styl se zaměřuje na elementy `<abbr>` s atributy `title` nebo `data-bs-original-title` a vylepšuje jejich vzhled a použitelnost. Můžeš ho umístit buď do globálního CSS souboru, pokud je používán napříč celou aplikací, nebo do specifických komponent, pokud je použití omezeno na určité části aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 ## Dotaz:
 
-Takže je vázán na tagy <abbr>? Ptám se protože jsem si v templates v Django nechal vyhledat abbr a nenašlo mi to nic, takže nevím, jestli ho vůbec potřebuji.
-
+Takže je vázán na tagy <abbr>? Ptám se, protože jsem si v templates v Django nechal vyhledat abbr a nenašlo mi to nic, takže nevím, jestli ho vůbec potřebuji.
 
 ## ChatGPT:
 
@@ -1491,6 +1505,6 @@ Ano, tento styl je vázán na HTML tag `<abbr>`, což je tag používaný k ozna
 - **Zkontroluj, zda není generován automaticky** nebo plánován pro budoucí použití.
 - **Odstraň styl**, pokud zjistíš, že je nepotřebný, ale buď připraven na možné budoucí použití.
 
-## Dotaz:
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#31-7-2024)  
 
 

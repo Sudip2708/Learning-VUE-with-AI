@@ -2,22 +2,18 @@
 
 # Obsah:
 
-[• *Vliv více spuštěných terminálů na běh systému*](#dotaz)  
-[• *Přehled kroků k propojení Vue a Django pro výpis článků*](#dotaz-1)  
-[• *Vysvětlení procesu komunikace mezi Django a Vue*](#dotaz-2)  
-[• *Jak se Vue dozví o adrese serveru Django*](#dotaz-3)  
-[• *Shrnutí postupu pro propojení Django a Vue*](#dotaz-4)  
-[• *Detaily pro nastavení django-cors-headers*](#dotaz-5)  
-[• *Kontrola nastavení a umístění konfigurace v settings.py*](#dotaz-6)  
-[• *Kde umístit nastavení URL pro spolupráci s Vue*](#dotaz-7)  
-[• *Význam URL endpointů v Django a jejich použití*](#dotaz-8)  
-[• *Návrh na úpravu Django view pro vracení JSON dat*](#dotaz-9)  
-[• *Konfigurace URL API endpointů ve Vue.js*](#dotaz-10)  
-[• *Kroky pro přidání nové stránky ve Vue*](#dotaz-11)  
-[• *Umístění souborů ve Vue do src/views vs. src/components*](#dotaz-12)  
-[• *Analýza chyby při načítání dat z API ve Vue*](#dotaz-13)  
-[• *Problém s lomítkem na konci URL ve Vue*](#dotaz-14)  
-[• *Shrnutí propojení Django s Vue*](#dotaz-15)  
+[• *Přehled použití vzorových komponent ve Vue*](#dotaz)  
+[• *Stylizace HTML pomocí vlastních tříd vs. Bootstrap*](#dotaz-1)  
+[• *Použití `:root` a proměnných z CSS ve Vue*](#dotaz-2)  
+[• *Kontrola CSS pro třídu `container` a umístění specifických stylů*](#dotaz-3)  
+[• *Import stylů přímo do komponent*](#dotaz-4)  
+[• *Vytváření specifických stylů, které obsahují více importů*](#dotaz-5)  
+[• *Význam stylů pro `*`, `*::before`, `*::after` a `scroll-behavior`*](#dotaz-6)  
+[• *Rozhodování mezi umístěním importu do `main.js` nebo `App.vue`*](#dotaz-7)  
+[• *Určení, zda styly pro `<body>` patří do globálního stylu*](#dotaz-8)  
+[• *Význam stylu pro `<abbr>` s atributem `title`*](#dotaz-9)  
+[• *Vazba stylu na tag `<abbr>` a jeho potřeba v projektu*](#dotaz-10)  
+
 
 ### 2) Oprava gramatiky a překlepů v otázkách
 
@@ -25,46 +21,128 @@
 
 **Dotaz:**
 
-Takže Vue s Django komunikuje tím, že odesílá požadavek na adresu serveru Django http://localhost:8000/api/articles/
-Ale jak se Vue o této adrese dozví? Jak ví, že má posílat požadavek na http://localhost:8000/api/articles/?
+Ahojky :-)
+Učím se Vue a teď by mě zajímalo toto:
+Takto mám definovaný komponent, který zobrazuje některé položky v horní navigační liště `frontend\src\components\RootHeader\NavItems.vue`:
+
+A takto mám pak definované tyto položky:
+
+1) `frontend\src\components\RootHeader\NavItems\NavHome.vue`:
+
+2) `frontend\src\components\RootHeader\NavItems\NavArticles.vue`:
+
+3) `frontend\src\components\RootHeader\NavItems\NavPost.vue`
+
+A teď k mému dotazu:
+Tyto všechny tři kódy mají identický základ a jenom se mění proměnné hodnoty. Napadlo mě tedy, jestli by nebylo lepší udělat jeden vzor pro všeobecnou položku navigace a pak tento vzor volat s předáním příslušných proměnných?
+Zajímalo by mě k tomu zejména, jestli se to dělá a je to běžnou praktikou, a pak taky jestli to není tak, že je lepší definovat každý kód zvlášť, tak jak to mám v projektu teď, z důvodu rychlejšího načítání. Přeci jenom dosazení proměnných do nějaké šablony je asi delší než nahrání šablony už s proměnnými. Jak to tedy je?
 
 ---
 
 **Dotaz:**
 
-Tak se mi chybu povedlo dohledat. Díky našemu společnému rozboru jsem zjistil, že v definici pohledu pro stránku se všemi články ve Vue jsem v tomto řádku:
-`const response = await api.get('articles/all');`
-měl na konci adresy skutečně ode mě zapsané lomítko a to bylo to, co způsobilo problém.
-Nyní se mi stránka už načetla a dokonce i s názvy článků z databáze, takže Vue a Django jsou propojené a pracují dohromady.
-Což je tedy paráda, a děkuji za pomoc. Pro dnešek máme splněno.
-A na závěr bych chtěl od tebe jen takové poslední shrnutí k tématu propojení Django s Vue.
-Podle toho, co jsem za dnešek pochopil, tak v Django si normálně rozjedu server, který hlídá na localhost portu 8000, zda nebude zadána nějaká adresa, či požadavek, který umí zpracovat – to pozná podle URL adresy, že se shoduje s URL adresou definovanou v jeho kódu.
-Vue pak do toho vstupuje tak, že je spuštěné na vlastním serveru localhost 8080 a když kliknu na odkaz na stránku se všemi články, axios ve Vue nejprve předělá tento požadavek na adresu localhost portu 8000 a tam ho odešle a čeká na odpověď v podobě JSON souboru. Poté co odpověď přijde a obdrží data, předá je dál pro vytváření stránky se všemi články na localhost 8080 dle kódu uvedeného ve Vue.
-Je to tak?
+Nyní bych se chtěl zeptat k stylizování HTML pomocí tříd. Ve svém projektu jsem používal Bootstrap a nyní mi přijde, že v rámci Vue by možná bylo přehlednější vytvořit vlastní CSS pro každý prvek, aby nedocházelo k tomu, že se mi v template za každým prvkem bude vytvářet řada Bootstrap tříd namísto jedné.
+
+Mám k tomu ale pár dotazů:
+1) Je to vůbec dobrý nápad předělávat Bootstrap třídy na vlastní styl ve `style scoped`?
+2) Pokud je to dobrý nápad, neměl bych pak například ve `frontend\src\assets\css` vytvořit soubory pro sdílené třídy, které se vyskytují v projektu vícekrát, jako je třeba třída `container`?
+3) Pokud je dobré vytvořit sdílené třídy, pak mě zajímá, zda ve Vue se používá formát jako v Django, kde se udělá jeden soubor pro CSS a kde jsou všechny kódy uvedené, nebo je ve Vue preferovaný způsob, že se vytvoří samostatné soubory (např. `container.css`) a ty se pak budou importovat jen do těch souborů, kde jsou potřeba. Teoreticky si totiž říkám, že mít jeden dlouhý soubor a v něm vyhledávat nastavení pro danou třídu musí být náročnější úkon, než načíst soubor jen s nastavením pro danou třídu - ale nevím, jestli to zase nezpomalí otevírání souboru.
+4) Je kromě složky: `frontend\src\assets\css` ještě někde v projektu další nějaký základní soubor s CSS, který by ovlivňoval vzhled aplikace?
 
 ---
 
 **Dotaz:**
 
-Tak se můžeme pustit do dalšího kroku:
-Přidat URL endpoint do `urls.py`, který bude mapovat na toto view.
+Tak jsem začal vypreparovávat kód ze souboru `static/css/style.default.css`, kde je uložený Bootstrap CSS. Všiml jsem si, že hned na začátku tohoto souboru je položka `:root`, kde je hromada definovaných proměnných:
 
-První, co by mě zajímalo, je, zda je lepší pro tuto chvíli umístit nastavení pro URL, která bude spolupracovat s Vue, v souboru `main/urls.py`:
-
-Nebo v souboru `articles/urls/articles.py`:
-
-A jak by tato definice měla vypadat?
+Dá se tohoto přístupu využít i nějak ve Vue, nebo mám z tohoto souboru hodnoty proměnných vypreparovat a vložit do CSS souborů, kde jsou tyto proměnné použity?
 
 ---
 
 **Dotaz:**
 
-Takže když jsi mi vytvořil tento bod:
+Dále se mi podařilo vytáhnout všechny styly pro `container`:
 
-Vytvořit URL pro toto view:
+Kouknul by ses prosím na ně, zda jsou takto zapsané v pořádku a zda je budu všechny potřebovat (nejsem si jistý, zda tu má být uvedená položka `.navbar > .container`, zda nemá být uvedena až u kódu, kde budu řešit `navbar`)?
 
-Přidej URL endpoint do `urls.py`, který bude mapovat na toto view.
+---
 
-Kde k definici URL používáš formulaci: `'api/articles/'`
+**Dotaz:**
 
-To neznamená to, co jsem si původně myslel, že definice URL adresy musí začínat v Django slovem `'api/'`, ale prakticky své nastavení mohu nechat tak, jak je, a slovo `'api'` zde bylo jen pro ilustrační charakter?
+A nebylo by lepší tyto styly importovat až v komponentách, kde jsou použity? 
+
+---
+
+**Dotaz:**
+
+Dá se vytvořit jeden specifický styl pro určitý prvek, který by v sobě obsahoval více importovaných stylů? Myslím tím, že by je byl schopen sdružit tak, aby v samotné třídě elementu mohl být namísto všech globálních stylů týkajících se daného prvku uveden jen jeden, který by tyto globální prvky sdružoval a přidával k nim vlastní styly?
+
+---
+
+**Dotaz:**
+
+Co znamenají tyto dva styly a kde bych je měl mít umístěné?
+
+```css
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+```
+
+---
+
+**Dotaz:**
+
+Podle čeho se mám rozhodnout, zda umístit import do `main.js` nebo do `App.vue`?
+
+---
+
+**Dotaz:**
+
+Patří toto také do globálního stylu?
+
+```css
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+```
+
+---
+
+**Dotaz:**
+
+Co znamená tento styl?
+
+```css
+abbr[title],
+abbr[data-bs-original-title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  -webkit-text-decoration-skip-ink: none;
+  text-decoration-skip-ink: none;
+}
+```
+
+---
+
+**Dotaz:**
+
+Takže je vázán na tagy `<abbr>`? Ptám se, protože jsem si v templates v Django nechal vyhledat `abbr` a nenašlo mi to nic, takže nevím, jestli ho vůbec potřebuji.
