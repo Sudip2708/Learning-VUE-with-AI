@@ -1,7 +1,38 @@
+# Přispůsobení se VUE struktuře + stránka se všemi články
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)   
+
+## Obsah:
+[• *Dotaz na použití třídy `APIView` vs. `ListView` v Django*](#dotaz)  
+[• *Získání absolutní cesty pro náhledový obrázek článku*](#dotaz-1)  
+[• *Získání názvu kategorie na základě ID v Django*](#dotaz-2)  
+[• *Přístup k profilovému obrázku autora článku v Django*](#dotaz-3)  
+[• *Výpočet stáří článku: Django vs. Vue*](#dotaz-4)  
+[• *Získání počtu komentářů pro článek v Django*](#dotaz-5)  
+[• *Předávání názvu stránky z Django do Vue*](#dotaz-6)  
+[• *Optimalizace dotazu: filtrovat data v dotazu vs. filtrovat po načtení*](#dotaz-7)  
+[• *Rozdíl mezi dotazem s cizím klíčem a novým dotazem v Django ORM*](#dotaz-8)  
+[• *Zpracování absolutní cesty k obrázkům: dotaz vs. cyklus*](#dotaz-9)
+[• *Přenášení slugu kategorie do Vue pro tvorbu URL*](#dotaz-10)  
+[• *Filtrace článků podle statusu publikace v dotazu Django*](#dotaz-11)  
+[• *Jak metoda `values()` využívá `annotate()` v Django ORM*](#dotaz-12)  
+[• *Zajištění absolutních cest pro obrázky v dotazu*](#dotaz-13)  
+[• *Vytvoření metod pro vracení absolutních URL obrázků v modelu*](#dotaz-14)  
+[• *Použití `Concat` v `annotate` pro absolutní URL obrázků*](#dotaz-15)  
+[• *Jak Vue zpracovává URL obrázku získané jako řetězec*](#dotaz-16)  
+[• *Nahrazení dotazu pro zpracování dat v Django*](#dotaz-17)  
+[• *Význam a přínos serializace dat*](#dotaz-18)  
+[• *Co všechno zahrnuje serializace dat*](#dotaz-19)  
+[• *Serializace v případě, kdy přenášíte pouze řetězce*](#dotaz-20)  
+[• *Možnost dělení tříd pohledů a serializerů v Django*](#dotaz-21)  
+[• *Umístění serializerů v projektu s více pohledy*](#dotaz-22)  
+[• *Optimalizace dotazů a serializace pouze potřebných polí*](#dotaz-23)  
+[• *Použití serializace pro validaci dat v Django a Vue*](#dotaz-24)
+
 ## Dotaz:
 
 Ahojky :-)
-Učím se VUE tím, že do někj postupně přepracovávám mojí aplikaci psanou čistě v Django. Aplikace je určená na vytváření a prohlížení multimediálních článků. Za sebou už mám funkční propojení mezi Django a Vue. Včera jsem  pracovali na základním rozložení vzhledu pro stránku se všemi články. Dneska budeme na této stránce pokračovat, ale stím, že na začátku se nejprve zaměříme na Django a na správnou přípravu dat pro VUE.
+
+Učím se Vue tím, že postupně přepracovávám svou aplikaci, kterou jsem původně napsal v Django. Aplikace je určena na vytváření a prohlížení multimediálních článků. Mám za sebou funkční propojení mezi Django a Vue. Včera jsem pracoval na základním rozložení vzhledu pro stránku se všemi články. Dneska budeme na této stránce pokračovat, ale na začátku se nejprve zaměříme na Django a na správnou přípravu dat pro Vue.
 
 Tady je základní soubor pro původní verzi Django pohledu pro tuto stránku:
 
@@ -83,7 +114,7 @@ Tady je základní soubor pro původní verzi Django pohledu pro tuto stránku:
             return get_context_data(self, context, **kwargs)
 
 
-A tady je kod který momentálně používám pro VUE:
+A tady je kód, který momentálně používám pro Vue:
 
     from rest_framework.views import APIView
     from rest_framework.response import Response
@@ -111,10 +142,10 @@ A tady je kod který momentálně používám pro VUE:
             return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-V konečném důsledku bych rád tento druhý pohled přepsal tak, aby odpovídal potřebám ve VUE, a zároveň mu nechyběla žádná funkčnost předchozího kodu.
+V konečném důsledku bych rád tento druhý pohled přepsal tak, aby odpovídal potřebám ve Vue a zároveň mu nechyběla žádná funkčnost předchozího kódu.
 
-První dotaz je, zda jdu správnou cestou, když používám třídu APIView a nebo zda bych měl použít pro to nějakou jinou třídu.
-A pokud je APIView v pořádku, můžeš mi ji nějak přiblížit, co vše nabízí, v čem je jiná oproti ListView a v čem jsou si naopak podobné.
+První dotaz je, zda jdu správnou cestou, když používám třídu APIView, nebo zda bych měl použít nějakou jinou třídu.
+A pokud je APIView v pořádku, můžeš mi ji přiblížit, co vše nabízí, v čem je jiná oproti ListView a v čem jsou si naopak podobné?
 
 
 ## ChatGPT:
@@ -318,33 +349,34 @@ class ArticleListView(APIView):
 
 Tento příklad zahrnuje základní implementaci stránkování, filtrování a přidání kontextových dat. Můžete ho dále rozšířit podle potřeb vaší aplikace, například přidáním logiky pro podobné články nebo další filtry.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
 Paráda :-)
 
-Rád bych šel krok po kroku. To první, čeho bych chtěl dosáhnout je, abych měl všechna potřebná data pro vykreslení samotných článků.
+Rád bych šel krok po kroku. To první, čeho bych chtěl dosáhnout, je, abych měl všechna potřebná data pro vykreslení samotných článků.
 
 Pro to potřebuji následující:
-1) Náhledový hlavní obrázek článku
-- v moedlu Articles se pole pro tento obrázek jmenuje main_picture_preview, a to co bych zde potřeboval vyřešit, je abych pro něj získal absolutní cestu, tak aby šel ve vue zobrazit.
-2) Datum publikace článku - Mám
-3) Kategorie
-- Zde se mi vrací číslo ID kategorie a já bych potřeboval její název. V jinja2 jsem to řešil přes model Article, kde jsem se přes navázané ID kategorie dostal až k jejímu názvu. To ale asi ve VUE nejde - takto pracovat s instancemi a jejich klíči, takže počítám, že název kategorie budu muset asi v procesu dohledat a číslo nahradit názvem.
-4) Název článku - Mám
-5) Overview článku - Mám
-- Zde jen jeden malí pod dotaz, vzhledem k tomu, že se na této stránce nevyskytuje obsah článku a vzhledem k tomu, že obsah článku je hodně dat, asi by bylo správné tento obsah vůbec nevytahovat z databáze a zaměřit se jen na ty pole, o které mám zájem? Je to tak?
-6) Miniatura profilového obrázku autora článku
-- Zde mám zase jako u kategorie k dispozici pouze id autora a tak počítám, že profilový obrázek asi budu muset dle tohoto id dohledat a přidat do slovníku
-7) Jméno autora
-- to samé jako u předešlého bodu
-8) Stáří článku 
-- to asi budu vypočítávat až ve VUE dle data publikace (A nebo je lepší to vypočítat v Django a jen předat údaj?)
-9) Počet komentářů
-- zde je potřeba získat tento údaj dle id článku v modelu pro komentáře
+1. Náhledový hlavní obrázek článku
+   - V modelu `Article` se pole pro tento obrázek jmenuje `main_picture_preview`, a to, co bych zde potřeboval vyřešit, je, abych pro něj získal absolutní cestu, tak aby šel ve Vue zobrazit.
+2. Datum publikace článku - Mám
+3. Kategorie
+   - Zde se mi vrací číslo ID kategorie a já bych potřeboval její název. V Jinja2 jsem to řešil přes model `Article`, kde jsem se přes navázané ID kategorie dostal až k jejímu názvu. To ale asi ve Vue nejde – takto pracovat s instancemi a jejich klíči, takže počítám, že název kategorie budu muset asi v procesu dohledat a číslo nahradit názvem.
+4. Název článku - Mám
+5. Overview článku - Mám
+   - Zde jen malý poddotaz: vzhledem k tomu, že se na této stránce nevyskytuje obsah článku a vzhledem k tomu, že obsah článku je hodně dat, asi by bylo správné tento obsah vůbec nevytahovat z databáze a zaměřit se jen na ta pole, o která mám zájem? Je to tak?
+6. Miniatura profilového obrázku autora článku
+   - Zde mám zase jako u kategorie k dispozici pouze ID autora, a tak počítám, že profilový obrázek asi budu muset dle tohoto ID dohledat a přidat do slovníku.
+7. Jméno autora
+   - To samé jako u předchozího bodu.
+8. Stáří článku
+   - To asi budu vypočítávat až ve Vue podle data publikace (nebo je lepší to vypočítat v Django a jen předat údaj?).
+9. Počet komentářů
+   - Zde je potřeba získat tento údaj dle ID článku v modelu pro komentáře.
 
-Takže to je vše co potřebuji pro kartičku pro jeden náhled jednoho článku a od tebe bych chtěl návrh kodu, který by toto navrhl základní kostru.
+Takže to je vše, co potřebuji pro kartičku pro jeden náhled jednoho článku, a od tebe bych chtěl návrh kódu, který by toto navrhl jako základní kostru.
 
-A jako další pod dotaz bych se chtěl zeptat, jestli je lepší předávat údaje jako je název stránky v kontextu z django a nebo je lepší ho natvrdo vložit přímo do Vue komponenty?
+A jako další poddotaz bych se chtěl zeptat, jestli je lepší předávat údaje jako je název stránky v kontextu z Django, nebo je lepší ho natvrdo vložit přímo do Vue komponenty?
 
 
 ## ChatGPT:
@@ -592,10 +624,11 @@ Je to do jisté míry otázka preference a záleží na konkrétním případu p
 
 V tomto případě jsem zahrnul `page_title` a `page_subtitle` do kontextu, který posíláme z Djanga. To vám dává flexibilitu měnit tyto hodnoty na straně serveru, pokud by to bylo v budoucnu potřeba.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
 OK, vezmeme to po kouskách.
-Je lepší zadat dotaz na databázi, který načte všechny data o článcích a pak následně z těchto dat filtrovat ty která potřebuji pro VUE, a nebo je lepší poslat dotaz do databáze, který mi pro každý článek vybere jen obsah polí o která mám zájem?
+Je lepší zadat dotaz na databázi, který načte všechny data o článcích a pak následně z těchto dat filtrovat ty, které potřebuji pro Vue, nebo je lepší poslat dotaz do databáze, který mi pro každý článek vybere jen obsah polí, o která mám zájem?
 
 ## ChatGPT:
 
@@ -749,9 +782,10 @@ Jedinou věcí, kterou byste museli řešit dodatečně, je získání absolutn�
 
 Tento přístup je obecně efektivnější než načtení všech dat a následné filtrování v Pythonu, zejména když pracujete s větším množstvím záznamů.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Vysvětli mi prosím rozdíl mezi těmito dvěma zápisi:
+Vysvětli mi prosím rozdíl mezi těmito dvěma zápisy:
 
 1)
 
@@ -776,7 +810,7 @@ Vysvětli mi prosím rozdíl mezi těmito dvěma zápisi:
            'comment_count'
        )
 
-Který z nic má potencionál být větší zátěží a nebo co se týká zátěže, jsou si rovnocenné?
+Který z nich má potenciál být větší zátěží, nebo co se týká zátěže, jsou si rovnocenné?
 
 ## ChatGPT:
 
@@ -903,11 +937,12 @@ Pro váš konkrétní případ, kdy chcete získat specifická data pro Vue a ne
 
 Pokud byste však potřebovali pracovat s metodami modelu nebo chtěli zachovat flexibilitu pro přístup k dalším polím, první přístup s `only()` by mohl být vhodnější.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-OK, napiš mi tedy kod který by byl ve stylu druhého zápisu s values, ale který by načítal pouze tato data:
+OK, napiš mi tedy kód, který by byl ve stylu druhého zápisu s `values()`, ale který by načítal pouze tato data:
 
-'id', 'main_picture_preview', 'publication_date', 'title', 'overview',
+`'id', 'main_picture_preview', 'publication_date', 'title', 'overview'`
 
 Rád bych to viděl jen pro to, abych dokázal oddělit, co je potřeba pro pole s cizími klíči a co je potřeba pro obyčejné pole s hodnotami.
 
@@ -962,31 +997,31 @@ Zde vidíte rozdíly:
 
 Toto oddělení vám pomůže lépe porozumět, jak pracovat s jednoduchými poli modelu versus poli z cizích klíčů a vypočítanými hodnotami.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
 Potřeboval bych to vzít ještě trošičku pomaleji, abych to správně pochopil. Mohl bys mi tedy tyto příklady rozdělit, tak abych vždy viděl nastavení pro jeden daný příklad.
 
-Vycházejme tedy z tohoto kodu:
+Vycházejme tedy z tohoto kódu:
 
-articles2 = Article.objects.values( 'id', 'main_picture_preview', 'published', 'title', 'overview', 'category', 'author', )
+```python
+articles2 = Article.objects.values('id', 'main_picture_preview', 'published', 'title', 'overview', 'category', 'author')
+```
 
 Který prochází všechny články a vytahuje z nich hodnoty pro dané klíče.
 
 A nyní bych tě tedy poprosil o následující:
 
-Přepiš mi tento základní kod pouze s jednou funkční změnou - a to:
+1. Přepiš mi tento základní kód pouze s jednou funkční změnou – a to:
 
-1) Aby main_picture_preview, které momentálně obsahuje tento řetězec:
+   - Aby `main_picture_preview`, které momentálně obsahuje tento řetězec:
+     `'images/articles/main_picture/article-00000001-0440.jpg'`
 
-'images/articles/main_picture/article-00000001-0440.jpg'
+     obsahovalo absolutní cestu.
 
-Obsahovalo absolutní cestu.
+2. Aby mi pole pro `category` obsahovalo namísto jejího ID její název (`category.name`).
 
-To mi vytvoř jako jeden příklad.
-
-2) Aby mi pole pro categoryi obsahovalo namísto její ID její název (category.name)
-
-To mi vytvoř taky jako jeden oddělený příklad.
+To mi vytvoř také jako jeden oddělený příklad.
 
 ## Claude:
 
@@ -1040,10 +1075,11 @@ V tomto příkladu jsme použili `select_related('category')` pro efektivní na�
 
 Tyto příklady ukazují, jak můžete postupně upravovat váš dotaz pro získání přesně těch dat, která potřebujete, v požadovaném formátu. Každá úprava přidává určitou složitost, ale také vám dává větší kontrolu nad daty, která získáváte z databáze.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
-Z toho co píšeš jsem si udělal představu, že  select_related je způsob jak se vyhnout novému dotazu (například do modelu kategorie na základě jejího ID) a namísto toho používáme dotazu přez cizí klíč. Zajímalo by mě nějaké porovnání těchto metod. Proč je dotaz přes cizí klíč rychlejší než nový dotaz na databázi kategoriií?
+Z toho, co píšeš, jsem si udělal představu, že `select_related` je způsob, jak se vyhnout novému dotazu (například do modelu kategorie na základě jejího ID) a namísto toho použít dotaz přes cizí klíč. Zajímalo by mě nějaké porovnání těchto metod. Proč je dotaz přes cizí klíč rychlejší než nový dotaz na databázi kategorií?
 
-A co se týká profilového obrázku, přemýšlím nad tím, zda je efektnější tuto absolutní cestu řešit v rámci dotazu, tak jak je to teď a nebo zda by bylo výhodnější ji v rámci dotazu neřešit a řešit ji až po načtení dat, například nějakým cyklem. Co je efektivnější přístup a proč?
+A co se týká profilového obrázku, přemýšlím nad tím, zda je efektivnější tuto absolutní cestu řešit v rámci dotazu, tak jak je to teď, nebo zda by bylo výhodnější ji řešit až po načtení dat, například nějakým cyklem. Co je efektivnější přístup a proč?
 
 ## Claude:
 
@@ -1109,25 +1145,40 @@ Pro velmi velké množství dat nebo v situacích, kde je kritický výkon, mů�
 
 Nejlepší přístup často závisí na konkrétním případu použití, množství dat a potřebách vaší aplikace. V praxi je dobré začít s jednodušším řešením (zpracování po načtení) a optimalizovat pouze pokud se ukáže, že je to potřeba.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Když zadám dotaz na databázy pro vyhledání všech článků:
+Když zadám dotaz na databázi pro vyhledání všech článků:
+
+```python
 articles = Article.objects.all()
+```
 
-Co se mi vrací s databáze? Vrací se mi všechna data (mám na mysli všechen obsah v podobě řetězců) a nebo se mi vrací pouze adresa na instance k článkům a k ostatním datům pak přistupuji přes ní bez nutnosti dalších databázových dotazů?
+Co se mi vrací z databáze? Vrací se mi všechna data (mám na mysli veškerý obsah v podobě řetězců) nebo se mi vrací pouze adresa na instance článků a k ostatním datům pak přistupuji přes ni bez nutnosti dalších databázových dotazů?
 
-Jde mi o to, zda po zadání tohoto dotazu se předávají veškerá data instance a nebo jen nějaký malí přístupový řetězec (adresu) k datům.
+Jde mi o to, zda po zadání tohoto dotazu se předávají veškerá data instance, nebo jen nějaký malý přístupový řetězec (adresu) k datům.
 
-Součástí tohoto dotazu, je tak i to, zda když mám v nějaké proměné načtenou určitou instanci kterou získán například dotazem:
+Součástí tohoto dotazu je i to, zda když mám v nějaké proměnné načtenou určitou instanci, kterou jsem získal například dotazem:
+
+```python
 article = Article.objects.first()
+```
 
 A pak budu přes tuto instanci přistupovat k jednotlivým polím:
+
+```python
 title = article.title
+```
 
-Jestli tímto způsobem dochází k novému databázovému dotazu, anebo dojde jen k volání instanční adresy, který odkazuje na určitý řádek databáze + sloupec (title), takže se nespouští klasický databázový dotaz. A nebo se děje to, že při načtení instance příkazem:
+Jestli tímto způsobem dochází k novému databázovému dotazu, nebo dojde jen k volání instanční adresy, která odkazuje na určitý řádek datab
+
+áze a sloupec (`title`), takže se nespouští klasický databázový dotaz. A nebo se děje to, že při načtení instance příkazem:
+
+```python
 article = Article.objects.first()
+```
 
-Se automaticky někde v paměti nějak vytvoří prostor, který si pamatuje všechny její data a tyto data jsou do něj přesunuty z databáze při tomto dotazu.
+Se automaticky někde v paměti vytvoří prostor, který si pamatuje všechny její data a tyto data jsou do něj přesunuta z databáze při tomto dotazu.
 
 Jde mi o pochopení tohoto procesu.
 
@@ -1222,14 +1273,16 @@ articles = Article.objects.annotate(comment_count=Count('comments')).values('id'
 
 Django ORM poskytuje různé nástroje pro optimalizaci dotazů a správu načítání dat. Používání správných metod ve správných situacích ti pomůže dosáhnout lepšího výkonu a efektivity aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A můžu se teda na instanci vytvořenou dotazem:
+A mohu se tedy na instanci vytvořenou dotazem:
 
+```python
 article = Article.objects.first()
+```
 
-Dívat jako na json slovník se všemi daty modelu? A nebo instance obsahuje ještě něco navíc?
+Dívat jako na JSON slovník se všemi daty modelu? A nebo instance obsahuje ještě něco navíc?
 
 
 ## ChatGPT:
@@ -1303,17 +1356,20 @@ Kromě dat obsahuje instance také další atributy a metody, například:
 
 Takže instance Django modelu není jen prostý JSON slovník, ale obsahuje více než jen data, což ji činí mocným nástrojem pro práci s databází v Django frameworku.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Jasně, tak už tomu asi rozumím - když se vytváří instance dojde k volání daného modelu a vytváří se v paměti objekt, který neobsahuje pouze data ale všechny ostatní náležitosti definované v modelu - takže samotná instance je vlastně jen odkaz na umístnění těchto dat v rámci paměti. A zároveň v tomto místě paměti jsou přeneseny všechna data a to včetně i metod, takže instance zabírá více místa v paměti.
+Jasně, tak už tomu asi rozumím – když se vytváří instance, dojde k volání daného modelu a vytváří se v paměti objekt, který neobsahuje pouze data, ale všechny ostatní náležitosti definované v modelu – takže samotná instance je vlastně jen odkaz na umístění těchto dat v rámci paměti. A zároveň v tomto místě paměti jsou přenesena všechna data a to včetně i metod, takže instance zabírá více místa v paměti.
 
 Kdežto, když použiji tento příkaz:
 
-first_article = Article.objects.values('id', 'title', 'overview', 'main_picture_preview').frist()
+```python
+first_article = Article.objects.values('id', 'title', 'overview', 'main_picture_preview').first()
+```
 
-pak first_article není instance modelu Article obsahující i jeho metody, ale jen json slovník, s vybranými daty.
+Pak `first_article` není instance modelu `Article` obsahující i jeho metody, ale jen JSON slovník s vybranými daty.
 
-Takže vytvoření instance je vhodné jen v těch případech, kdy víme, že bude skrze ni používat i další možnosti a metody modelu, a vytvoření slovníku je pak vhodné tam, kde chceme vytáhnout jen data pro zobrazení (například ve VUE). 
+Takže vytvoření instance je vhodné jen v těch případech, kdy víme, že budeme skrze ni používat i další možnosti a metody modelu, a vytvoření slovníku je pak vhodné tam, kde chceme vytáhnout jen data pro zobrazení (například ve Vue).
 
 Je to tak?
 
@@ -1362,17 +1418,18 @@ print(article_data['title'])  # Přístup k datům
 
 Tvé pochopení je správné: používání instancí modelu je vhodné, když potřebuješ využívat další možnosti a metody modelu, zatímco `values()` je vhodné, když potřebuješ jen data pro zobrazení nebo další zpracování bez dalších náležitostí modelu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Paráda a díky moc. Teď už mám pocit, že tomuto rozumím. A závěr který jsem si z toho odnesl, je že při vytváření dotazů v pohledu v Django, pro frontend je na zdroje méně náročnější vytváření slovníků namísto instancí.
+Paráda a díky moc. Teď už mám pocit, že tomuto rozumím. A závěr, který jsem si z toho odnesl, je, že při vytváření dotazů v pohledu v Django je pro frontend méně náročné vytváření slovníků namísto instancí.
 
 Teď by mě ale zajímalo toto:
 
-Karta pro zobrazení jednoho článku na stránce s články obsahuje pole pro název kategorie, pod který daný článek spadá. A v mém původním kodu v Django, toto pole bylo kotvou, která po kliknutí na kategorii volala adresu pro zobrazení článků pro danou kategorii a předávala této adrese hodnotu slug pro danou kategorii.
+Karta pro zobrazení jednoho článku na stránce s články obsahuje pole pro název kategorie, pod který daný článek spadá. A v mém původním kódu v Django bylo toto pole kotvou, která po kliknutí na kategorii volala adresu pro zobrazení článků pro danou kategorii a předávala této adrese hodnotu `slug` pro danou kategorii.
 
-Počítám tedy, že pokud budu chtít podobnou funkčnost i ve VUE, pak asi i kromě jména kategorie, bych měl přenášet i její slug, podle kterého pak budu vytvářet dotaz pro stránku s články dané kategorie. To by tedy znamenalo, že pro všechny tyto případy, kdy nějaká hodnota je zároveň i router-link, pak si musím hodnoty podle kterých se vytvářejí dané URL přidat do slovníku json s daty pro daný článek taky, a být tak na to připraven. 
+Počítám tedy, že pokud budu chtít podobnou funkčnost i ve Vue, pak kromě jména kategorie bych měl přenášet i její `slug`, podle kterého pak budu vytvářet dotaz pro stránku s články dané kategorie. To by tedy znamenalo, že pro všechny tyto případy, kdy nějaká hodnota je zároveň i `router-link`, pak si musím hodnoty, podle kterých se vytvářejí dané URL, přidat do JSON slovníku s daty pro daný článek také, a být tak na to připraven.
 
-Je to tak a nebo se to dělá ve VUE nějakým jiným způsobem?
+Je to tak, nebo se to dělá ve Vue nějakým jiným způsobem?
 
 ## ChatGPT:
 
@@ -1482,11 +1539,12 @@ V tomto příkladu `router-link` používá `slug` z odpovědi API k vytvoření
 
 Ano, pokud potřebuješ dynamické odkazy ve Vue.js, je potřeba zahrnout do odpovědi API i další potřebné hodnoty, jako například `slug` kategorie. Takto můžeš ve Vue.js snadno vytvářet dynamické odkazy na základě dat, která dostaneš z backendu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
 Takže stále pracuji na optimalizaci dotazu do databáze.
 
-Toto je to co zatím mám:
+Toto je to, co zatím mám:
 
         articles2 = Article.objects.select_related(
             'category',
@@ -1510,7 +1568,7 @@ Toto je to co zatím mám:
             'author_profile_picture'
         )
 
-A nyní bych chtěl aby se filtorvali články pouze se statusem publish (article.status == publish), kde je dobré místo v tomto dotazu přidat toto omezení a proč?
+A nyní bych chtěl, aby se filtrovaly články pouze se statusem `publish` (`article.status == publish`). Kde je dobré místo v tomto dotazu přidat toto omezení a proč?
 
 ## ChatGPT:
 
@@ -1562,9 +1620,10 @@ articles2 = Article.objects.filter(
 
 Použitím `filter()` před `select_related()`, `annotate()` a `values()` optimalizujete dotaz, což vede k efektivnějšímu a rychlejšímu načítání dat z databáze.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Jak metoda values() pozná, zda určitá data pro daný klíč má hledat v modelu a nebo v metodě annotate()? Prochází nejprve annotate() a pak pole modelu? A co by se stalo, kdyby nějaký klíč nebyl ani tam a ani tam? 
+Jak metoda `values()` pozná, zda určitá data pro daný klíč má hledat v modelu, nebo v metodě `annotate()`? Prochází nejprve `annotate()` a pak pole modelu? A co by se stalo, kdyby nějaký klíč nebyl ani tam, ani tam?
 
 ## ChatGPT:
 
@@ -1615,11 +1674,12 @@ articles = Article.objects.select_related('category', 'author').annotate(
 
 Tento postup zajišťuje, že `values()` vybírá hodnoty na základě toho, kde byly definovány. Proto je důležité zajistit, že názvy v `values()` odpovídají těm, které jste použili v `annotate()` a modelových polích, aby nedocházelo k chybám.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
 Super a díky :-)
 
-takže momentálně můj kod pro dotaz na data pro stránku se všemi publikovanými články vypadá takto:
+Takže momentálně můj kód pro dotaz na data pro stránku se všemi publikovanými články vypadá takto:
 
         articles2 = Article.objects.filter(
             status='publish'
@@ -1645,9 +1705,9 @@ takže momentálně můj kod pro dotaz na data pro stránku se všemi publikovan
             'author_profile_picture'
         )
 
-A nyní bych potřeboval zařídit, aby hodnoty pro main_picture_preview a author_profile_picture byli absolutní cesty.
+A nyní bych potřeboval zařídit, aby hodnoty pro `main_picture_preview` a `author_profile_picture` byly absolutní cesty.
 
-Jaké jsou nejčastěji používané způsoby jak tohoto dosáhnout?
+Jaké jsou nejčastěji používané způsoby, jak tohoto dosáhnout?
 
 ## ChatGPT:
 
@@ -1774,7 +1834,7 @@ class ArticleListView(APIView):
 
 Oba přístupy mají své výhody. Pokud pracujete s API a Django REST framework, úprava serializeru může být pohodlnější. Pokud pracujete přímo s modely a šablonami, přidání vlastností do modelu může být praktičtější.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
 Když mám v modelu část pro profilové obrázky zpracovanou takto:
@@ -1846,9 +1906,9 @@ Když mám v modelu část pro profilové obrázky zpracovanou takto:
             ''' Method for creating size variants of the main article image. '''
             return main_picture_processing(self)
 
-Takže mám zde 4 varianty obrázků, které se používají, pak mám asi pro každou variantu vytvořit metodu, která by vracela absolutní url obrázku, že? 
+Takže mám zde 4 varianty obrázků, které se používají. Pak mám asi pro každou variantu vytvořit metodu, která by vracela absolutní URL obrázku, že? 
 
-Dopiš mi prosím do toho kodu metody, které by mě vraceli absolutní url, tak abych ji pak mohl použít v rámci dotazu.
+Dopiš mi prosím do toho kódu metody, které by mi vracely absolutní URL, abych je pak mohl použít v rámci dotazu.
 
 
 ## ChatGPT:
@@ -1986,17 +2046,20 @@ class ArticleSerializer(serializers.ModelSerializer):
 
 Tímto způsobem budete mít ve vašem API odpovědi všechny potřebné absolutní URL obrázků.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A nemohl bych jednoduše použít v annotate něco jako je toto:
+A nemohl bych jednoduše použít v `annotate` něco jako je toto:
 
-    absolute_main_picture=Concat(
-        Value(settings.BASE_URL),
-        'main_picture_preview',
-        output_field=models.CharField()
-    )
+```python
+absolute_main_picture=Concat(
+    Value(settings.BASE_URL),
+    'main_picture_preview',
+    output_field=models.CharField()
+)
+```
 
-A pokud ano, mohl bys mi vysvětlit tento příkaz? 
+A pokud ano, mohl bys mi vysvětlit tento příkaz?
 
 ## ChatGPT:
 
@@ -2070,13 +2133,14 @@ articles = Article.objects.filter(
 
 Tento přístup je efektivní, pokud je URL základní část konstantní a relativní cesta je uložena v databázi. Pokud se základní část URL může měnit nebo pokud jsou podmínky složitější, může být potřeba přizpůsobit tento kód.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Nerozumím tomu procesu, když VUE dostane řetězec:
-"/media/images/articles/main_picture/article-00000045-0440.jpg"
+Nerozumím tomu procesu, když Vue dostane řetězec:
 
-Jak s ním dál nakládá aby se nakonec dostal až k umístění obrázku.
+`"/media/images/articles/main_picture/article-00000045-0440.jpg"`
+
+Jak s ním dál nakládá, aby se nakonec dostal až k umístění obrázku?
 
 ## ChatGPT:
 
@@ -2152,10 +2216,10 @@ Rozumím, že to může být trochu matoucí. Vysvětlím, jak to ve Vue.js a v 
 
 Tímto způsobem se dosáhne toho, že Vue.js může přistupovat k obrázkům, aniž by musel znát fyzické umístění souborů na serveru. Důležité je mít správně nastavenou konfiguraci serveru pro správné mapování URL na fyzické soubory.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Takže když včera jsem používal pro vytažení a přenosu dat do vue tento kod pro pohled v Django:
+Takže když včera jsem používal pro vytažení a přenos dat do Vue tento kód pro pohled v Django:
 
     from rest_framework.views import APIView
     from rest_framework.response import Response
@@ -2218,7 +2282,7 @@ A dneska bych ho rád nahradil tak, abych mohl využít tento upravený a specif
             'author_profile_picture_url'
         )
 
-Jak bych toho měl ideálně dosáhnout? A pokud je více než jede dobrý způsob, zmiň i je.
+Jak bych toho měl ideálně dosáhnout? A pokud je více než jeden dobrý způsob, zmiň i je.
 
 ## ChatGPT:
 
@@ -2509,11 +2573,12 @@ Který přístup zvolit záleží na vašich konkrétních potřebách:
 
 Ve většině případů bych doporučil začít s třetím přístupem, protože poskytuje dobrý kompromis mezi čitelností, udržovatelností a výkonem. Pokud později zjistíte, že potřebujete více optimalizovat, můžete přejít na první nebo druhý přístup.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Pořád nějak nerozumím tomu, proč bych měl chtít provádět serializaci dat? Proč je to dobré, co mi to přináší a co tím získávám? Jaká je za tím myšlenka a nebo potřeba?
+Pořád nějak nerozumím tomu, proč bych měl chtít provádět serializaci dat. Proč je to dobré, co mi to přináší a co tím získávám? Jaká je za tím myšlenka a nebo potřeba?
 
-Můžeš mi uvést i nějaké příklady? 
+Můžeš mi uvést i nějaké příklady?
 
 ## ChatGPT:
 
@@ -2738,9 +2803,10 @@ Jistě, rád vám vysvětlím význam a výhody serializace v kontextu webových
 
 Celkově serializery poskytují rozhraní mezi vašimi interními datovými strukturami a externím API. Pomáhají udržovat vaše API čisté, konzistentní a bezpečné, zatímco zjednodušují mnoho běžných úkolů spojených s manipulací s daty v API.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Je serilizace proces, kdy data se převádějí na řetězec a přidává se k němu datový format, anebo to dělá ještě i něco víc.
+Je serializace proces, kdy se data převádějí na řetězec a přidává se k němu datový formát, nebo to dělá ještě něco víc?
 
 ## ChatGPT:
 
@@ -2835,9 +2901,10 @@ V tomto případě serializér zvaliduje vstupní JSON data a vytvoří novou in
 
 Serializace je klíčový proces pro převod dat mezi různými formáty, zejména při komunikaci mezi frontendem a backendem. V Django REST Framework se používá pro snadný převod Django modelů na JSON, což usnadňuje práci s API a integraci s frontendovými frameworky jako Vue.js.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A dá se říct, že když přináším z Django do Vue JSON slovník, který obsahuje řetězce, a u kterých nepotřebuju deklarovat typ, stačí mi, že jsou to řetězce, že pak serializaci nepotřebuju, které nepotřebuju.
+A dá se říct, že když přináším z Django do Vue JSON slovník, který obsahuje řetězce, a u kterých nepotřebuji deklarovat typ, stačí mi, že jsou to řetězce, že pak serializaci nepotřebuji?
 
 ## ChatGPT:
 
@@ -2956,9 +3023,10 @@ class ArticleListView(APIView):
 
 Serializace není vždy nezbytná, pokud pracujete s velmi jednoduchými daty. Nicméně, přináší mnoho výhod, jako je validace, jednotné formátování, bezpečnost a snadné rozšíření kódu. V dlouhodobém horizontu může použití serializérů ušetřit čas a usnadnit údržbu kódu, zejména pokud vaše aplikace začne růst a pracovat s komplexnějšími daty.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A dá se, že by třída pro pohled dětěla i z třídy pro serializer. A sterilizovaní dat bych proved uvnitř pohledu?
+A dá se říct, že třída pro pohled dědí i z třídy pro serializer? A serializaci dat bych provedl uvnitř pohledu?
 
 ## ChatGPT:
 
@@ -3035,9 +3103,10 @@ Tento přístup jasně odděluje zodpovědnosti:
 
 Tímto způsobem získáte čistý a rozšiřitelný kód, který se snadno udržuje a rozšiřuje.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Ve svém projektům mám něco mezi deseti a dvaceti pohledy, co znamená to, že pro každý pohled budu muset takhle vytvářet celý arizér. A pokud ano, teda, kde by měly být úložní kysly ve složce pro pohledy jako podsložka anebo v kořenovém adresáři.
+Ve svém projektu mám něco mezi deseti a dvaceti pohledy. Co znamená, že pro každý pohled budu muset takto vytvářet celý serializer? A pokud ano, kde by měly být úložní soubory – ve složce pro pohledy jako podsložka, nebo v kořenovém adresáři?
 
 ## ChatGPT:
 
@@ -3170,9 +3239,10 @@ Použití serializérů přináší několik výhod:
 
 Použití serializérů je tedy doporučeným postupem při práci s Django REST Frameworkem a pomáhá udržet váš kód organizovaný a snadno spravovatelný.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A dá se říct, že když z modelu nepotřebuji všechny polé a potřebuji jen jich pár, tak je lepší provízt Select na tyto polé a serializovat až tento výsledek, než vytáhnout celou instanci a serializovat ji.
+A dá se říct, že když z modelu nepotřebuji všechna pole a potřebuji jen některá, je lepší provést `select` na tyto pole a serializovat až tento výsledek, než vytáhnout celou instanci a serializovat ji?
 
 ## ChatGPT:
 
@@ -3261,9 +3331,10 @@ class ArticleSummaryListView(APIView):
 
 Tento přístup je doporučený zejména v případech, kdy pracujete s velkými množstvími dat nebo když je potřeba přenést pouze specifickou podmnožinu dat pro optimalizaci výkonu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Napiš mi něco více o tom, jak se může serializace použít pro validaci dát. Zkus to rozebrat z obou strán, jak z Django, tak z Vue.
+Napiš mi něco více o tom, jak se může serializace použít pro validaci dat. Zkus to rozebrat z obou stran, jak z Django, tak z Vue.
 
 ## ChatGPT:
 
@@ -3395,7 +3466,7 @@ export default {
 
 Tento přístup kombinuje výhody obou světů a zajišťuje robustní a spolehlivou aplikaci.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 
 
 

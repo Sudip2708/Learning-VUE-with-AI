@@ -1,133 +1,247 @@
-### 1) Seznam stručných popisů otázek pro obsah
-
-# Obsah:
-
-[• *Přiřazení CSS pro `<body>` ve Vue*](#dotaz)  
-[• *Alternativní způsoby zápisu kódu ve Vue*](#dotaz-1)  
-[• *Výhody a nevýhody inline stylů ve Vue vs. globální CSS soubory*](#dotaz-2)  
-[• *Alternativy pro `collapse` a `navbar-collapse` ve Vue*](#dotaz-3)  
-[• *Vytváření Vue komponent s oddělením stylů a responzivity*](#dotaz-4)  
-[• *Potřeba použití `!important` ve style scoped*](#dotaz-5)  
-[• *Náhrada `<a>` za `<router-link>` ve Vue*](#dotaz-6)  
-[• *Jednoduchý kód pro zobrazení obrázku ve Vue*](#dotaz-7)  
-[• *Použití nástrojů ve Vue pro vytváření komponent podobných Bootstrapu*](#dotaz-8)  
-[• *Porovnání používání Vue komponent a Bootstrapu*](#dotaz-9)  
-
-### 2) Oprava gramatiky a překlepů v otázkách
-
----
-
-**Dotaz:**
+## Dotaz:
 
 Ahojky :-)
-Dneska pokračujeme v učení Vue a to stále na přepracování frontendu, který byl celý psaný v Django do Vue.
+Učím se VUE tím, že do někj postupně přepracovávám mojí aplikaci psanou čistě v Django. Aplikace je určená na vytváření a prohlížení multimediálních článků. Za sebou už mám funkční propojení mezi Django a Vue. Včera jsem  pracovali na základním rozložení vzhledu pro stránku se všemi články. Dneska budeme na této stránce pokračovat, ale stím, že na začátku se nejprve zaměříme na Django a na správnou přípravu dat pro VUE.
 
-Dnešní první otázka zní. V mém projektu mám vlastní CSS, které je přepracované z Bootstrap 5 a má kolem 12000 řádků. Počítám, že asi nebude potřeba úplně vše přetahovat, a tak bych rád ponechal jen ta CSS, která jsou skutečně v kódu použita. Napadlo mě, že budu postupně procházet všechny stránky a styly z Bootstrap tříd přepisovat do Vue přímo.
+Tady je základní soubor pro původní verzi Django pohledu pro tuto stránku:
 
-První na co jsem narazil, je že v Django CSS mám definovaný i vzhled pro body:
+A tady je kod který momentálně používám pro VUE:
 
-```css
-body {
-  margin: 0;
-  font-family: var(--bs-body-font-family);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
-  text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-```
+V konečném důsledku bych rád tento druhý pohled přepsal tak, aby odpovídal potřebám ve VUE, a zároveň mu nechyběla žádná funkčnost předchozího kodu.
 
-A ve Vue mám body v tomto souboru: `frontend\public\index.html`
+První dotaz je, zda jdu správnou cestou, když používám třídu APIView a nebo zda bych měl použít pro to nějakou jinou třídu.
+A pokud je APIView v pořádku, můžeš mi ji nějak přiblížit, co vše nabízí, v čem je jiná oproti ListView a v čem jsou si naopak podobné.
 
-Jak mám ideálně přiřadit CSS pro body ve Vue?
+## Dotaz:
 
----
+Paráda :-)
 
-**Dotaz:**
+Rád bych šel krok po kroku. To první, čeho bych chtěl dosáhnout je, abych měl všechna potřebná data pro vykreslení samotných článků.
 
-Jaké jsou jiné způsoby zápisu tohoto kódu?
+Pro to potřebuji následující:
+1) Náhledový hlavní obrázek článku
+- v moedlu Articles se pole pro tento obrázek jmenuje main_picture_preview, a to co bych zde potřeboval vyřešit, je abych pro něj získal absolutní cestu, tak aby šel ve vue zobrazit.
+2) Datum publikace článku - Mám
+3) Kategorie
+- Zde se mi vrací číslo ID kategorie a já bych potřeboval její název. V jinja2 jsem to řešil přes model Article, kde jsem se přes navázané ID kategorie dostal až k jejímu názvu. To ale asi ve VUE nejde - takto pracovat s instancemi a jejich klíči, takže počítám, že název kategorie budu muset asi v procesu dohledat a číslo nahradit názvem.
+4) Název článku - Mám
+5) Overview článku - Mám
+- Zde jen jeden malí pod dotaz, vzhledem k tomu, že se na této stránce nevyskytuje obsah článku a vzhledem k tomu, že obsah článku je hodně dat, asi by bylo správné tento obsah vůbec nevytahovat z databáze a zaměřit se jen na ty pole, o které mám zájem? Je to tak?
+6) Miniatura profilového obrázku autora článku
+- Zde mám zase jako u kategorie k dispozici pouze id autora a tak počítám, že profilový obrázek asi budu muset dle tohoto id dohledat a přidat do slovníku
+7) Jméno autora
+- to samé jako u předešlého bodu
+8) Stáří článku 
+- to asi budu vypočítávat až ve VUE dle data publikace (A nebo je lepší to vypočítat v Django a jen předat údaj?)
+9) Počet komentářů
+- zde je potřeba získat tento údaj dle id článku v modelu pro komentáře
 
-```vue
-<template>
-  <router-link 
-    class="navbar-brand text-sm fw-bold text-dark" 
-    to="/"
-  >
-  Bootstrap Blog
-  </router-link>
-</template>
+Takže to je vše co potřebuji pro kartičku pro jeden náhled jednoho článku a od tebe bych chtěl návrh kodu, který by toto navrhl základní kostru.
 
-<style scoped>
-@import '@/assets/css/b-class/navbar-brand.css';
-@import '@/assets/css/b-class/text-sm.css';
-@import '@/assets/css/b-class/fw-bold.css';
-@import '@/assets/css/b-class/text-dark.css';
-</style>
-```
+A jako další pod dotaz bych se chtěl zeptat, jestli je lepší předávat údaje jako je název stránky v kontextu z django a nebo je lepší ho natvrdo vložit přímo do Vue komponenty?
 
-Tak aby vracel stejný výsledek?  
-Jde mi o to, že předělávám projekt z Django do Vue a v Django jsem hodně používal upraveného CSS Bootstrap stylu, a nyní přemýšlím, zda by se dalo obejít bez něj a použít to, co Vue nabízí.
+## Dotaz:
 
-Tady jsou ještě i CSS pro dané odkazy:
+OK, vezmeme to po kouskách.
+Je lepší zadat dotaz na databázi, který načte všechny data o článcích a pak následně z těchto dat filtrovat ty která potřebuji pro VUE, a nebo je lepší poslat dotaz do databáze, který mi pro každý článek vybere jen obsah polí o která mám zájem?
 
-V projektu mám také tento soubor: `frontend\src\assets\css\global\variables.css`  
-Kde jsou všechny proměnné a který importuji v `main.js`.
+## ChatGPT:
 
----
+Je obecně lepší poslat dotaz do databáze, který vybere pouze pole, která skutečně potřebuješ. Tímto způsobem minimalizuješ přenos dat a zlepšíš výkon aplikace.
 
-**Dotaz:**
+V Django ORM lze použít metody `only()` nebo `values()` k omezení načítaných polí. Následně můžeš tato data serializovat a poslat do Vue. Pojďme si to ukázat na příkladu.
 
-Mě jde o to, že projekt, který jsem vytvářel, má vlastní přepracovanou sadu Bootstrap stylů, kde CSS soubor má asi 12000 řádků, takže mě to dovedlo k myšlence, že kdyby byly styly přímo v kódu jako inline style scoped, že by se zlehčilo načítání stylů.  
-Nemuselo by docházet k tomu, že by se daný styl vyhledával v tomto 12000 řádků dlouhém CSS, ale byl by k dispozici ihned u kódu. Bylo by to tak asi i více přehledné, akorát nevím, zda se nepletu v tom, že načtení stylu definovaném ve style scoped je rychlejší než načtení ze zmíněného 12000 řádkového CSS?
+## Dotaz:
 
----
+Vysvětli mi prosím rozdíl mezi těmito dvěma zápisi:
 
-**Dotaz:**
+Který z nic má potencionál být větší zátěží a nebo co se týká zátěže, jsou si rovnocenné?
 
-Jaké jsou další možnosti, jak bych mohl situaci se styly, které mají na sebe navázanou JS funkcionalitu, řešit?  
-Pojďme si více rozebrat: `collapse` a `navbar-collapse`.
+## Dotaz:
 
-Co dělají, proč je to pro mě dobré a jak jinak bych mohl dosáhnout stejného výsledku, aby to více odpovídalo filozofii práce ve Vue?
+OK, napiš mi tedy kod který by byl ve stylu druhého zápisu s values, ale který by načítal pouze tato data:
 
----
+'id', 'main_picture_preview', 'publication_date', 'title', 'overview',
 
-**Dotaz:**
+Rád bych to viděl jen pro to, abych dokázal oddělit, co je potřeba pro pole s cizími klíči a co je potřeba pro obyčejné pole s hodnotami.
 
-OK, rozumím, a právě rád bych si na tomto projektu vyzkoušel Vue přístup s vytvářením vlastních komponent.  
-Z toho, co píšeš, jsem pochopil, že jsou zde uvedeny jen proto, že při přechodu na menší zařízení se tyto položky schovají do tlačítka s nabídkou.  
-Řekněme, že tuto funkcionalitu zatím nepotřebuji a momentálně mi jde primárně o funkčnost na PC bez responzivních požadavků - ty počítám půjdou asi doplnit později.  
-Je tedy dobrý nápad přepsat kód tak, že ve style scoped budou uvedeny jen vzhledové styly a responzivní funkčnost budu dodělávat až následně?
+## Dotaz:
 
----
+Potřeboval bych to vzít ještě trošičku pomaleji, abych to správně pochopil. Mohl bys mi tedy tyto příklady rozdělit, tak abych vždy viděl nastavení pro jeden daný příklad.
 
-**Dotaz:**
+Vycházejme tedy z tohoto kodu:
 
-Když píšu styly do style scoped, pak asi už nemusím používat `!important`, podle mě se toto používá pouze pro přepsání defaultního nastavení, a když vytvářím novou třídu, tak ta přeci žádné defaultní nastavení nemá. Je to tak?
+articles2 = Article.objects.values( 'id', 'main_picture_preview', 'published', 'title', 'overview', 'category', 'author', )
 
----
+Který prochází všechny články a vytahuje z nich hodnoty pro dané klíče.
 
-**Dotaz:**
+A nyní bych tě tedy poprosil o následující:
 
-Je dobré ve Vue nahradit `<a>` za `<router-link>`?
+Přepiš mi tento základní kod pouze s jednou funkční změnou - a to:
 
----
+1) Aby main_picture_preview, které momentálně obsahuje tento řetězec:
 
-**Dotaz:**
+'images/articles/main_picture/article-00000001-0440.jpg'
 
-Jak by vypadal jednoduchý kód ve Vue, který by zobrazil obrázek z tohoto umístění: `/media/images/articles/main_picture/article-00000001-0440.jpg`?
+Obsahovalo absolutní cestu.
 
----
+To mi vytvoř jako jeden příklad.
 
-**Dotaz:**
+2) Aby mi pole pro categoryi obsahovalo namísto její ID její název (category.name)
 
-Je ve Vue nějaký nástroj, který by vytvářel také komponenty, jako mám v Bootstrapu, třeba `container`?
+To mi vytvoř taky jako jeden oddělený příklad.
 
----
+## Dotaz:
+Z toho co píšeš jsem si udělal představu, že  select_related je způsob jak se vyhnout novému dotazu (například do modelu kategorie na základě jejího ID) a namísto toho používáme dotazu přez cizí klíč. Zajímalo by mě nějaké porovnání těchto metod. Proč je dotaz přes cizí klíč rychlejší než nový dotaz na databázi kategoriií?
 
-**Dotaz:**
+A co se týká profilového obrázku, přemýšlím nad tím, zda je efektnější tuto absolutní cestu řešit v rámci dotazu, tak jak je to teď a nebo zda by bylo výhodnější ji v rámci dotazu neřešit a řešit ji až po načtení dat, například nějakým cyklem. Co je efektivnější přístup a proč?
 
-Je lepší používat některou z těchto komponent než Bootstrap?
+## Dotaz:
+
+Když zadám dotaz na databázy pro vyhledání všech článků:
+articles = Article.objects.all()
+
+Co se mi vrací s databáze? Vrací se mi všechna data (mám na mysli všechen obsah v podobě řetězců) a nebo se mi vrací pouze adresa na instance k článkům a k ostatním datům pak přistupuji přes ní bez nutnosti dalších databázových dotazů?
+
+Jde mi o to, zda po zadání tohoto dotazu se předávají veškerá data instance a nebo jen nějaký malí přístupový řetězec (adresu) k datům.
+
+Součástí tohoto dotazu, je tak i to, zda když mám v nějaké proměné načtenou určitou instanci kterou získán například dotazem:
+article = Article.objects.first()
+
+A pak budu přes tuto instanci přistupovat k jednotlivým polím:
+title = article.title
+
+Jestli tímto způsobem dochází k novému databázovému dotazu, anebo dojde jen k volání instanční adresy, který odkazuje na určitý řádek databáze + sloupec (title), takže se nespouští klasický databázový dotaz. A nebo se děje to, že při načtení instance příkazem:
+article = Article.objects.first()
+
+Se automaticky někde v paměti nějak vytvoří prostor, který si pamatuje všechny její data a tyto data jsou do něj přesunuty z databáze při tomto dotazu.
+
+Jde mi o pochopení tohoto procesu.
+
+## Dotaz:
+
+A můžu se teda na instanci vytvořenou dotazem:
+
+article = Article.objects.first()
+
+Dívat jako na json slovník se všemi daty modelu? A nebo instance obsahuje ještě něco navíc?
+
+
+## Dotaz:
+
+Jasně, tak už tomu asi rozumím - když se vytváří instance dojde k volání daného modelu a vytváří se v paměti objekt, který neobsahuje pouze data ale všechny ostatní náležitosti definované v modelu - takže samotná instance je vlastně jen odkaz na umístnění těchto dat v rámci paměti. A zároveň v tomto místě paměti jsou přeneseny všechna data a to včetně i metod, takže instance zabírá více místa v paměti.
+
+Kdežto, když použiji tento příkaz:
+
+first_article = Article.objects.values('id', 'title', 'overview', 'main_picture_preview').frist()
+
+pak first_article není instance modelu Article obsahující i jeho metody, ale jen json slovník, s vybranými daty.
+
+Takže vytvoření instance je vhodné jen v těch případech, kdy víme, že bude skrze ni používat i další možnosti a metody modelu, a vytvoření slovníku je pak vhodné tam, kde chceme vytáhnout jen data pro zobrazení (například ve VUE). 
+
+Je to tak?
+
+
+## Dotaz:
+
+Paráda a díky moc. Teď už mám pocit, že tomuto rozumím. A závěr který jsem si z toho odnesl, je že při vytváření dotazů v pohledu v Django, pro frontend je na zdroje méně náročnější vytváření slovníků namísto instancí.
+
+Teď by mě ale zajímalo toto:
+
+Karta pro zobrazení jednoho článku na stránce s články obsahuje pole pro název kategorie, pod který daný článek spadá. A v mém původním kodu v Django, toto pole bylo kotvou, která po kliknutí na kategorii volala adresu pro zobrazení článků pro danou kategorii a předávala této adrese hodnotu slug pro danou kategorii.
+
+Počítám tedy, že pokud budu chtít podobnou funkčnost i ve VUE, pak asi i kromě jména kategorie, bych měl přenášet i její slug, podle kterého pak budu vytvářet dotaz pro stránku s články dané kategorie. To by tedy znamenalo, že pro všechny tyto případy, kdy nějaká hodnota je zároveň i router-link, pak si musím hodnoty podle kterých se vytvářejí dané URL přidat do slovníku json s daty pro daný článek taky, a být tak na to připraven. 
+
+Je to tak a nebo se to dělá ve VUE nějakým jiným způsobem?
+
+## Dotaz:
+
+Takže stále pracuji na optimalizaci dotazu do databáze.
+
+Toto je to co zatím mám:
+
+A nyní bych chtěl aby se filtorvali články pouze se statusem publish (article.status == publish), kde je dobré místo v tomto dotazu přidat toto omezení a proč?
+
+## Dotaz:
+
+Jak metoda values() pozná, zda určitá data pro daný klíč má hledat v modelu a nebo v metodě annotate()? Prochází nejprve annotate() a pak pole modelu? A co by se stalo, kdyby nějaký klíč nebyl ani tam a ani tam? 
+
+## Dotaz:
+
+Super a díky :-)
+
+takže momentálně můj kod pro dotaz na data pro stránku se všemi publikovanými články vypadá takto:
+
+A nyní bych potřeboval zařídit, aby hodnoty pro main_picture_preview a author_profile_picture byli absolutní cesty.
+
+Jaké jsou nejčastěji používané způsoby jak tohoto dosáhnout?
+
+## Dotaz:
+
+Když mám v modelu část pro profilové obrázky zpracovanou takto:
+
+Takže mám zde 4 varianty obrázků, které se používají, pak mám asi pro každou variantu vytvořit metodu, která by vracela absolutní url obrázku, že? 
+
+Dopiš mi prosím do toho kodu metody, které by mě vraceli absolutní url, tak abych ji pak mohl použít v rámci dotazu.
+
+## Dotaz:
+
+A nemohl bych jednoduše použít v annotate něco jako je toto:
+
+    absolute_main_picture=Concat(
+        Value(settings.BASE_URL),
+        'main_picture_preview',
+        output_field=models.CharField()
+    )
+
+A pokud ano, mohl bys mi vysvětlit tento příkaz? 
+
+## Dotaz:
+
+Nerozumím tomu procesu, když VUE dostane řetězec:
+"/media/images/articles/main_picture/article-00000045-0440.jpg"
+
+Jak s ním dál nakládá aby se nakonec dostal až k umístění obrázku.
+
+## Dotaz:
+
+Takže když včera jsem používal pro vytažení a přenosu dat do vue tento kod pro pohled v Django:
+
+A dneska bych ho rád nahradil tak, abych mohl využít tento upravený a specifikovaný dotaz:
+
+Jak bych toho měl ideálně dosáhnout? A pokud je více než jede dobrý způsob, zmiň i je.
+
+## Dotaz:
+
+Pořád nějak nerozumím tomu, proč bych měl chtít provádět serializaci dat? Proč je to dobré, co mi to přináší a co tím získávám? Jaká je za tím myšlenka a nebo potřeba?
+
+Můžeš mi uvést i nějaké příklady? 
+
+## Dotaz:
+
+Je serilizace proces, kdy data se převádějí na řetězec a přidává se k němu datový format, anebo to dělá ještě i něco víc.
+
+## Dotaz:
+
+A dá se říct, že když přináším z Django do Vue JSON slovník, který obsahuje řetězce, a u kterých nepotřebuju deklarovat typ, stačí mi, že jsou to řetězce, že pak serializaci nepotřebuju, které nepotřebuju.
+
+## Dotaz:
+
+A dá se, že by třída pro pohled dětěla i z třídy pro serializer. A sterilizovaní dat bych proved uvnitř pohledu?
+
+## Dotaz:
+
+Ve svém projektům mám něco mezi deseti a dvaceti pohledy, co znamená to, že pro každý pohled budu muset takhle vytvářet celý arizér. A pokud ano, teda, kde by měly být úložní kysly ve složce pro pohledy jako podsložka anebo v kořenovém adresáři.
+
+## Dotaz:
+
+A dá se říct, že když z modelu nepotřebuji všechny polé a potřebuji jen jich pár, tak je lepší provízt Select na tyto polé a serializovat až tento výsledek, než vytáhnout celou instanci a serializovat ji.
+
+
+## Dotaz:
+
+Napiš mi něco více o tom, jak se může serializace použít pro validaci dát. Zkus to rozebrat z obou strán, jak z Django, tak z Vue.
+
+
+
+

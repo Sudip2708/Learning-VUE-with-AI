@@ -1,15 +1,33 @@
+# Přispůsobení se VUE struktuře + stránka se všemi články
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)   
+
+## Obsah:
+[• *Vytvoření Vue komponenty pro hlavičku webu*](#dotaz)  
+[• *Možnosti nastavení šířky hlavičky webu ve Vue*](#dotaz-1)  
+[• *Zátěž 12000 řádkového CSS a přechod na style scoped ve Vue*](#dotaz-2)  
+[• *Import CSS stylů do Vue komponenty a struktura DOMu*](#dotaz-3)  
+[• *Výhody globálních CSS souborů vs. scoped styly ve Vue*](#dotaz-4)  
+[• *Vysvětlení kódu Vue šablony pro zobrazení seznamu článků*](#dotaz-5)  
+[• *Rozdíl mezi `response` a `response.data` v Axiosu*](#dotaz-6)  
+[• *Struktura a zobrazení dat v seznamu článků ve Vue*](#dotaz-7)  
+[• *Přepis kódu pro zobrazení klíčů prvního článku*](#dotaz-8)  
+[• *Přístup k datům autora článku přes Vue a API*](#dotaz-9)  
+[• *Vytvoření Vue komponenty pro zobrazení článků podle specifikací*](#dotaz-10)  
+[• *Rozdělení kódu Vue šablony do menších komponent*](#dotaz-11)  
+
 ## Dotaz:
 
 Ahojky :-)
-Předělávám projekt z Django do Vue a do teď jsem zkoušel cestu překopírování kodu z templates a  změnu bootstrap tříd na ccs v style scoped. Příjde mi ale, že jsem takto částečně svázán jiným stylem práce v předchozím projektu (přeci jenom zde jsem používal klasické html šablony s jinja2) a já bych si nyní chtěl vyzkoušet čistě vue přístup, abych si mohl porovnat tyto dva přístupy.
-Používám tedy VUE s CLI, jestli je to tedy nějak důležité.
-A z toho co jsem zatím pochopil, jde mi nejprve o to, abych dosáhl stejného vzhledu a pak i funkcionality.
+Předělávám projekt z Django do Vue a doteď jsem zkoušel cestu překopírování kódu z templates a změnu Bootstrap tříd na CSS ve style scoped. Přijde mi ale, že jsem takto částečně svázán jiným stylem práce z předchozího projektu (přeci jenom jsem tam používal klasické HTML šablony s Jinja2), a já bych si nyní chtěl vyzkoušet čistě Vue přístup, abych mohl porovnat tyto dva přístupy.
+Používám tedy Vue s CLI, jestli je to nějak důležité.
+Z toho, co jsem zatím pochopil, jde mi nejprve o to, abych dosáhl stejného vzhledu, a pak i funkcionality.
 
-Nyní tedy jsem zaměřený především na vzhled a to první co bych po tobě chtěl je připravit mi komponenty pro hlavičku webu dle následující kryterií:
+Nyní tedy jsem zaměřený především na vzhled a to první, co bych po tobě chtěl, je připravit mi komponenty pro hlavičku webu dle následujících kritérií:
+
 1) Hlavička je rozdělena na levou a pravou stranu.
-2) Levá strana je přilepena na levo a obsahuje nadpis stránky: Bootstrap Blog, na který je možný kliknout a dostat se na domácí stránku ('/')
-3) Pravá strana je zase přilepena napravo a obsahuje zatím tři položky:  
-   - Odkaz na stránku Home: routeName="homeView" to="/" 
+2) Levá strana je přilepena vlevo a obsahuje nadpis stránky: Bootstrap Blog, na který je možné kliknout a dostat se na domácí stránku ('/').
+3) Pravá strana je zase přilepena vpravo a obsahuje zatím tři položky:
+   - Odkaz na stránku Home: routeName="homeView" to="/"
    - Odkaz na stránku Articles: routeName="articlesView" to="/articles/all"
    - Odkaz na stránku Post: routeName="postView" to="/post"
 
@@ -275,9 +293,10 @@ Abyste mohli tuto hlavičku použít ve vaší aplikaci, importujte a použijte 
 
 Nezapomeňte, že budete potřebovat správně nastavené cesty v routeru Vue, aby odkazy fungovaly správně. Pokud byste potřebovali pomoc s nastavením routeru nebo s čímkoli dalším, dejte mi vědět.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Tak, hlavička by byla a teď bych potřeboval docílit podobného stylu, jako jsem měl v Django, kde šířku hlavičky udávala bootstrap třída container. Jaké jsou možnosti jak tohoto dosáhnout? Uveď mi více než jednu a i s výčtem výhod a nevýhod.
+Tak, hlavička by byla, a teď bych potřeboval docílit podobného stylu, jako jsem měl v Django, kde šířku hlavičky udávala Bootstrap třída container. Jaké jsou možnosti, jak tohoto dosáhnout? Uveď mi více než jednu a i s výčtem výhod a nevýhod.
 
 ## ChatGPT:
 
@@ -707,10 +726,10 @@ Nevýhody:
 
 Každý z těchto přístupů má své místo a může být vhodný v různých situacích. Výběr nejlepší metody závisí na specifických požadavcích vašeho projektu, týmových preferencích a dlouhodobé udržitelnosti kódu.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-V mém projektu psaném v Django jsem pro šablony používal předpřipravený bootstrap css upravený potřebám projektu. CSS má kolem 12000 řádek, zajímalo by mě, jak moc velká zátěž je takto velký css a jestli by se přechodem na selektivní css v style scoped výrazně ušetřilo prostředků a nebo zda je 12000 řádkový css v pořádku a nezpůsobuje větší zátěž?
+V mém projektu psaném v Django jsem pro šablony používal předpřipravený Bootstrap CSS upravený potřebám projektu. CSS má kolem 12000 řádků, zajímalo by mě, jak moc velká zátěž je takto velký CSS a jestli by se přechodem na selektivní CSS ve style scoped výrazně ušetřilo prostředků, nebo zda je 12000 řádkový CSS v pořádku a nezpůsobuje větší zátěž?
 
 ## ChatGPT:
 
@@ -807,11 +826,10 @@ Doporučení:
 
 Pamatujte, že optimalizace by měla být založena na reálných problémech s výkonem. Pokud vaše aplikace funguje dobře s současným CSS, možná není nutné dělat velké změny. Vždy je dobré najít rovnováhu mezi optimalizací a udržitelností kódu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Když mám vytvořený na tomto umístění: frontend\src\assets\css\global\my-container.css
-
-Tento styl:
+Mám vytvořený tento styl na umístění: : frontend\src\assets\css\global\my-container.css
 
       .my-container {
         width: 100%;
@@ -882,16 +900,15 @@ A nyní bych ho chtěl importovat do tohoto komponentu: frontend\src\components\
       }
       </style>
 
-Jaké jsou způsoby jak toho dosáhnout a jaké jsou jejich výhody a nevýhody?
+Jaké jsou způsoby, jak toho dosáhnout, a jaké jsou jejich výhody a nevýhody?
 
 A pak ještě poddotaz:
-Když chci v komponentě použít více tříd pro daný prvek, je lepší každou třídu dávat do vlastního DIV a vytvořit více domů a nebo je lepší skládat ty styli které jdou k sobě do jednoho elementu, tak jak je to tady:
+Když chci v komponentě použít více tříd pro daný prvek, je lepší každou třídu dávat do vlastního DIVu a vytvořit více DOMů, nebo je lepší skládat ty styly, které jdou k sobě, do jednoho elementu, tak jak je to tady:
 
       <header class="my-container header">
 
-protože se ušetří na zapozdření kodu?
-Zajímalo by mě jak je to tedy s DOMY které se vytvážejí do sebe zanořujícími se tagy? Proč se to řeší a jaký to má vliv na aplikaci?
-
+protože se ušetří na zanoření kódu?
+Zajímalo by mě, jak je to tedy s DOMy, které se vytvářejí do sebe zanořujícími se tagy? Proč se to řeší a jaký to má vliv na aplikaci?
 
 ## ChatGPT:
 
@@ -1096,11 +1113,12 @@ Obecně platí pravidlo: používejte pouze tolik DOM elementů, kolik je skute�
 
 V případě vašeho příkladu je tedy správné použít obě třídy na jednom elementu `<header>`, pokud obě třídy přispívají k jeho stylu a funkcionalitě.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Jestli to tedy chápu správně, pak styli, které se používají na více prvků (jako je zde například styl pro kontejner) je lepší umístnit do globálního css souboru, protože tak se zajistí, že nedojde k zbytečnému znovunačítání nastavení stylu s každou položkou kde je použit a sníží se tak objem dat potřebných na vykreslení stránky.
+Jestli to tedy chápu správně, pak styly, které se používají na více prvků (jako je zde například styl pro kontejner), je lepší umístit do globálního CSS souboru, protože se tak zajistí, že nedojde ke zbytečnému znovunačítání nastavení stylu s každou položkou, kde je použit, a sníží se tak objem dat potřebných pro vykreslení stránky.
 
-A ze stejného důvodu je dobré i stylové css které jsou například v bootstrapu rozdělené do menších logických celků, je dobré zpojit do jednoho nastavení pro daný prvek.
+A ze stejného důvodu je dobré i stylové CSS, které je například v Bootstrapu rozdělené do menších logických celků, spojit do jednoho nastavení pro daný prvek.
 
 Je to tak?
 
@@ -1133,13 +1151,12 @@ Co se týče Bootstrapu, mnoho vývojářů skutečně preferuje customizaci a v
 
 Závěrem, váš přístup k optimalizaci CSS je správný. Jde o to najít rovnováhu mezi globálními styly pro často používané elementy a komponentově specifickými styly pro unikátní prvky, přičemž se snažíme minimalizovat celkovou velikost a počet CSS souborů.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Tak super a hlavičku máme :-)
-Teď tedy budeme pracovat na stránce se všemi články. 
-To co už mám je tento soubor:
-frontend\src\views\ArticlesView.vue:
+Tak super, hlavičku máme :-)
+Teď tedy budeme pracovat na stránce se všemi články.
+To, co už mám, je tento soubor: frontend\src\views\ArticlesView.vue:
 
       <template>
         <div class="my-container">
@@ -1182,7 +1199,7 @@ frontend\src\views\ArticlesView.vue:
 
 
 Který mi pouze na stránce vypíše seznam všech článků.
-Kod takto funguje a to první, co od tebe budu chtít je mi prodrobně vysvětlit význam jednotlivých řádků v tomto scriptu:
+Kód takto funguje a to první, co od tebe budu chtít, je mi podrobně vysvětlit význam jednotlivých řádků v tomto skriptu.
 
 ## ChatGPT:
 
@@ -1343,10 +1360,10 @@ Uzavření metody, sekce metod a objektu komponenty.
 
 Tento skript tedy definuje komponentu, která při svém vytvoření automaticky načte články z API a uloží je do svého stavu. Pokud dojde k chybě při načítání, je tato chyba zaznamenána v konzoli. Data jsou pak k dispozici pro zobrazení v šabloně komponenty.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Takže při volání articlesView nejprve kod načte za pomocí axios nastavení data ze serveru a přijatá data dosadí do seznamu articles a ty pak v kodu šablony prochází a zobrazuje. Je to tak?
+Takže při volání articlesView nejprve kód načte za pomocí Axios nastavení data ze serveru a přijatá data dosadí do seznamu articles a ty pak v kódu šablony prochází a zobrazuje. Je to tak?
 
 ## ChatGPT:
 
@@ -1422,10 +1439,10 @@ export default {
 
 Tímto způsobem se při každém zobrazení `ArticlesView` komponenty načtou články ze serveru a zobrazí se na stránce.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Jaký je rozdíl obsahu mezi proměnou response a response.data? Co jiného než .data responze obsahuje?
+Jaký je rozdíl mezi proměnnou response a response.data? Co jiného než .data response obsahuje?
 
 ## ChatGPT:
 
@@ -1508,9 +1525,10 @@ async fetchArticles() {
 
 Používání `response.data` je efektivní, protože vás nezajímá celá odpověď, ale pouze data v ní obsažená. Pokud byste však potřebovali více informací, například stavový kód nebo hlavičky, můžete pracovat s celým objektem `response`.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Jak jsou uložená data v seznamu articles? Jedná se o json slovník? Pokud ano, jak si mohu nechat zobrazit obsah jeho klíčů?
+Jak jsou uložená data v seznamu articles? Jedná se o JSON slovník? Pokud ano, jak si mohu nechat zobrazit obsah jeho klíčů?
 
 ## ChatGPT:
 
@@ -1626,6 +1644,7 @@ async fetchArticles() {
 
 Tímto způsobem můžete snadno zobrazit a pracovat s obsahem jednotlivých článků ve vašem seznamu `articles`.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
 Přepiš mi tuto část:
@@ -1641,8 +1660,7 @@ Přepiš mi tuto část:
         </div>
       </template>
 
-Tak aby namísto procházení článků vzala první článek v řadě a pak v něm spustit cyklus na procházení jednotlivých položek slovníku a výpisem pouze klíčů.
-
+Tak, aby namísto procházení článků vzala první článek v řadě a pak v něm spustila cyklus na procházení jednotlivých položek slovníku a výpisem pouze klíčů.
 
 ## ChatGPT:
 
@@ -1751,7 +1769,7 @@ export default {
 
 Tímto způsobem zobrazíte pouze první článek a klíče jeho objektu, což vám umožní lépe pochopit strukturu dat a ověřit, jaké klíče obsahuje.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
 Super, tak teď se mi zobrazil obsah klíčů pro jeden článek:
@@ -1774,7 +1792,7 @@ Super, tak teď se mi zobrazil obsah klíčů pro jeden článek:
       previous_article
       next_article
 
-zajímalo by ně, zda se zde dá přistupovat k jednotlivým položkám jako v django, kde za pomoci jinja2 jsem si třeba byl schopný vytáhnout namísto ID autora, který článek vytvořil, jeho jméno přes article.author.name. Jde to takto nějak i zde a nebo to funguje tak, že se zobrazují jen přenesená data a pro získání autora je potřeba znovu vytvořit dotaz do databáze dle jeho ID?
+Zajímalo by mě, zda se zde dá přistupovat k jednotlivým položkám jako v Django, kde za pomoci Jinja2 jsem si třeba byl schopný vytáhnout namísto ID autora, který článek vytvořil, jeho jméno přes article.author.name. Jde to takto nějak i zde, nebo to funguje tak, že se zobrazují jen přenesená data, a pro získání autora je potřeba znovu vytvořit dotaz do databáze dle jeho ID?
 
 ## Claude:
 
@@ -1854,9 +1872,10 @@ Obecně platí, že ve Vue.js pracujete s daty tak, jak je získáte z API. Poku
 
 Doporučuji se podívat na strukturu dat, kterou vaše API aktuálně vrací, a podle toho se rozhodnout, zda potřebujete upravit backend pro poskytnutí více detailů, nebo zda budete muset implementovat dodatečné požadavky na frontendu pro získání chybějících informací.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Můžeš mi vytvořit komponenty pro ArticlesView, které by vyhledané články zobrazili podle těchto kritérií:
+Můžeš mi vytvořit komponenty pro ArticlesView, které by vyhledané články zobrazily podle těchto kritérií:
 1) Na jeden řádek 3 články
 2) Na jednu stránku 2 řádky (časem přidám stránkování pro více stránek)
 3) Jeden článek bude obsahovat tyto řádky:
@@ -1864,8 +1883,7 @@ Můžeš mi vytvořit komponenty pro ArticlesView, které by vyhledané články
    - Levá strana: Datum a rok publikování (published), Pravá strana: Kategorie (category)
    - Nadpis článku (title)
    - Úvod k článku (overview)
-   - Řazeno z leva: Miniatura obrázku autora, Jméno autora, Doba od jeho publikování, Počet komentářů (Tyto položky dodám až později)
-
+   - Řazeno zleva: Miniatura obrázku autora, Jméno autora, Doba od jeho publikování, Počet komentářů (Tyto položky dodám až později)
 
 ## ChatGPT:
 
@@ -2279,9 +2297,10 @@ Pro použití těchto komponent:
 
 Tyto komponenty poskytují základní strukturu a vzhled pro zobrazení článků. Můžete je dále upravovat podle potřeby, například přidáním stránkování nebo úpravou stylů.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 ## Dotaz:
 
-Můžeš mi tento pohled rozdělit na menší komponenty z kterých by se skládal:
+Můžeš mi tento pohled rozdělit na menší komponenty, z kterých by se skládal:
 
       <template>
         <div class="article-card">
@@ -2398,7 +2417,7 @@ Můžeš mi tento pohled rozdělit na menší komponenty z kterých by se sklád
       </style>
 
 
-A je dobré rozdělovat takovéto kody a nebo v tomto případě je lepší, když je vše v jednom souboru?
+A je dobré rozdělovat takovéto kódy, nebo v tomto případě je lepší, když je vše v jednom souboru?
 
 ## ChatGPT:
 
@@ -2683,4 +2702,5 @@ export default {
 
 Celkově je rozdělení komponenty na menší části doporučované, pokud to pomůže zlepšit přehlednost, modularitu a údržbu kódu. V případě jednodušších komponent nebo malých projektů může být vše v jednom souboru také přijatelné, ale jak projekt roste, rozdělení na menší komponenty často přináší výhody.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#2-8-2024)  
 
