@@ -2,18 +2,16 @@
 
 # Obsah:
 
-[• *Přehled použití vzorových komponent ve Vue*](#dotaz)  
-[• *Stylizace HTML pomocí vlastních tříd vs. Bootstrap*](#dotaz-1)  
-[• *Použití `:root` a proměnných z CSS ve Vue*](#dotaz-2)  
-[• *Kontrola CSS pro třídu `container` a umístění specifických stylů*](#dotaz-3)  
-[• *Import stylů přímo do komponent*](#dotaz-4)  
-[• *Vytváření specifických stylů, které obsahují více importů*](#dotaz-5)  
-[• *Význam stylů pro `*`, `*::before`, `*::after` a `scroll-behavior`*](#dotaz-6)  
-[• *Rozhodování mezi umístěním importu do `main.js` nebo `App.vue`*](#dotaz-7)  
-[• *Určení, zda styly pro `<body>` patří do globálního stylu*](#dotaz-8)  
-[• *Význam stylu pro `<abbr>` s atributem `title`*](#dotaz-9)  
-[• *Vazba stylu na tag `<abbr>` a jeho potřeba v projektu*](#dotaz-10)  
-
+[• *Přiřazení CSS pro `<body>` ve Vue*](#dotaz)  
+[• *Alternativní způsoby zápisu kódu ve Vue*](#dotaz-1)  
+[• *Výhody a nevýhody inline stylů ve Vue vs. globální CSS soubory*](#dotaz-2)  
+[• *Alternativy pro `collapse` a `navbar-collapse` ve Vue*](#dotaz-3)  
+[• *Vytváření Vue komponent s oddělením stylů a responzivity*](#dotaz-4)  
+[• *Potřeba použití `!important` ve style scoped*](#dotaz-5)  
+[• *Náhrada `<a>` za `<router-link>` ve Vue*](#dotaz-6)  
+[• *Jednoduchý kód pro zobrazení obrázku ve Vue*](#dotaz-7)  
+[• *Použití nástrojů ve Vue pro vytváření komponent podobných Bootstrapu*](#dotaz-8)  
+[• *Porovnání používání Vue komponent a Bootstrapu*](#dotaz-9)  
 
 ### 2) Oprava gramatiky a překlepů v otázkách
 
@@ -22,92 +20,11 @@
 **Dotaz:**
 
 Ahojky :-)
-Učím se Vue a teď by mě zajímalo toto:
-Takto mám definovaný komponent, který zobrazuje některé položky v horní navigační liště `frontend\src\components\RootHeader\NavItems.vue`:
+Dneska pokračujeme v učení Vue a to stále na přepracování frontendu, který byl celý psaný v Django do Vue.
 
-A takto mám pak definované tyto položky:
+Dnešní první otázka zní. V mém projektu mám vlastní CSS, které je přepracované z Bootstrap 5 a má kolem 12000 řádků. Počítám, že asi nebude potřeba úplně vše přetahovat, a tak bych rád ponechal jen ta CSS, která jsou skutečně v kódu použita. Napadlo mě, že budu postupně procházet všechny stránky a styly z Bootstrap tříd přepisovat do Vue přímo.
 
-1) `frontend\src\components\RootHeader\NavItems\NavHome.vue`:
-
-2) `frontend\src\components\RootHeader\NavItems\NavArticles.vue`:
-
-3) `frontend\src\components\RootHeader\NavItems\NavPost.vue`
-
-A teď k mému dotazu:
-Tyto všechny tři kódy mají identický základ a jenom se mění proměnné hodnoty. Napadlo mě tedy, jestli by nebylo lepší udělat jeden vzor pro všeobecnou položku navigace a pak tento vzor volat s předáním příslušných proměnných?
-Zajímalo by mě k tomu zejména, jestli se to dělá a je to běžnou praktikou, a pak taky jestli to není tak, že je lepší definovat každý kód zvlášť, tak jak to mám v projektu teď, z důvodu rychlejšího načítání. Přeci jenom dosazení proměnných do nějaké šablony je asi delší než nahrání šablony už s proměnnými. Jak to tedy je?
-
----
-
-**Dotaz:**
-
-Nyní bych se chtěl zeptat k stylizování HTML pomocí tříd. Ve svém projektu jsem používal Bootstrap a nyní mi přijde, že v rámci Vue by možná bylo přehlednější vytvořit vlastní CSS pro každý prvek, aby nedocházelo k tomu, že se mi v template za každým prvkem bude vytvářet řada Bootstrap tříd namísto jedné.
-
-Mám k tomu ale pár dotazů:
-1) Je to vůbec dobrý nápad předělávat Bootstrap třídy na vlastní styl ve `style scoped`?
-2) Pokud je to dobrý nápad, neměl bych pak například ve `frontend\src\assets\css` vytvořit soubory pro sdílené třídy, které se vyskytují v projektu vícekrát, jako je třeba třída `container`?
-3) Pokud je dobré vytvořit sdílené třídy, pak mě zajímá, zda ve Vue se používá formát jako v Django, kde se udělá jeden soubor pro CSS a kde jsou všechny kódy uvedené, nebo je ve Vue preferovaný způsob, že se vytvoří samostatné soubory (např. `container.css`) a ty se pak budou importovat jen do těch souborů, kde jsou potřeba. Teoreticky si totiž říkám, že mít jeden dlouhý soubor a v něm vyhledávat nastavení pro danou třídu musí být náročnější úkon, než načíst soubor jen s nastavením pro danou třídu - ale nevím, jestli to zase nezpomalí otevírání souboru.
-4) Je kromě složky: `frontend\src\assets\css` ještě někde v projektu další nějaký základní soubor s CSS, který by ovlivňoval vzhled aplikace?
-
----
-
-**Dotaz:**
-
-Tak jsem začal vypreparovávat kód ze souboru `static/css/style.default.css`, kde je uložený Bootstrap CSS. Všiml jsem si, že hned na začátku tohoto souboru je položka `:root`, kde je hromada definovaných proměnných:
-
-Dá se tohoto přístupu využít i nějak ve Vue, nebo mám z tohoto souboru hodnoty proměnných vypreparovat a vložit do CSS souborů, kde jsou tyto proměnné použity?
-
----
-
-**Dotaz:**
-
-Dále se mi podařilo vytáhnout všechny styly pro `container`:
-
-Kouknul by ses prosím na ně, zda jsou takto zapsané v pořádku a zda je budu všechny potřebovat (nejsem si jistý, zda tu má být uvedená položka `.navbar > .container`, zda nemá být uvedena až u kódu, kde budu řešit `navbar`)?
-
----
-
-**Dotaz:**
-
-A nebylo by lepší tyto styly importovat až v komponentách, kde jsou použity? 
-
----
-
-**Dotaz:**
-
-Dá se vytvořit jeden specifický styl pro určitý prvek, který by v sobě obsahoval více importovaných stylů? Myslím tím, že by je byl schopen sdružit tak, aby v samotné třídě elementu mohl být namísto všech globálních stylů týkajících se daného prvku uveden jen jeden, který by tyto globální prvky sdružoval a přidával k nim vlastní styly?
-
----
-
-**Dotaz:**
-
-Co znamenají tyto dva styly a kde bych je měl mít umístěné?
-
-```css
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
-```
-
----
-
-**Dotaz:**
-
-Podle čeho se mám rozhodnout, zda umístit import do `main.js` nebo do `App.vue`?
-
----
-
-**Dotaz:**
-
-Patří toto také do globálního stylu?
+První na co jsem narazil, je že v Django CSS mám definovaný i vzhled pro body:
 
 ```css
 body {
@@ -124,25 +41,93 @@ body {
 }
 ```
 
+A ve Vue mám body v tomto souboru: `frontend\public\index.html`
+
+Jak mám ideálně přiřadit CSS pro body ve Vue?
+
 ---
 
 **Dotaz:**
 
-Co znamená tento styl?
+Jaké jsou jiné způsoby zápisu tohoto kódu?
 
-```css
-abbr[title],
-abbr[data-bs-original-title] {
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
-  cursor: help;
-  -webkit-text-decoration-skip-ink: none;
-  text-decoration-skip-ink: none;
-}
+```vue
+<template>
+  <router-link 
+    class="navbar-brand text-sm fw-bold text-dark" 
+    to="/"
+  >
+  Bootstrap Blog
+  </router-link>
+</template>
+
+<style scoped>
+@import '@/assets/css/b-class/navbar-brand.css';
+@import '@/assets/css/b-class/text-sm.css';
+@import '@/assets/css/b-class/fw-bold.css';
+@import '@/assets/css/b-class/text-dark.css';
+</style>
 ```
 
+Tak aby vracel stejný výsledek?  
+Jde mi o to, že předělávám projekt z Django do Vue a v Django jsem hodně používal upraveného CSS Bootstrap stylu, a nyní přemýšlím, zda by se dalo obejít bez něj a použít to, co Vue nabízí.
+
+Tady jsou ještě i CSS pro dané odkazy:
+
+V projektu mám také tento soubor: `frontend\src\assets\css\global\variables.css`  
+Kde jsou všechny proměnné a který importuji v `main.js`.
+
 ---
 
 **Dotaz:**
 
-Takže je vázán na tagy `<abbr>`? Ptám se, protože jsem si v templates v Django nechal vyhledat `abbr` a nenašlo mi to nic, takže nevím, jestli ho vůbec potřebuji.
+Mě jde o to, že projekt, který jsem vytvářel, má vlastní přepracovanou sadu Bootstrap stylů, kde CSS soubor má asi 12000 řádků, takže mě to dovedlo k myšlence, že kdyby byly styly přímo v kódu jako inline style scoped, že by se zlehčilo načítání stylů.  
+Nemuselo by docházet k tomu, že by se daný styl vyhledával v tomto 12000 řádků dlouhém CSS, ale byl by k dispozici ihned u kódu. Bylo by to tak asi i více přehledné, akorát nevím, zda se nepletu v tom, že načtení stylu definovaném ve style scoped je rychlejší než načtení ze zmíněného 12000 řádkového CSS?
+
+---
+
+**Dotaz:**
+
+Jaké jsou další možnosti, jak bych mohl situaci se styly, které mají na sebe navázanou JS funkcionalitu, řešit?  
+Pojďme si více rozebrat: `collapse` a `navbar-collapse`.
+
+Co dělají, proč je to pro mě dobré a jak jinak bych mohl dosáhnout stejného výsledku, aby to více odpovídalo filozofii práce ve Vue?
+
+---
+
+**Dotaz:**
+
+OK, rozumím, a právě rád bych si na tomto projektu vyzkoušel Vue přístup s vytvářením vlastních komponent.  
+Z toho, co píšeš, jsem pochopil, že jsou zde uvedeny jen proto, že při přechodu na menší zařízení se tyto položky schovají do tlačítka s nabídkou.  
+Řekněme, že tuto funkcionalitu zatím nepotřebuji a momentálně mi jde primárně o funkčnost na PC bez responzivních požadavků - ty počítám půjdou asi doplnit později.  
+Je tedy dobrý nápad přepsat kód tak, že ve style scoped budou uvedeny jen vzhledové styly a responzivní funkčnost budu dodělávat až následně?
+
+---
+
+**Dotaz:**
+
+Když píšu styly do style scoped, pak asi už nemusím používat `!important`, podle mě se toto používá pouze pro přepsání defaultního nastavení, a když vytvářím novou třídu, tak ta přeci žádné defaultní nastavení nemá. Je to tak?
+
+---
+
+**Dotaz:**
+
+Je dobré ve Vue nahradit `<a>` za `<router-link>`?
+
+---
+
+**Dotaz:**
+
+Jak by vypadal jednoduchý kód ve Vue, který by zobrazil obrázek z tohoto umístění: `/media/images/articles/main_picture/article-00000001-0440.jpg`?
+
+---
+
+**Dotaz:**
+
+Je ve Vue nějaký nástroj, který by vytvářel také komponenty, jako mám v Bootstrapu, třeba `container`?
+
+---
+
+**Dotaz:**
+
+Je lepší používat některou z těchto komponent než Bootstrap?

@@ -149,7 +149,17 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Vazba stylu na tag `<abbr>` a jeho potřeba v projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_04.md#dotaz-10)  
 
 ### 1. 8. 2024
-[• Přechod na Vue bez závislosti na Bootstrap](django-to-vue/zacatek_prace_na_projektu_05.md)  
+[**Přechod na Vue bez závislosti na Bootstrap**](django-to-vue/zacatek_prace_na_projektu_05.md)  
+[• *Přiřazení CSS pro `<body>` ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz)  
+[• *Alternativní způsoby zápisu kódu ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-1)  
+[• *Výhody a nevýhody inline stylů ve Vue vs. globální CSS soubory*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-2)  
+[• *Alternativy pro `collapse` a `navbar-collapse` ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-3)  
+[• *Vytváření Vue komponent s oddělením stylů a responzivity*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-4)  
+[• *Potřeba použití `!important` ve style scoped*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-5)  
+[• *Náhrada `<a>` za `<router-link>` ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-6)  
+[• *Jednoduchý kód pro zobrazení obrázku ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-7)  
+[• *Použití nástrojů ve Vue pro vytváření komponent podobných Bootstrapu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-8)  
+[• *Porovnání používání Vue komponent a Bootstrapu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_05.md#dotaz-9)  
 
 ### 2. 8. 2024
 [• Přispůsobení se VUE struktuře + stránka se všemi články](django-to-vue/zacatek_prace_na_projektu_06.md)  

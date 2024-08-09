@@ -1,11 +1,26 @@
+# Vytváření opakovaně použitelných komponent
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)   
+
+## Obsah:
+[• *Přiřazení CSS pro `<body>` ve Vue*](#dotaz)  
+[• *Alternativní způsoby zápisu kódu ve Vue*](#dotaz-1)  
+[• *Výhody a nevýhody inline stylů ve Vue vs. globální CSS soubory*](#dotaz-2)  
+[• *Alternativy pro `collapse` a `navbar-collapse` ve Vue*](#dotaz-3)  
+[• *Vytváření Vue komponent s oddělením stylů a responzivity*](#dotaz-4)  
+[• *Potřeba použití `!important` ve style scoped*](#dotaz-5)  
+[• *Náhrada `<a>` za `<router-link>` ve Vue*](#dotaz-6)  
+[• *Jednoduchý kód pro zobrazení obrázku ve Vue*](#dotaz-7)  
+[• *Použití nástrojů ve Vue pro vytváření komponent podobných Bootstrapu*](#dotaz-8)  
+[• *Porovnání používání Vue komponent a Bootstrapu*](#dotaz-9)  
+
 ## Dotaz:
 
 Ahojky :-)
-Dneska pokračujeme v učení VUE a to stále na přepracování frontendu, který byl celý psaný v Django do VUE.
+Dneska pokračujeme v učení Vue a to stále na přepracování frontendu, který byl celý psaný v Django do Vue.
 
-Dnešní první otázka zní. V mém projektu mám vlastní css které je přepracované z bootstrap 5 a má kolem 12000 řádek. počítám že asi nebude potřeba úplně vše přetahovat a tak bych rád ponechal jen ta css které jsou skutečně v kodu použita. Napadlo mě že budu postupně procházet všechny stránky a styly z bootstrap tříd přepisovat do vue přímo.
+Dnešní první otázka zní. V mém projektu mám vlastní CSS, které je přepracované z Bootstrap 5 a má kolem 12000 řádků. Počítám, že asi nebude potřeba úplně vše přetahovat, a tak bych rád ponechal jen ta CSS, která jsou skutečně v kódu použita. Napadlo mě, že budu postupně procházet všechny stránky a styly z Bootstrap tříd přepisovat do Vue přímo.
 
-První na co jsem narazil, že v Django css mám definovaný i vzhled pro body:
+První na co jsem narazil, je že v Django CSS mám definovaný i vzhled pro body:
 
     body {
       margin: 0;
@@ -20,10 +35,9 @@ První na co jsem narazil, že v Django css mám definovaný i vzhled pro body:
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
-A ve vue mám body v tomto souboru:
-frontend\public\index.html
+A ve Vue mám body v tomto souboru: frontend\public\index.html
 
-Jak mám ideálně přiřadit css pro body ve vue?
+Jak mám ideálně přiřadit CSS pro body ve Vue?
 
 ## ChatGPT:
 
@@ -71,9 +85,10 @@ Tímto způsobem zajistíme, že styly pro `body` budou aplikovány globálně v
 
 Pokud máte jakékoli další dotazy nebo potřebujete pomoc s dalšími částmi projektu, neváhejte se zeptat!
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-Jaké jsou jiné způsoby zapsání tohoto kodu:
+Jaké jsou jiné způsoby zápisu tohoto kódu?
 
 <template>
   <router-link 
@@ -92,9 +107,9 @@ Jaké jsou jiné způsoby zapsání tohoto kodu:
 </style>
 
 Tak aby vracel stejný výsledek?
-Jde mi o to, že předělávám projekt z Django so Vue a v Django jsem hodně používal upraveného css bootstrap stylu a nyní přemýšlím, zda by se dalo obejít bez něj a použít to co vue nabízí.
+Jde mi o to, že předělávám projekt z Django do Vue a v Django jsem hodně používal upraveného CSS Bootstrap stylu, a nyní přemýšlím, zda by se dalo obejít bez něj a použít to, co Vue nabízí.
 
-Tady jsou ještě i css pro dané odkazy:
+Tady jsou ještě i CSS pro dané odkazy:
 
 frontend\src\assets\css\b-class\navbar-brand.css:
 
@@ -154,7 +169,7 @@ frontend\src\assets\css\b-class\text-dark.css:
       }
 
 V projektu mám také tento soubor: frontend\src\assets\css\global\variables.css
-Kde jsou všechny proměné a který importuji v main.js.
+Kde jsou všechny proměnné a který importuji v main.js.
 
 
 ## ChtaGPT:
@@ -297,11 +312,11 @@ Pokud chcete nadále využívat stylování podobné Bootstrapu, můžete použ�
 
 Přechod od Bootstrapu k vlastnímu řešení ve Vue může být časově náročný, ale nabízí větší flexibilitu a kontrolu nad výsledným vzhledem aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-Mě jde o to, že projekt který jsem vytvářel má vlastní přepracovanou sadu bootstrap stylů, kde css soubor má asi 12000 řádek, takže mě to dovedlo k myšlence, že kdyby byli styli přímo v kodu jako inline style scoped, tak že by se zlehčilo načítání stylů. Že by nemuselo docházet k tomu, že by se daný styl vyhledával v tomto 12000 řádků dlouhém css ale byl k dispozici ihned  u kodu. Bylo by to tak asi i více přehledné, akorát nevím, zda se nepletu v tom, že načtení stylu definovaném v style scoped je rychlejší než načtení ze zmíněného 12000 řádkového css?
-
+Mě jde o to, že projekt, který jsem vytvářel, má vlastní přepracovanou sadu Bootstrap stylů, kde CSS soubor má asi 12000 řádků, takže mě to dovedlo k myšlence, že kdyby byly styly přímo v kódu jako inline style scoped, že by se zlehčilo načítání stylů.
+Nemuselo by docházet k tomu, že by se daný styl vyhledával v tomto 12000 řádků dlouhém CSS, ale byl by k dispozici ihned u kódu. Bylo by to tak asi i více přehledné, akorát nevím, zda se nepletu v tom, že načtení stylu definovaném ve style scoped je rychlejší než načtení ze zmíněného 12000 řádkového CSS?
 
 ## ChatGPT:
 
@@ -405,12 +420,13 @@ Tímto způsobem budou styly uloženy přímo v komponentě a budou aplikovány 
 
 Pokud máte nějaké konkrétní otázky nebo potřebujete další pomoc s refaktoringem, neváhejte se zeptat!
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-Jaké jsou další možnosti, jak bych mohl situaci se styli které mají na sebe navázanou js funkcionalitu? 
-Pojďme si je více rozebrat: collapse a navbar-collapse
+Jaké jsou další možnosti, jak bych mohl situaci se styly, které mají na sebe navázanou JS funkcionalitu, řešit?
+Pojďme si více rozebrat: collapse a navbar-collapse.
 
-Co dělají, proč je to pro mě dobré a jak jinak bych mohl dosáhnout stejného výsledku aby to více odpovídalo filozofii práce ve VUE?
+Co dělají, proč je to pro mě dobré a jak jinak bych mohl dosáhnout stejného výsledku, aby to více odpovídalo filozofii práce ve Vue?
 
 ## ChatGPT:
 
@@ -507,13 +523,13 @@ export default {
 
 Tímto způsobem můžete snadno vytvořit vlastní rozbalitelnou navigaci ve Vue bez nutnosti používat externí knihovny. Tento přístup je více přizpůsobitelný a integruje se do filozofie Vue, která klade důraz na komponentový a reaktivní přístup k vývoji aplikací.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-OK rozumím, a právě rád bych si na tomto projektu vyzkoušel VUE přístup s vytvářením vlastních komponent.
-Z toho co píše jsem pochopil, že jsou zde uvedeny jen proto, že při přechodu na menší zařízení se tyto položky schovají do tlačítka s nabídkou.
-Řekněme, že tuto funkcionalitu zatím nepotřebuji a momentálně mi jde primárně o funkčnost na PC bez responzivních požadavlů - ty počítám půjdou asi doplnit později.
-Je tedy dobrý nápad, přepsat kod tak, že v style scoped budou uvedené jen vzhledové styli a responzivní funkčnost budu dodělávat až následně?
-
+OK, rozumím, a právě rád bych si na tomto projektu vyzkoušel Vue přístup s vytvářením vlastních komponent.
+Z toho, co píšeš, jsem pochopil, že jsou zde uvedeny jen proto, že při přechodu na menší zařízení se tyto položky schovají do tlačítka s nabídkou.
+Řekněme, že tuto funkcionalitu zatím nepotřebuji a momentálně mi jde primárně o funkčnost na PC bez responzivních požadavků - ty počítám půjdou asi doplnit později.
+Je tedy dobrý nápad přepsat kód tak, že ve style scoped budou uvedeny jen vzhledové styly a responzivní funkčnost budu dodělávat až následně?
 
 ## ChatGPT:
 
@@ -638,10 +654,10 @@ Například, můžete použít `@media` dotazy k přidání responzivních styl�
 
 Tímto způsobem můžete postupně budovat svou aplikaci ve Vue, začít s desktopovou verzí a postupně přidávat mobilní a tabletové verze.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-Když píšu styly do style scoped, pak asi už nemusím používat !Important, podle mě toto se používá pouze pro přepsaání defaultního nastavení a když vytvářím novou třídu, tak ta přeci žádné defaultní nastavení nemá. Je to tak?
+Když píšu styly do style scoped, pak asi už nemusím používat !important, podle mě se toto používá pouze pro přepsání defaultního nastavení, a když vytvářím novou třídu, tak ta přeci žádné defaultní nastavení nemá. Je to tak?
 
 ## ChatGPT:
 
@@ -692,10 +708,10 @@ Ano, máte pravdu. Použití `!important` v CSS je obvykle zaměřeno na přeps�
 
 Používejte `!important` uvážlivě a pokud je to možné, snažte se dosáhnout požadovaného výsledku pomocí správného nastavení specifikace a hierarchie stylů.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-Je dobré ve vue nahradit <a> s <router-link>?
+Je dobré ve Vue nahradit <a> za <router-link>?
 
 
 # ChatGPT:
@@ -761,10 +777,10 @@ Ano, ve Vue.js je doporučeno používat `<router-link>` místo `<a>` pro naviga
 
 Použití `<router-link>` místo `<a>` je doporučené v kontextu Vue.js aplikací, protože poskytuje lepší integraci s Vue Router a přispívá k plynulejšímu a rychlejšímu uživatelskému zážitku. Pomocí `<router-link>` můžete efektivně spravovat navigaci bez opětovného načítání stránky, což je klíčové pro výkonnost a uživatelský komfort ve SPA.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-Jak by vyadal jednoduchý kod ve vue, který by zobrazil obrázek z tohoto umístění:
-/media/images/articles/main_picture/article-00000001-0440.jpg
+Jak by vypadal jednoduchý kód ve Vue, který by zobrazil obrázek z tohoto umístění: /media/images/articles/main_picture/article-00000001-0440.jpg?
 
 
 ## ChatGPT:
@@ -860,10 +876,11 @@ export default {
 
 Tento jednoduchý příklad ukazuje, jak pracovat se statickými obrázky ve Vue.js a jak využít komponenty pro zobrazení obsahu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 # Dotazy z předchozího dne z procházky se psem:
 ## Dotaz:
 
-Je ve VUE nějakej nástroj, který by vytvářel taky komponenty, jako mám Bootstrap, třeba container.
+Je ve Vue nějaký nástroj, který by vytvářel také komponenty, jako mám v Bootstrapu, třeba container?
 
 ## ChatGPT:
 
@@ -887,10 +904,10 @@ Ano, ve Vue.js je možné používat různé UI knihovny, které nabízejí pře
 
 Všechny tyto knihovny poskytují obsáhlou dokumentaci a příklady, jak začít a používat jejich komponenty ve vašich Vue projektech.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
 ## Dotaz:
 
-Je lepší používat některou z těchto komponent než Bootstrap.
+Je lepší používat některou z těchto komponent než Bootstrap?
 
 ## ChatGPT:
 
@@ -953,4 +970,4 @@ Zda je lepší používat některou z výše zmíněných knihoven místo Bootst
 
 Volba nejlepší knihovny závisí na vašem konkrétním projektu, preferencích v designu a funkcionalitě, a zkušenostech s jednotlivými frameworky.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-8-2024)  
