@@ -1,6 +1,26 @@
+# Dotazy z procházky
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)   
+
+## Obsah:
+[• *Úvod do JavaScriptu: Základy, struktura a logika*](#dotaz)  
+[• *Proč prohlížeče podporují JavaScript a ne jiný jazyk*](#dotaz-1)  
+[• *Možnost vývoje mobilních aplikací ve Vue*](#dotaz-2)  
+[• *Srovnání Vue a Kivy pro různé platformy*](#dotaz-3)  
+[• *Vue pro webové aplikace vs. Kivy pro mobilní a desktopové aplikace*](#dotaz-4)  
+[• *Srovnání učící křivky mezi Kivy, JavaScriptem a Pythonem*](#dotaz-5)  
+[• *Naučení Kivy při znalosti Pythonu a JavaScriptu*](#dotaz-6)  
+[• *Příklady Kivy Language a specifických widgetů Kivy*](#dotaz-7)  
+[• *Historie Kivy: Kdo, proč a jak vznikl*](#dotaz-8)  
+[• *Vývoj jazyka Python a jeho postavení mezi ostatními jazyky*](#dotaz-9)  
+[• *Python a jeho postavení v moderních programovacích jazycích*](#dotaz-10)  
+[• *Python jako angličtina programovacích jazyků*](#dotaz-11)  
+[• *Znalosti potřebné k úspěchu jako programátor webových aplikací v Pythonu*](#dotaz-12)  
+[• *Význam a definice RESTful API*](#dotaz-13)
+
 ## Dotaz:
 
-Ve VIEW normálně používám JavaScript. Rozumím tomu z té pozice, že si dokážu představit, co co dělá a dohledat si, co to znamená. Ale zajímal by mě nějakej úvod a logika a struktura JavaScriptu, nějaké základy, na čím to je založené, abych měl o tomhle jazyku větší vědomosti a dokázal se je dát do lepšího kontextu.
+Ve Vue normálně používám JavaScript. Rozumím tomu z této pozice, že si dokážu představit, co co dělá a dohledat si, co to znamená. Ale zajímal by mě nějaký úvod a logika a struktura JavaScriptu, nějaké základy, na čem je to založené, abych měl o tomto jazyku větší vědomosti a dokázal se je dát do lepšího kontextu.
+
 
 ## ChatGPT:
 
@@ -185,9 +205,11 @@ Tento příklad načte seznam uživatelů z veřejného API a zobrazí je v HTML
 
 JavaScript je mocný a flexibilní jazyk, který je zásadní pro moderní webový vývoj. Jeho síla spočívá v jeho schopnosti běžet jak na klientské, tak na serverové straně a v jeho široké podpoře pro různé typy asynchronního programování. Pochopení základních konceptů, jako jsou proměnné, funkce, objekty, asynchronní kód a modulární design, je klíčové pro efektivní využití JavaScriptu ve vašich projektech.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A jestli je to tak, že jeho hlavní výhodou je, že ho podporují prohlížeče, tak co byly jeho přednosti, nebo co vedlo k tomu, že prohlížeče podporují Javascript a nečá nějakej jiný jazyk podobný, který by uměl to samé.
+A jestli je to tak, že jeho hlavní výhodou je, že ho podporují prohlížeče, tak co byly jeho přednosti, nebo co vedlo k tomu, že prohlížeče podporují JavaScript a ne nějaký jiný jazyk podobný, který by uměl to samé.
+
 
 ## ChatGPT:
 
@@ -236,9 +258,11 @@ JavaScript se stal dominantním jazykem pro webové prohlížeče z několika d�
 
 JavaScript se stal dominantním jazykem pro webový vývoj díky své jednoduchosti, flexibilitě, vestavěné podpoře v prohlížečích, standardizaci a silné komunitě. I když existují jiné jazyky a technologie, které by mohly teoreticky plnit podobnou roli, žádný z nich nedosáhl stejné úrovně přijetí a podpory. JavaScript tedy zůstává klíčovým nástrojem pro vývoj webových aplikací.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Dají se Vue programovat i mobilní aplikace?
+Dají se ve Vue programovat i mobilní aplikace?
+
 
 ## ChatGPT:
 
@@ -298,9 +322,10 @@ new Vue({
 
 Vue.js samotný je zaměřen na vývoj webových aplikací, ale s pomocí frameworků jako NativeScript-Vue, Quasar Framework a Vue Native je možné využít Vue.js i pro vývoj mobilních aplikací. Tyto frameworky umožňují využít znalosti a dovednosti získané při práci s Vue.js a aplikovat je na vývoj nativních mobilních aplikací, což poskytuje velkou flexibilitu a možnost vyvíjet aplikace pro různé platformy z jedné kódové báze.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A jaké by bylo použití těchto variant, kdyby se to porovnalo třeba s kivy?
+Jaké by bylo použití těchto variant, kdyby se to porovnalo třeba s Kivy?
 
 ## ChatGPT:
 
@@ -340,9 +365,10 @@ Kivy je framework pro vývoj multimediálních aplikací v Pythonu, zaměřený 
 
 Volba mezi Kivy a frameworky pro Vue.js závisí na preferovaném programovacím jazyku, požadované platformě a specifických potřebách projektu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Takže by se dalo říct, že Vue je dobré pro webové aplikace a Kiwi je dobré pro mobilní a desktopové aplikace.
+Takže by se dalo říct, že Vue je dobré pro webové aplikace a Kivy je dobré pro mobilní a desktopové aplikace.
 
 ## ChatGPT:
 
@@ -373,9 +399,10 @@ Ano, to je přesně tak. Rozdíly v zaměření mezi Vue.js a Kivy lze shrnout n
 
 Výběr mezi Vue.js a Kivy by měl vycházet z toho, co je pro váš projekt nejvhodnější, jaké platformy plánujete podporovat a jaký jazyk a ekosystém vám nejvíce vyhovuje.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Jaké srovnání učící křivky u Kiwi a u JavaScriptu a ještě třeba u Pythona bych měl nějaké srovnání?
+Jaké srovnání učící křivky u Kivy a u JavaScriptu a ještě třeba u Pythona bych měl nějaké srovnání?
 
 ## ChatGPT:
 
@@ -420,9 +447,10 @@ Srovnání učící křivky mezi Kivy, JavaScriptem (včetně Vue.js), a Pythone
 - Pro webový vývoj a práci s moderními webovými technologiemi je **JavaScript** nezbytný a může mít složitější učící křivku.
 - **Kivy** je výhodný, pokud máte zájem o multiplatformní vývoj s Pythonem, ale jeho specifické rysy mohou vyžadovat dodatečné učení.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A když bych si vzal v potaz to, že Python už umím dobře, včetně objektového programování, s JavaScriptem si taky poradím, například teď v Vue, a je teda z tohohle pohledu možné, že Kivy mi zabere stejně práce naučit se, jako mi zabírá teď Vue, anebo je tam objem vědomostí, které se člověk potřebuje naučit větší.
+A když bych si vzal v potaz to, že Python už umím dobře, včetně objektového programování, s JavaScriptem si taky poradím, například teď v Vue, a je tedy z tohoto pohledu možné, že Kivy mi zabere stejně práce naučit se, jako mi zabírá teď Vue, anebo je tam objem vědomostí, které se člověk potřebuje naučit větší?
 
 ## ChatGPT:
 
@@ -446,9 +474,10 @@ Pokud máte silné základy v Pythonu a JavaScriptu, a především pokud už um
 
 Objem vědomostí, které se musíte naučit, může být srovnatelný s učením Vue.js, ale s ohledem na to, že se jedná o framework pro jiné prostředí (mobilní a desktopové aplikace vs. web), může existovat určitý dodatečný obsah a specifické dovednosti, které se musíte naučit. Celkově by ale proces učení neměl být zásadně složitější, pokud máte solidní základní znalosti v obou jazycích a již zkušenosti s programováním.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Napiš mi nějaké příklady pro kávé jazyk a  specifické vingity kivy.
+Napiš mi nějaké příklady pro Kivy Language a specifické widgety Kivy.
 
 ## ChatGPT:
 
@@ -613,7 +642,8 @@ V tomto příkladu používáme `Animation` pro animaci velikosti tlačítka. Po
 - **Vlastní widgety**: Lze vytvářet vlastní widgety děděním z existujících widgetů a přidávat vlastní logiku a vzhled.
 - **Animace**: Kivy podporuje animace, které umožňují přidat vizuální efekty k widgetům.
 
-## ChatGPT:
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
+## Dotaz:
 
 Tohle zní docela snadně. Řekni mi tedy něco víc o historii Kivy, kdo ho vytvořil, proč ho vytvořil, co byla jeho motivace a nakolik se mu to povedlo.
 
@@ -651,48 +681,10 @@ Kivy je open-source framework pro vývoj vícerozměrných aplikací s grafický
 
 Kivy byl vyvinut s cílem poskytnout robustní a flexibilní nástroj pro vývoj multiplatformních aplikací. Jeho otevřený přístup a aktivní komunita přispěly k jeho úspěchu a popularitě. Díky své schopnosti fungovat na různých zařízeních a platformách, stejně jako jeho podpoře moderních grafických technologií, se stal populární volbou pro vývojáře, kteří chtějí vytvořit atraktivní a funkční aplikace s Pythonem.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Ono se mi to nepřepsalo, tlí, můžeš mi to napsat ještě jednou?
-
-## ChatGPT:
-
-Samozřejmě! Tady je přehled historie a motivace za vznikem Kivy:
-
-### Historie Kivy
-
-1. **Vznik a Počátky**
-   - **Vytvoření**: Kivy byl poprvé vydán v roce 2011. Hlavním autorem a zakladatelem projektu byl **Mathieu Virbel**. Projekt vznikl z potřeby vytvořit framework, který umožní vývoj multiplatformních aplikací s bohatým grafickým uživatelským rozhraním.
-   - **Motivace**: Virbel a jeho tým chtěli vytvořit nástroj, který usnadní vývoj aplikací pro různé platformy (desktop a mobilní zařízení) s jednotným kódem. Před vznikem Kivy bylo mnoho knihoven a frameworků pro Python, ale většina z nich byla buď specifická pro určitou platformu, nebo složitá na používání.
-
-2. **Rozvoj a Popularita**
-   - **Rychlý Rozvoj**: Kivy se rychle vyvinul díky otevřené povaze projektu a přispěvatelské komunitě. Bylo navrženo jako framework, který usnadňuje vývoj aplikací s moderním vzhledem a grafickými efekty.
-   - **Multiplatformnost**: Kivy umožňuje vývoj aplikací pro Windows, macOS, Linux, Android a iOS. Tím umožňuje vývojářům psát kód pouze jednou a nasadit ho na různé platformy.
-
-3. **Hlavní Rysy**
-   - **Kivy Language (KV)**: Kivy zavádí jazyk KV, který slouží k deklaraci uživatelského rozhraní. Tento jazyk odděluje logiku aplikace od jejího vzhledu.
-   - **Flexibilita a Rozšiřitelnost**: Framework nabízí širokou škálu widgetů a nástrojů pro vytváření interaktivních aplikací. Podporuje animace, multitouch a další moderní funkce.
-   - **Otevřený Vývoj**: Kivy je open-source projekt s aktivní komunitou vývojářů, kteří pravidelně přispívají novými funkcemi a vylepšeními.
-
-### Motivace a Úspěchy
-
-1. **Motivace**
-   - **Jednotný Kód**: Kivy byl vytvořen s cílem umožnit vývoj aplikací, které běží na různých platformách, bez nutnosti přepisování kódu pro každou platformu zvlášť.
-   - **Jednoduchost a Flexibilita**: Framework měl nabídnout jednoduché a flexibilní prostředí pro tvorbu aplikací s moderním uživatelským rozhraním, bez nutnosti hlubokého ponoru do nativních API jednotlivých platforem.
-
-2. **Úspěchy**
-   - **Rostoucí Komunita**: Kivy má aktivní komunitu a pravidelně se aktualizuje, přidává nové funkce a zlepšuje výkon.
-   - **Podpora Různých Platforem**: Je široce používán pro vývoj aplikací na desktopu i mobilních zařízeních.
-   - **Přístup k Novým Technologiím**: Kivy podporuje moderní grafické technologie jako OpenGL, což umožňuje vytvářet aplikace s pokročilými grafickými efekty.
-
-### Shrnutí
-
-Kivy vznikl jako nástroj pro snadné vytváření multiplatformních aplikací s moderním grafickým uživatelským rozhraním. Jeho otevřený přístup, multiplatformní podpora a schopnost využívat moderní grafické technologie přispěly k jeho úspěchu a popularitě mezi vývojáři, kteří chtějí vytvářet atraktivní a funkční aplikace s Pythonem.
-
-## Dotaz:
-
-Dá se říct, že v poslední dekádě je Python na zestupu a lehce na úkor ostatních jazyků, jako je třeba C++ a podobné.
+Dá se říct, že v poslední dekádě je Python na vzestupu a lehce na úkor ostatních jazyků, jako je třeba C++ a podobné?
 
 ## ChatGPT:
 
@@ -730,9 +722,10 @@ Ano, v poslední dekádě se Python opravdu stal velmi populárním jazykem a je
 
 Python se stal velmi populárním díky své jednoduchosti, univerzálnosti a silné podpoře komunity. I když to může znamenat, že některé oblasti, kde je Python silný, mohou mít vliv na použití jiných jazyků, jako je C++ nebo Java, každý jazyk má své specifické výhody a oblasti použití. Python a C++ (nebo jiné jazyky) často existují vedle sebe a jsou vybírány na základě konkrétních požadavků projektu.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Jak by vypadala evoluční linka vývoje jazyku? Byl by teda Python někde na vrcholu? Nebo jsou i některé modernější nad ním?
+Jak by vypadala evoluční linie vývoje jazyků? Byl by tedy Python někde na vrcholu? Nebo jsou i některé modernější jazyky nad ním?
 
 ## ChatGPT:
 
@@ -782,9 +775,10 @@ Evoluční linka vývoje programovacích jazyků odráží různé etapy vývoje
 
 Python je na vrcholu popularity díky své všestrannosti a širokému použití. Ale nejsou to jediné jazyky, které jsou moderní a výkonné. Jazyky jako Rust, Go, Kotlin a Swift představují novější přístupy a specializované funkce, které se hodí pro specifické potřeby a použití. Evoluční linka vývoje jazyků ukazuje, jak se jazyky přizpůsobují novým požadavkům a jak různé jazyky vynikají v různých oblastech.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-A dalo by se hodně nadneseně, nebo spíš obrazně, říct, že to, co je angličtina pro lidi, je Python pro počítáč?
+A dalo by se hodně nadneseně, nebo spíš obrazně, říct, že to, co je angličtina pro lidi, je Python pro počítače?
 
 ## ChatGPT:
 
@@ -814,9 +808,10 @@ Ano, obrazně řečeno, to, co je angličtina pro lidi, může být Python pro p
 
 Python je v mnoha ohledech považován za jazyk, který usnadňuje přístup k programování podobně, jako angličtina usnadňuje komunikaci mezi lidmi. Jeho design, čitelnost a univerzálnost přispívají k tomu, že je široce přijat a používán v mnoha oblastech, podobně jako angličtina hraje klíčovou roli v globální komunikaci.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Už jsem se naučil Python, Django, Flask. Teď se učím Voo. A naučil jsem se pracovat s Dockerem, GitHub. A od tebe bych chtěl slyšet nějaký výpis všech takovýhle znalostí, který by člověk měl mít, když chce být úspěšným programátorem webových aplikací v Pythonu.
+Už jsem se naučil Python, Django, Flask. Teď se učím Vue. A naučil jsem se pracovat s Dockerem, GitHub. A od tebe bych chtěl slyšet nějaký výpis všech takových znalostí, který by člověk měl mít, když chce být úspěšným programátorem webových aplikací v Pythonu.
 
 ## ChatGPT:
 
@@ -884,9 +879,10 @@ To, co jsi dosud naučil, je skvělý základ pro webového vývojáře v Python
 
 Tyto dovednosti a technologie pokrývají většinu oblastí potřebných pro efektivní vývoj webových aplikací. To, jak hluboko se ponoříš do každé z těchto oblastí, bude závislé na konkrétních požadavcích projektů, na kterých pracuješ.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  
 ## Dotaz:
 
-Co myslíš s slovním spojením RESTFUL API?
+Co myslíš tím slovním spojením RESTful API?
 
 ## ChatGPT:
 
@@ -931,3 +927,5 @@ RESTful API (Representational State Transfer API) je architektonický styl pro n
 - **Znovupoužitelnost**: Jednotné rozhraní a standardní HTTP metody zjednodušují použití API v různých aplikacích a klientech.
 
 RESTful API je široce používané pro moderní webové služby a je považováno za jeden z nejběžnějších způsobů, jakým aplikace komunikují v dnešním webovém světě.
+
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)  

@@ -1,4 +1,4 @@
-# Přispůsobení se VUE struktuře + stránka se všemi články
+# Úprava Django pro VUE
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#4-8-2024)   
 
 ## Obsah:

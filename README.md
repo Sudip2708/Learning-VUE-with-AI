@@ -205,6 +205,20 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Použití serializace pro validaci dat v Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07.md#dotaz-24)
 
 [**Dotazy z procházky**](django-to-vue/zacatek_prace_na_projektu_07_prochazka.md)  
+[• *Úvod do JavaScriptu: Základy, struktura a logika*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz)  
+[• *Proč prohlížeče podporují JavaScript a ne jiný jazyk*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-1)  
+[• *Možnost vývoje mobilních aplikací ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-2)  
+[• *Srovnání Vue a Kivy pro různé platformy*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-3)  
+[• *Vue pro webové aplikace vs. Kivy pro mobilní a desktopové aplikace*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-4)  
+[• *Srovnání učící křivky mezi Kivy, JavaScriptem a Pythonem*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-5)  
+[• *Naučení Kivy při znalosti Pythonu a JavaScriptu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-6)  
+[• *Příklady Kivy Language a specifických widgetů Kivy*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-7)  
+[• *Historie Kivy: Kdo, proč a jak vznikl*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-8)  
+[• *Vývoj jazyka Python a jeho postavení mezi ostatními jazyky*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-9)  
+[• *Python a jeho postavení v moderních programovacích jazycích*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-10)  
+[• *Python jako angličtina programovacích jazyků*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-11)  
+[• *Znalosti potřebné k úspěchu jako programátor webových aplikací v Pythonu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-12)  
+[• *Význam a definice RESTful API*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_07_prochazka.md#dotaz-13)
 
 ### 5. 8. 2024
 [• Stránkování ve VUE](django-to-vue/zacatek_prace_na_projektu_08.md)  
