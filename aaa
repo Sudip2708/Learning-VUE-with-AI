@@ -1,4 +1,16 @@
-## Dotaz:
+### 1) Seznam stručných popisů otázek pro obsah
+
+# Obsah:
+
+[• *Instalace Vue CLI globálně*](#dotaz)
+[• *Umístění projektu Vue v rámci struktury Django*](#dotaz-1)
+[• *Příkazy pro vytvoření frontendu ve Vue*](#dotaz-2)
+
+### 2) Oprava gramatiky a překlepů v otázkách
+
+---
+
+**Původní dotaz:**
 
 Je dobré mít pro VUE nainstalované globálně i toto:
 
@@ -6,8 +18,17 @@ Je dobré mít pro VUE nainstalované globálně i toto:
 
 ?
 
+**Opravený dotaz:**
 
-## Dotaz:
+Je dobré mít pro Vue nainstalované globálně i toto:
+
+    npm install -g @vue/cli
+
+?
+
+---
+
+**Původní dotaz:**
 
 Když teď chci vytvořit projekt VUE pro frontend pro můj projekt, tak kde je ideální místo pro jeho vytvoření?
 
@@ -15,8 +36,13 @@ Projekt Django mám ve složce main. Tam je i například manage.py:
 
 C:\Users\Sudip2708\Dropbox\__DjangoBlogWeb\main\manage.py
 
+**Opravený dotaz:**
 
-## Dotaz:
+Když teď chci vytvořit projekt Vue pro frontend pro můj projekt, tak kde je ideální místo pro jeho vytvoření?
 
-Jaké je pořadí terminálových příkazů pro vytvoření frontendu pro první možnost?
+Projekt Django mám ve složce main. Tam je i například manage.py:
+
+C:\Users\Sudip2708\Dropbox\__DjangoBlogWeb\main\manage.py
+
+---
 

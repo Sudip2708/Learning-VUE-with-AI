@@ -82,7 +82,11 @@ V mém případě vyhrál tento 6. hodinový kurz, ktrý jsem si rozložil do 3 
 [• *Umístění konfiguračních souborů*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-12)  
 [• *Další kroky po vytvoření základního prostředí ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-13)  
 
-[• Integrace VUE do Django - úvod od Claude](django-to-vue/integrace_vue_claude.md)  
+[**Integrace VUE do Django - úvod od Claude**](django-to-vue/integrace_vue_claude.md)  
+[• *Úvodní kroky pro integraci Vue do Django projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz)  
+[• *Instalace Vue CLI globálně*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-1)
+[• *Umístění projektu Vue v rámci struktury Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-2)
+[• *Příkazy pro vytvoření frontendu ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_claude.md#dotaz-3)
 
 ### 28. 7. 2024
 [• Začátek práce na projektu](django-to-vue/zacatek_prace_na_projektu_01.md)  

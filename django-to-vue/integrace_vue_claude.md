@@ -1,3 +1,13 @@
+# Integrace VUE do Django - úvod od Claude
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)   
+
+## Obsah:
+[• *Úvodní kroky pro integraci Vue do Django projektu*](#dotaz)  
+[• *Instalace Vue CLI globálně*](#dotaz-1)
+[• *Umístění projektu Vue v rámci struktury Django*](#dotaz-2)
+[• *Příkazy pro vytvoření frontendu ve Vue*](#dotaz-3)
+
+
 ## Dotaz:
 
 Ahojky :-)
@@ -98,11 +108,11 @@ Zdravím! Těší mě, že se pouštíte do integrace Vue.js do vašeho Django p
 
 Tento seznam poskytuje obecný přehled. Konkrétní kroky se mohou lišit v závislosti na specifických požadavcích vašeho projektu. Až budete mít připravenou strukturu projektu, rád vám pomůžu s konkrétnějšími kroky.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 
-Je dobré mít pro VUE nainstalované globálně i toto:
+Je dobré mít pro Vue nainstalované globálně i toto:
 
     npm install -g @vue/cli
 
@@ -144,10 +154,10 @@ V CI/CD prostředích je obvykle lepší specifikovat závislosti projektu loká
 
 Závěrem, globální instalace Vue CLI je užitečná pro vývojáře, kteří pravidelně pracují s Vue.js, ale není to striktně nutné pro fungování jednotlivých Vue projektů. Každý projekt může mít své vlastní lokální závislosti specifikované v package.json.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
-Když teď chci vytvořit projekt VUE pro frontend pro můj projekt, tak kde je ideální místo pro jeho vytvoření? 
+Když teď chci vytvořit projekt Vue pro frontend pro můj projekt, tak kde je ideální místo pro jeho vytvoření?
 
 Projekt Django mám ve složce main. Tam je i například manage.py:
 
@@ -209,7 +219,7 @@ Který přístup zvolíte, závisí na vašich konkrétních potřebách:
 
 Nezapomeňte, že bez ohledu na to, kterou strukturu zvolíte, budete muset nakonfigurovat Django tak, aby správně servírovalo vaši Vue.js aplikaci, ať už jako statické soubory nebo přes speciální view.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 ## Dotaz:
 
 Jaké je pořadí terminálových příkazů pro vytvoření frontendu pro první možnost?
@@ -274,3 +284,4 @@ C:\Users\Sudip2708\Dropbox\__DjangoBlogWeb\
 
 Další kroky budou zahrnovat konfiguraci Django pro servírování Vue.js aplikace a nastavení komunikace mezi frontendem a backendem. To bude záviset na vašich konkrétních požadavcích a architektuře aplikace.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  

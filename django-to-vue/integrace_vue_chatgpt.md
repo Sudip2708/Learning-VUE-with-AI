@@ -1,6 +1,7 @@
-# Obsah:
+# Integrace VUE do Django - úvod od ChatGPT
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)   
 
+## Obsah:
 [• *Úvodní kroky pro integraci Vue do Django projektu*](#dotaz)  
 [• *Kontrola instalace Node.js a npm*](#dotaz-1)  
 [• *Použití příkazu npm install vue@latest*](#dotaz-2)  
@@ -1367,4 +1368,5 @@ Skvělé, že máš základní prostředí pro Vue vytvořené! Nyní se může�
 
 Tento postup ti pomůže začít s vývojem Vue aplikace a integrovat ji s tvým existujícím Django backendem. Ujisti se, že pravidelně testuješ a aktualizuješ svůj projekt, aby byl stabilní a efektivní.
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#27-7-2024)  
 
