@@ -1,6 +1,5 @@
 ### Cheat Sheet pro Vue.js
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI?tab=readme-ov-file#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)
 
 #### Instance Vue
 - Vytvořte instanci Vue: `new Vue({ options })`

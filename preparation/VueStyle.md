@@ -1,3 +1,5 @@
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
+
 ## Dotaz:
 Jsou také nějaké metody a funkce VUE používané v 'style scoped' a nebo zde se používá pouze čistě CSS?
 
