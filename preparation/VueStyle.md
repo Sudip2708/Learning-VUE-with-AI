@@ -1,7 +1,18 @@
+# Funkce a techniky pro 'style scoped' ve VUE
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
+## Obsah:
+[• *Scopování stylů*](#1-scopování-stylů)  
+[• *Dynamic CSS Classes*](#2-dynamic-css-classes)  
+[• *Dynamic Inline Styles*](#3-dynamic-inline-styles)  
+[• *CSS Variables*](#4-css-variables)  
+[• *Scoped CSS Modules*](#5-scoped-css-modules)  
+[• *Vue CLI a CSS Pre-processory*](#6-vue-cli-a-css-pre-processory)  
+[• *CSS-in-JS*](#7-css-in-js)  
+[• *Scoped Slots and Dynamic Styles*](#8-scoped-slots-and-dynamic-styles)  
+
 ## Dotaz:
-Jsou také nějaké metody a funkce VUE používané v 'style scoped' a nebo zde se používá pouze čistě CSS?
+Existují nějaké metody a funkce ve Vue.js, které se používají v rámci 'style scoped', nebo se zde používá pouze čisté CSS?
 
 ## ChatGPT
 Ve Vue.js se v 'style scoped' používá čistě CSS, ale Vue.js umožňuje využívat některé funkce a techniky, které mohou ovlivnit způsob, jakým se stylování aplikuje. Přímo v 'style scoped' se však Vue.js metody a funkce nepoužívají. Nicméně, zde jsou některé užitečné techniky a možnosti, jak Vue.js může ovlivnit stylování:
@@ -19,6 +30,7 @@ Ve Vue.js můžeš použít scoped atribut v 'style' tagu, který zajistí, že 
     }
     </style>
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ### 2. Dynamic CSS Classes
 Přidání nebo odebrání CSS tříd na základě reaktivních dat můžeš dosáhnout pomocí v-bind:class:
 
@@ -35,6 +47,7 @@ Přidání nebo odebrání CSS tříd na základě reaktivních dat můžeš dos
     }
     </style>
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ### 3. Dynamic Inline Styles
 Podobně můžeš dynamicky měnit inline styly pomocí v-bind:style:
 
@@ -46,6 +59,7 @@ Podobně můžeš dynamicky měnit inline styly pomocí v-bind:style:
     /* Zde můžeš definovat základní styly */
     </style>
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ### 4. CSS Variables
 Vue.js může využívat CSS proměnné pro dynamické změny stylů, což umožňuje změnu stylů na základě reaktivních dat.
 
@@ -76,6 +90,7 @@ Vue.js může využívat CSS proměnné pro dynamické změny stylů, což umož
     }
     </style>
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ### 5. Scoped CSS Modules
 Pokud používáš CSS Modules, Vue.js umožňuje použití CSS Modules pro komponenty. Tato technika izoluje CSS a přidává unikátní identifikátory k třídám.
 
@@ -89,6 +104,7 @@ Pokud používáš CSS Modules, Vue.js umožňuje použití CSS Modules pro komp
     }
     </style>
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ### 6. Vue CLI a CSS Pre-processory
 Pokud používáš Vue CLI, můžeš konfigurovat CSS pre-processory jako Sass, Less nebo Stylus, které umožňují pokročilé možnosti stylování:
 
@@ -112,6 +128,7 @@ Pokud používáš Vue CLI, můžeš konfigurovat CSS pre-processory jako Sass, 
     }
     </script>
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ### 7. CSS-in-JS
 Pokud používáš knihovny jako styled-components nebo emotion s Vue.js, můžeš psát CSS-in-JS:
 
@@ -132,6 +149,7 @@ Pokud používáš knihovny jako styled-components nebo emotion s Vue.js, může
     }
     </script>
 
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ### 8. Scoped Slots and Dynamic Styles
 Pokud komponenty mají scoped slots, můžeš dynamicky přizpůsobovat styly podle obsahu slotů:
 
@@ -152,3 +170,5 @@ Pokud komponenty mají scoped slots, můžeš dynamicky přizpůsobovat styly po
     </script>
 
 V 'style scoped' se používají čistě CSS styly, ale Vue.js nabízí různé techniky a možnosti pro dynamické stylování a integraci stylů s reaktivními daty.
+
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 

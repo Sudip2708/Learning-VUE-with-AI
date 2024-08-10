@@ -1,8 +1,24 @@
+<a id="top"></a>
+# Inicializace projektu VUE
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
+
+## Obsah:
+[• *Manuál na vytvoření základní Vue.js aplikace v PowerShellu*](#manuál-na-vytvoření-základní-vuejs-aplikace-v-powershellu)  
+[• *Základní struktura projektu*](#základní-struktura-projektu)  
+[• *Význam jednotlivých inicializačních dotazů při vytváření Vue.js aplikace*](#dotaz-1)  
+[• *1. Project name*](#1-project-name)  
+[• *2. Add TypeScript?*](#2-add-typescript)  
+[• *3. Add JSX Support?*](#3-add-jsx-support)  
+[• *4. Add Vue Router for Single Page Application development?*](#4-add-vue-router-for-single-page-application-development)  
+[• *5. Add Pinia for state management?*](#5-add-pinia-for-state-management)  
+[• *6. Add Vitest for Unit testing?*](#6-add-vitest-for-unit-testing)  
+[• *7. Add Cypress for both Unit and End-to-End testing?*](#7-add-cypress-for-both-unit-and-end-to-end-testing)  
+[• *8. Add ESLint for code quality?*](#8-add-eslint-for-code-quality)  
+
 
 ## Dotaz:
 
-Napiš mi jednoduchý manuál na vytvoření základní aplikace v terminálu v PowerShelu, který bude začínat příkazem:
+Mohl bys mi napsat jednoduchý manuál na vytvoření základní aplikace v PowerShellu, který bude začínat příkazem:
 
     npm init vue@latest
 
@@ -48,6 +64,7 @@ Spusťte vývojový server, abyste mohli zobrazit svou novou Vue.js aplikaci v p
 
 Po úspěšném spuštění vývojového serveru byste měli vidět výstup s adresou, jako je http://localhost:3000, na které můžete aplikaci zobrazit.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### Základní struktura projektu
 Po vytvoření projektu a úspěšném spuštění vývojového serveru by struktura vašeho projektu měla vypadat zhruba takto:
 
@@ -70,10 +87,10 @@ Nyní máte základní Vue.js aplikaci spuštěnou a můžete začít s vývojem
 
 Pro více informací o Vue.js doporučuji navštívit oficiální dokumentaci Vue.js.
 
-
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ## Dotaz:
 
-Popiš mi prosím význam jednotlivých inicializačních dotazů.
+Mohl bys mi prosím vysvětlit význam jednotlivých inicializačních dotazů?
 
 ## ChatGPT:
 
@@ -85,36 +102,43 @@ Dotaz: Project name: (my-vue-app)
 Popis: Název vašeho projektu. Toto je základní identifikátor vaší aplikace. Název projektu bude použit jako název adresáře, ve kterém bude aplikace vytvořena.
 Příklad odpovědi: my-vue-app
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### 2. Add TypeScript?
 - **Dotaz**: Add TypeScript? (y/N)
 - **Popis**: TypeScript je nadmnožina JavaScriptu, která přidává typovou kontrolu. Pokud zvolíte y, bude váš projekt nastaven pro používání TypeScriptu.
 - **Příklad odpovědi**: y pro přidání TypeScriptu, N (nebo stisknutí Enter) pro nepřidání.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### 3. Add JSX Support?
 - **Dotaz**: Add JSX Support? (y/N)
 - **Popis**: JSX je syntaxe, která umožňuje psát HTML přímo v JavaScriptu. Je často používána v Reactu, ale může být užitečná i ve Vue.js pro pokročilé případy.
 - **Příklad odpovědi**: y pro přidání podpory JSX, N (nebo stisknutí Enter) pro nepřidání.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### 4. Add Vue Router for Single Page Application development?
 - **Dotaz**: Add Vue Router for Single Page Application development? (y/N)
 - **Popis**: Vue Router je oficiální router pro Vue.js, který umožňuje vytváření Single Page Applications (SPA) s navigací mezi stránkami bez přenačítání celé stránky.
 - **Příklad odpovědi**: y pro přidání Vue Routeru, N (nebo stisknutí Enter) pro nepřidání.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### 5. Add Pinia for state management?
 - **Dotaz**: Add Pinia for state management? (y/N)
 - **Popis**: Pinia je nový oficiální nástroj pro správu stavu aplikace (state management) ve Vue.js. Je jednodušší a modernější alternativou k Vuex.
 - **Příklad odpovědi**: y pro přidání Pinia, N (nebo stisknutí Enter) pro nepřidání.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### 6. Add Vitest for Unit testing?
 - **Dotaz**: Add Vitest for Unit testing? (y/N)
 - **Popis**: Vitest je moderní nástroj pro jednotkové testování, který je inspirován Jestem a optimalizován pro Vite. Používá se k testování jednotlivých částí kódu.
 - **Příklad odpovědi**: y pro přidání Vitest, N (nebo stisknutí Enter) pro nepřidání.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### 7. Add Cypress for both Unit and End-to-End testing?
 - **Dotaz**: Add Cypress for both Unit and End-to-End testing? (y/N)
 - **Popis**: Cypress je nástroj pro end-to-end testování a také podporuje jednotkové testování. Umožňuje testování aplikace v reálném prohlížeči.
 - **Příklad odpovědi**: y pro přidání Cypress, N (nebo stisknutí Enter) pro nepřidání.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 ### 8. Add ESLint for code quality?
 - **Dotaz**: Add ESLint for code quality? (y/N)
 - **Popis**: ESLint je nástroj pro analýzu a zajištění kvality kódu. Pomáhá detekovat a opravit problémy v JavaScriptovém kódu podle definovaných pravidel.
@@ -125,3 +149,4 @@ Tyto inicializační dotazy vám umožní nakonfigurovat váš nový Vue.js proj
 
 Výběr těchto nástrojů závisí na vašich preferencích a požadavcích na projekt.
 
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   

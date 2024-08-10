@@ -1,7 +1,28 @@
+# Základní struktura projektu Vue
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
+## Obsah:
+[• *Základní struktura projektu Vue.js*](#základní-struktura-projektu-vuejs)  
+[• *Popis jednotlivých souborů a adresářů*](#popis-jednotlivých-souborů-a-adresářů)  
+[• *node_modules/*](#nodemodules)  
+[• *public/*](#public)  
+[• *src/*](#src)  
+[• *assets/*](#assets)  
+[• *components/*](#components)  
+[• *App.vue*](#appvue)  
+[• *main.js*](#mainjs)  
+[• *.gitignore*](#gitignore)  
+[• *index.html*](#indexhtml)  
+[• *package.json*](#packagejson)  
+[• *README.md*](#readmemd)  
+[• *vite.config.js*](#viteconfigjs)  
+[• *Běžné složky v adresáři src Vue.js projektu*](#běžné-složky-v-adresáři-src-vuejs-projektu)  
+[• *Příklad základní struktury*](#příklad-základní-struktury)  
+[• *Shrnutí*](#shrnutí)
+
+
 ## Dotaz:
-Popiš mi prosím podobně i základní strukturu projektu.
+Mohl bys mi prosím popsat základní strukturu projektu?
 
 ## ChatGPT:
 
@@ -143,10 +164,10 @@ Příklad:
 ### Závěr
 Tato základní struktura poskytuje pevný základ pro vývoj Vue.js aplikace. Můžete ji dále rozšiřovat a přizpůsobovat podle potřeb vašeho projektu. Pro další informace doporučuji navštívit oficiální dokumentaci Vue.js.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ## Dotaz:
 
-Mohl bys mi prosím napsat jaké nejběžnější složky se v složce 'src' vytvářejí, jaké jsou běžné konvence pro názvy, a co by měli obsahovat?
+Mohl bys mi prosím napsat, jaké nejběžnější složky se vytvářejí ve složce 'src', jaké jsou běžné konvence pro názvy, a co by měly obsahovat?
 
 ## ChatGPT:
 
@@ -314,7 +335,7 @@ Příklad:
 ### Shrnutí
 Tato struktura pomáhá udržovat kód organizovaný a snadno udržovatelný. Konvence pro názvy složek a souborů zajišťují, že kód je čitelný a pochopitelný pro všechny členy týmu. Je důležité dodržovat tyto konvence, aby byl projekt snadno rozšiřitelný a přehledný.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 
 
 

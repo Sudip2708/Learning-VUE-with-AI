@@ -1,9 +1,10 @@
 <a id="top"></a>
+# Organizace VUE komponent
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 
 ## Dotaz:
-Dokázal bys mi popsat základní stromovou strukturu VUE?
+Dokázal bys mi popsat základní stromovou strukturu ve Vue.js?
 
 ## ChatGPT
 Samozřejmě! Ve Vue.js je základní stromová struktura tvořena komponentami, které se hierarchicky skládají. Tady je přehled základní struktury:
@@ -48,7 +49,7 @@ Každý prvek má své vlastní místo v této hierarchii, což usnadňuje sprá
     /* Styles for the root component */
     </style>
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### 2. Podkomponenty
 **Podkomponenty (Child Components)**: Jsou komponenty, které jsou použity v rámci kořenové komponenty nebo jiných podkomponent. Můžou být znovu použitelné a mají vlastní šablony, skripty a styly.
@@ -117,7 +118,7 @@ Každý prvek má své vlastní místo v této hierarchii, což usnadňuje sprá
     }
     </style>
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### 3. Komponentní strom
 **Komponentní strom (Component Tree)**: Je hierarchická struktura, která ukazuje vztahy mezi komponentami. Kořenová komponenta je vrchol stromu, a její podkomponenty jsou uzly pod tímto vrcholem. Komponenty mohou mít své vlastní podkomponenty, což vytváří víceúrovňový strom.
@@ -127,7 +128,7 @@ Každý prvek má své vlastní místo v této hierarchii, což usnadňuje sprá
     ├── MainContent
     └── FooterComponent
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### 4. Props a Events
 **Props**: Jsou datové atributy, které komponenty mohou přijímat od jejich rodičovských komponent. Pomocí props se mohou předávat data mezi komponentami.
@@ -158,7 +159,7 @@ Každý prvek má své vlastní místo v této hierarchii, což usnadňuje sprá
     }
     </script>
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 **Events**: Komponenty mohou emitovat vlastní události, které mohou být zachyceny rodičovskými komponentami pro zpracování nebo změnu stavu.
 
@@ -192,7 +193,7 @@ Každý prvek má své vlastní místo v této hierarchii, což usnadňuje sprá
     }
     </script>
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### 5. Routing a State Management
 **Routing (Vue Router)**: Pokud aplikace používá více stránek, Vue Router je nástroj pro správu navigace mezi komponentami a jejich zobrazení na základě URL.
@@ -234,7 +235,7 @@ Každý prvek má své vlastní místo v této hierarchii, což usnadňuje sprá
       }
     })
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### 6. Lifecycle Hooks
 **Lifecycle Hooks**: Vue komponenty mají několik životních cyklů, jako jsou created, mounted, updated, a destroyed, které můžeš využít pro inicializaci, aktualizaci nebo čištění komponent.
@@ -251,4 +252,4 @@ Každý prvek má své vlastní místo v této hierarchii, což usnadňuje sprá
       }
     }
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   

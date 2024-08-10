@@ -1,8 +1,6 @@
 <a id="top"></a>
+# Metody a funkce pro 'script setup' ve VUE
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
-
-
-## Metody a funkce pro script setup ve Vue
 
 Tento seznam obsahuje některé z nejběžněji používaných metod a funkcí ve script-setup Vue.js komponentách. 
 Tyto metody a funkce poskytují silné nástroje pro práci s reaktivními daty, sledování změn, správu životního cyklu komponent a mnoho dalšího.
@@ -89,7 +87,7 @@ Vytváří reaktivní objekt, který sleduje změny ve svých vlastnostech.
     
     const state = reactive({ count: 0 });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### ref
 Vytváří reaktivní proměnnou, která může být použita pro primitivní typy dat (např. čísla, řetězce).
@@ -98,7 +96,7 @@ Vytváří reaktivní proměnnou, která může být použita pro primitivní ty
     
     const count = ref(0);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### computed
 Vytváří vypočítanou vlastnost, která automaticky reaguje na změny ve svých závislostech.
@@ -107,7 +105,7 @@ Vytváří vypočítanou vlastnost, která automaticky reaguje na změny ve svý
     
     const doubleCount = computed(() => count.value * 2);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### watch
 Sledování změn specifikovaných reaktivních hodnot nebo funkcí a reagování na ně.
@@ -118,7 +116,7 @@ Sledování změn specifikovaných reaktivních hodnot nebo funkcí a reagován�
       console.log(`count changed from ${oldVal} to ${newVal}`);
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### watchEffect
 Automaticky sleduje všechny reaktivní závislosti uvnitř předané funkce a spustí ji, když se něco změní.
@@ -129,7 +127,7 @@ Automaticky sleduje všechny reaktivní závislosti uvnitř předané funkce a s
       console.log(`count is now ${count.value}`);
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### onMounted
 Spustí se, když je komponenta připojena do DOM.
@@ -140,7 +138,7 @@ Spustí se, když je komponenta připojena do DOM.
       console.log('Component has been mounted');
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### onUnmounted
 Spustí se, když je komponenta odstraněna z DOM.
@@ -151,7 +149,7 @@ Spustí se, když je komponenta odstraněna z DOM.
       console.log('Component has been unmounted');
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### onUpdated
 Spustí se, když je komponenta aktualizována.
@@ -162,7 +160,7 @@ Spustí se, když je komponenta aktualizována.
       console.log('Component has been updated');
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### onBeforeMount
 Spustí se těsně před připojením komponenty do DOM.
@@ -173,7 +171,7 @@ Spustí se těsně před připojením komponenty do DOM.
       console.log('Component is about to be mounted');
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### onBeforeUnmount
 Spustí se těsně před odstraněním komponenty z DOM.
@@ -184,7 +182,7 @@ Spustí se těsně před odstraněním komponenty z DOM.
       console.log('Component is about to be unmounted');
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### onBeforeUpdate
 Spustí se těsně před aktualizací komponenty.
@@ -195,7 +193,7 @@ Spustí se těsně před aktualizací komponenty.
       console.log('Component is about to be updated');
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### provide-and-inject
 provide umožňuje předat hodnotu z rodičovské komponenty do podřízených komponent.   
@@ -207,7 +205,7 @@ inject umožňuje přístup k těmto hodnotám v podřízených komponentách.
 
     const injectedValue = inject('key');
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### defineProps
 Používá se k definování vstupních parametrů komponenty.
@@ -216,7 +214,7 @@ Používá se k definování vstupních parametrů komponenty.
     
     const props = defineProps(['propA', 'propB']);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### defineEmits
 Používá se k definování a vyvolávání událostí v komponentě.
@@ -225,7 +223,7 @@ Používá se k definování a vyvolávání událostí v komponentě.
     
     const emit = defineEmits(['eventA', 'eventB']);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### useSlots
 Získá sloty předané do komponenty.
@@ -234,7 +232,7 @@ Získá sloty předané do komponenty.
     
     const slots = useSlots();
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### useAttrs
 Získá atributy předané do komponenty.
@@ -243,7 +241,7 @@ Získá atributy předané do komponenty.
     
     const attrs = useAttrs();
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### defineExpose
 Umožňuje explicitně určit, které vlastnosti a metody by měly být vystaveny při použití komponenty.
@@ -254,7 +252,7 @@ Umožňuje explicitně určit, které vlastnosti a metody by měly být vystaven
       someMethod
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### nextTick
 Spustí kód po dokončení další aktualizace DOM.
@@ -265,7 +263,7 @@ Spustí kód po dokončení další aktualizace DOM.
       // Code to be executed after DOM update
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### h
 Vytváří virtuální DOM node.
@@ -274,7 +272,7 @@ Vytváří virtuální DOM node.
     
     const vnode = h('div', { class: 'foo' }, 'Hello');
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### toRefs
 Převádí reaktivní objekt na sadu referencí, což může být užitečné pro destrukturalizaci a předávání reaktivních vlastností.
@@ -284,7 +282,7 @@ Převádí reaktivní objekt na sadu referencí, což může být užitečné pr
     const state = reactive({ count: 0, name: 'Vue' });
     const { count, name } = toRefs(state);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### isRef
 Kontroluje, zda je hodnota referencí.
@@ -294,7 +292,7 @@ Kontroluje, zda je hodnota referencí.
     const count = ref(0);
     console.log(isRef(count)); // true
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### isReactive
 Kontroluje, zda je hodnota reaktivní objekt.
@@ -304,7 +302,7 @@ Kontroluje, zda je hodnota reaktivní objekt.
     const state = reactive({ count: 0 });
     console.log(isReactive(state)); // true
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### isReadonly
 Kontroluje, zda je hodnota pouze pro čtení.
@@ -314,7 +312,7 @@ Kontroluje, zda je hodnota pouze pro čtení.
     const state = readonly({ count: 0 });
     console.log(isReadonly(state)); // true
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### readonly
 Vytváří objekt pouze pro čtení.
@@ -323,7 +321,7 @@ Vytváří objekt pouze pro čtení.
     
     const state = readonly({ count: 0 });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### shallowReactive
 Vytváří reaktivní objekt, který sleduje pouze první úroveň vlastností.
@@ -332,7 +330,7 @@ Vytváří reaktivní objekt, který sleduje pouze první úroveň vlastností.
     
     const state = shallowReactive({ count: 0 });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### shallowRef
 Vytváří reaktivní referenci, která sleduje pouze první úroveň.
@@ -341,7 +339,7 @@ Vytváří reaktivní referenci, která sleduje pouze první úroveň.
     
     const count = shallowRef(0);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### triggerRef
 Manuálně spouští reaktivní aktualizaci pro shallowRef.
@@ -351,7 +349,7 @@ Manuálně spouští reaktivní aktualizaci pro shallowRef.
     const count = shallowRef(0);
     triggerRef(count);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### unref
 Vrací hodnotu z reference nebo samotnou hodnotu, pokud není reference.
@@ -361,7 +359,7 @@ Vrací hodnotu z reference nebo samotnou hodnotu, pokud není reference.
     const count = ref(0);
     console.log(unref(count)); // 0
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### customRef
 Vytváří vlastní referenci s plnou kontrolou nad reaktivitou.
@@ -389,7 +387,7 @@ Vytváří vlastní referenci s plnou kontrolou nad reaktivitou.
     
     const count = useDebouncedRef(0);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### watchPostEffect
 Podobné jako watchEffect, ale spustí se až po vykreslení změn v DOM.
@@ -400,7 +398,7 @@ Podobné jako watchEffect, ale spustí se až po vykreslení změn v DOM.
       console.log(`count is now ${count.value}`);
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### watchSyncEffect
 Podobné jako watchEffect, ale spustí se synchronně před aktualizací DOM.
@@ -411,7 +409,7 @@ Podobné jako watchEffect, ale spustí se synchronně před aktualizací DOM.
       console.log(`count is now ${count.value}`);
     });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### useCssModule
 Získá CSS moduly připojené ke komponentě.
@@ -420,7 +418,7 @@ Získá CSS moduly připojené ke komponentě.
     
     const styles = useCssModule();
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### markRaw
 Označí objekt jako "surový", takže nebude dělat reaktivní.
@@ -429,7 +427,7 @@ Označí objekt jako "surový", takže nebude dělat reaktivní.
     
     const raw = markRaw({ count: 0 });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### shallowReadonly
 Vytváří pouze pro čtení reaktivní objekt, který sleduje pouze první úroveň vlastností.
@@ -438,7 +436,7 @@ Vytváří pouze pro čtení reaktivní objekt, který sleduje pouze první úro
     
     const state = shallowReadonly({ count: 0 });
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### useSSRContext
 Používá se pro získání kontextu během SSR (Server-Side Rendering).
@@ -447,7 +445,7 @@ Používá se pro získání kontextu během SSR (Server-Side Rendering).
     
     const ssrContext = useSSRContext();
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### getCurrentInstance
 Získá aktuální instanci komponenty.
@@ -456,7 +454,7 @@ Získá aktuální instanci komponenty.
     
     const instance = getCurrentInstance();
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### resolveComponent
 Dynamicky řeší komponentu, často se používá pro renderování komponent pomocí JSX nebo renderovacích funkcí.
@@ -467,7 +465,7 @@ Dynamicky řeší komponentu, často se používá pro renderování komponent p
     
     return () => h(MyComponent);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ### resolveDirective
 Dynamicky řeší direktivu, často se používá pro aplikování direktiv pomocí renderovacích funkcí.
@@ -478,4 +476,4 @@ Dynamicky řeší direktivu, často se používá pro aplikování direktiv pomo
     
     return () => withDirectives(h('div'), [[myDirective]]);
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   

@@ -1,12 +1,18 @@
+# Dotaz na strukturu: Script - Templates - Style
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
+
+## Obsah:
+[• *Má přítomnost prázdných tagů vliv na výkon aplikace?*](#dotaz)  
+[• *Záleží na pořadí, ve kterém jsou tagy uvedeny ve Vue souboru?*](#dotaz-1)   
+[• *Opodstatnění umístění script tagu na začátek Vue souboru?*](#dotaz-2)  
 
 ## Dotaz:
 
 Tak mám ještě dotaz, když se vytváří soubor proVUE tak obsahuje:
 
-Script - Templates - Style  
+    Script - Templates - Style  
 
-A mě zajímá, jestli vadí, když jsou tyto tagy přítomné i když v sobě nemají žádný obsah? Jde mi o to, kdybych si z lenosti vytvořil něco co by mi při založení každého nového souboru ve VUE vytvořilo tuto šablonu:
+A zajímá mě, jestli vadí, když jsou tyto tagy přítomné, i když v sobě nemají žádný obsah? Jde mi o to, kdybych si z lenosti vytvořil něco co by mi při založení každého nového souboru ve VUE vytvořilo tuto šablonu:
 
     <script setup>
     </script>
@@ -17,9 +23,9 @@ A mě zajímá, jestli vadí, když jsou tyto tagy přítomné i když v sobě n
     <style scoped>
     </style>
 
-jestli by pak vadilo, že někde nebudou všechny tři potřeba a přesto tam budou uvedené prázdné?
+jestli by pak vadilo, že někde nebudou všechny tři potřeba, a přesto tam budou uvedené prázdné?
 
-Jde mi jen o to, zda to má nějaký dopad na výkon a nebo je to zcela jedno a jediný dopad na výkon to má, že je třeba tyto řádky přečíst a pak je ignorovat?
+Jde mi jen o to, zda to má nějaký dopad na výkon, nebo je to zcela jedno a jediný dopad na výkon je, že je třeba tyto řádky přečíst a pak je ignorovat?
 
 ## ChatGPT
 
@@ -48,10 +54,10 @@ Prázdné tagy:
 
 Takže pokud vám vyhovuje mít tyto prázdné tagy pro účely šablon a konzistence, klidně to tak nechte. Nemusíte se obávat negativního dopadu na výkon vaší aplikace.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ## Dotaz:
 
-A záleží na pořadí v jakém je v souboru uvedeno: Script - Templates - Style?
+Záleží na pořadí, v jakém jsou v souboru uvedeny: Script - Templates - Style?
 
 ## ChatGPT:
 
@@ -96,9 +102,9 @@ Zde je příklad podle této konvence:
 Nicméně, pokud byste umístili 'style' jako první nebo 'template' jako poslední, Vue.js by stále komponentu správně zpracoval. 
 Důležité je hlavně to, aby každá sekce byla správně uzavřena a aby byly správně definovány potřebné atributy jako například scoped pro 'style'.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 
 ## Dotaz:
-Já jsem se setkal s řazením scriptu na začátek a prý z důvodů, že je tak vidět import hned na začátku, jako třeba v Pythonu. Co ty na to, má to nějaké opodstatnění?
+Já jsem se setkal s řazením scriptu na začátek a prý z důvodů, že je tak vidět import hned na začátku, jako třeba v Pythonu. Co si o tom myslíš, má to nějaké opodstatnění?
 
 ## ChatGPT:
 
@@ -155,4 +161,4 @@ Ačkoliv Vue.js a většina komunitních standardů doporučuje pořadí 'templa
 
 Nejlepší praxí je řídit se konvencemi, které vyhovují vašemu týmu a projektu, a které přispívají k lepší čitelnosti a údržbě kódu.
 
-
+[*zpět na obsah*](#obsah) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue) 

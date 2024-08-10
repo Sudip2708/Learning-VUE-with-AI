@@ -1,5 +1,4 @@
-### Cheat Sheet pro Vue.js
-[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
+# Stručný tahák od Aria
 
 #### Instance Vue
 - Vytvořte instanci Vue: `new Vue({ options })`
@@ -41,4 +40,5 @@
 - Sledujte změny v datových vlastnostech
 - Definujte sledovací mechanismy v opci `watch`
 
-Tento cheat sheet pokrývá některé klíčové aspekty Vue.js, které vám pomohou během učení. Užijte si kódování s Vue.js! 
+[*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
+

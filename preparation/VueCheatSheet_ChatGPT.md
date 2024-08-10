@@ -1,9 +1,9 @@
 <a id="top"></a>
 
-# Vue.js Cheat Sheet
+# Podrobnější tahák od ChatGPT
 [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
-## Table of Contents
+## Obsah
 1. [Installation](#installation)
 2. [Instance](#instance)
 3. [Template Syntax](#template-syntax)
@@ -29,7 +29,7 @@ Instalace Vue.js přes npm.
 npm install vue
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Instance
 Vytvoření nové Vue instance.
@@ -42,7 +42,7 @@ var app = new Vue({
 });
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Template Syntax
 ### Interpolations
@@ -57,7 +57,7 @@ Použití Vue.js direktiv.
 <p v-if="seen">Now you see me</p>
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Directives
 - `v-bind`: Vazba atributu
@@ -72,7 +72,7 @@ Použití Vue.js direktiv.
 - `v-cloak`: Udržuje prvek skrytý, dokud není dokončena kompilace Vue
 - `v-once`: Vykreslí prvek a komponentu pouze jednou
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Computed Properties and Watchers
 ### Computed Properties
@@ -129,7 +129,7 @@ var app = new Vue({
 });
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Class and Style Bindings
 ### Object Syntax
@@ -150,7 +150,7 @@ Vázání stylů pomocí inline syntaxe.
 <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Conditional Rendering
 Podmíněné vykreslování prvků.
@@ -169,7 +169,7 @@ Vykreslování seznamů.
 </ul>
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Event Handling
 ### Listening to Events
@@ -184,7 +184,7 @@ Použití metod v inline handlerech.
 <button v-on:click="doSomething('hello', $event)">Click me</button>
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Form Input Bindings
 ### Text
@@ -221,7 +221,7 @@ Dvoucestné vázání pro select box.
 <span>Selected: {{ selected }}</span>
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
 ## Components
 ### Global Registration
@@ -269,11 +269,6 @@ Vue.component('button-counter', {
 });
 ```
 
-[*Zpět na začátek*](#top)
+[*zpět na začátek*](#top) / [*zpět na readme*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI#1-krok---sezn%C3%A1men%C3%AD-se-s-vue)   
 
-## Conclusion
-This cheat sheet provides a quick reference for essential Vue.js concepts and syntax. For more detailed information, visit the [official Vue.js documentation](https://vuejs.org/v2/guide/).
 
-Happy coding!
-
-[*Zpět na začátek*](#top)

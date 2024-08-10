@@ -1,4 +1,14 @@
+<a id="top"></a>
 # Učení se VUE za asistence AI
+
+## Obsah:
+[• *Pár slov úvodem*](#par-slov-uvodem)   
+[• *1. krok - Seznámení se s VUE*](#1-krok---seznameni-se-s-vue)   
+[• *2. krok - Osahání si VUE*](#2-krok---osahani-si-vue)   
+[• *3. Krok - Převod Django na VUE*](#3-krok---prevod-django-na-vue)   
+[• *Poslední zápis*](#8---9-8-2024--vytvoreni-tehto-github-repozitare--)   
+
+## Pár slov úvodem
 
 ### Smysl tohoto dokumentu:
 Tento dokument vzniká z několika důvodů:  
@@ -37,7 +47,8 @@ Od prvního momentu jsem se do VUE zamiloval, protože nabízelo přesně to, co
 Přerušil jsem tedy vytváření testů pro svou aplikaci v Django a začal se naplno věnovat studiu VUE.  
 A zde už se dostáváme k samotnému obsahu tohoto dokumentu, jenž má za úkol celý tento proces zmapovat.
 
-# 1. krok - Seznámení se s VUE
+[*zpět na začátek*](#top)
+## 1. krok - Seznámení se s VUE
 
 ### 18. - 20. 7. 2024 | První seznámení + Vytvoření taháků
 (Část zde uvedených materiálů vznikala i během dalších dní, ale pro lepší přehlednost jsou všechny uvedené zde.)
@@ -53,7 +64,8 @@ A zde už se dostáváme k samotnému obsahu tohoto dokumentu, jenž má za úko
 [• Dotaz na strukturu: Script - Templates - Style](preparation/VueStratSet.md)  
 [• Psaní čárek, středníků a mezer v JavaScriptu a Vue.js](preparation/WritingCommasSemicolonsAndSpaces.md)  
 
-# 2. krok - Osahání si VUE
+[*zpět na začátek*](#top)
+## 2. krok - Osahání si VUE
 
 ### 21. - 23. 7. 2024 | Zhlédnutí výukového videa + vytvoření v něm uvedených projektů
 
@@ -62,17 +74,17 @@ Pro VUE existuje mnoho různých výukových videí, a tak má člověk možnost
 V mém případě vyhrál tento 6 hodinový kurz, který jsem si rozložil do 3 dní:  
 [Laith Academy - The Ultimate Vue 3 Tutorial](https://www.youtube.com/watch?v=I_xLMmNeLDY&t=231s)
 
-
-# 3. Krok - Převod Django na VUE
+[*zpět na začátek*](#top)
+## 3. Krok - Převod Django na VUE
 
 ### 27. 7. 2024
 [**Integrace VUE do Django - úvod od ChatGPT**](django-to-vue/integrace_vue_chatgpt.md)  
 [• *Úvodní kroky pro integraci Vue do Django projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz)  
 [• *Kontrola instalace Node.js a npm*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-1)  
-[• *Použití příkazu npm install vue@latest*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-2)  
-[• *Řešení chyby při spuštění vue create frontend*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-3)  
-[• *Průvodce nastavením při vue create frontend*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-4)  
-[• *Výběr funkcí při tvorbě projektu ve Vue!*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-5)  
+[• *Použití příkazu `npm install vue@latest`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-2)  
+[• *Řešení chyby při spuštění `vue create frontend`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-3)  
+[• *Průvodce nastavením při `vue create frontend`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-4)  
+[• *Výběr funkcí při tvorbě projektu ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-5)  
 [• *Pozdější aktivace funkcí ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-6)  
 [• *Dopad výběru jednotlivých funkcí ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-7)  
 [• *Shrnutí volby funkcí a další otázky*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/integrace_vue_chatgpt.md#dotaz-8)  
@@ -91,12 +103,12 @@ V mém případě vyhrál tento 6 hodinový kurz, který jsem si rozložil do 3 
 ### 28. 7. 2024
 [**Začátek práce na projektu**](django-to-vue/zacatek_prace_na_projektu_01.md)  
 [• *Seznámení se stromovou strukturou projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz)  
-[• *Analýza aplikace a struktury templates pro Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-1)  
+[• *Analýza aplikace a struktury `templates` pro Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-1)  
 [• *První kroky po analýze projektu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-2)  
 [• *První komponenty a routování ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-3)  
-[• *Obsah souboru App.vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-4)  
+[• *Obsah souboru `App.vue`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-4)  
 [• *Řešení chyb ESLint a Prettier ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-5)  
-[• *Význam export default v App.vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-6)  
+[• *Význam `export default` v `App.vue`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_01.md#dotaz-6)  
 
 ### 29. 7. 2024
 [**Převod základní šablony**](django-to-vue/zacatek_prace_na_projektu_02.md)  
@@ -105,15 +117,9 @@ V mém případě vyhrál tento 6 hodinový kurz, který jsem si rozložil do 3 
 [• *Další význam chybových hlášení*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-2)  
 [• *Doporučený postup při oddělení frontendu z Django do Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-3)  
 [• *Výběr umístění statických souborů ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-4)  
-[• *Návrh umístění souborů z Django static a media ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-5)  
-[• *Přenesení nastavení z Django HEAD do Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-6)  
-[• *Ponechání noscript tagu v public/index.html*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-7)  
-[• *Kontrola struktury souboru pro rozčlenění*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-8)  
-[• *Zajištění integrity odkazů pro externí zdroje*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-9)  
-[• *Přenos hlavičky a struktury navigace z Django do Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-10)  
-[• *Převod šablon do Vue a oddělení komponent*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-11)  
-[• *Dočasné vypnutí sémantických chyb od Prettier*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-12)  
-[• *Dočasné vypnutí chyb od ESLint*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-13)  
+[• *Návrh umístění souborů z Django `static` a `media` ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-5)  
+[• *Přenesení šablon a komponentů mezi Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-6)  
+[• *Přenos a úprava CSS mezi Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_02.md#dotaz-7)  
 
 ### 30. 7. 2024
 [**Práce s terminálem**](django-to-vue/zacatek_prace_na_projektu_03.md)  
@@ -122,14 +128,14 @@ V mém případě vyhrál tento 6 hodinový kurz, který jsem si rozložil do 3 
 [• *Vysvětlení procesu komunikace mezi Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-2)  
 [• *Jak se Vue dozví o adrese serveru Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-3)  
 [• *Shrnutí postupu pro propojení Django a Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-4)  
-[• *Detaily pro nastavení django-cors-headers*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-5)  
-[• *Kontrola nastavení a umístění konfigurace v settings.py*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-6)  
+[• *Detaily pro nastavení `django-cors-headers`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-5)  
+[• *Kontrola nastavení a umístění konfigurace v `settings.py`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-6)  
 [• *Kde umístit nastavení URL pro spolupráci s Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-7)  
 [• *Význam URL endpointů v Django a jejich použití*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-8)  
 [• *Návrh na úpravu Django view pro vracení JSON dat*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-9)  
 [• *Konfigurace URL API endpointů ve Vue.js*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-10)  
 [• *Kroky pro přidání nové stránky ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-11)  
-[• *Umístění souborů ve Vue do src/views vs. src/components*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-12)  
+[• *Umístění souborů ve Vue do `src/views` vs. `src/components`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-12)  
 [• *Analýza chyby při načítání dat z API ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-13)  
 [• *Problém s lomítkem na konci URL ve Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-14)  
 [• *Shrnutí propojení Django s Vue*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_03.md#dotaz-15)  
@@ -259,19 +265,24 @@ V mém případě vyhrál tento 6 hodinový kurz, který jsem si rozložil do 3 
 ### 7. 8. 2024
 [**Stránka pro detail článku 2/2**](django-to-vue/zacatek_prace_na_projektu_10.md)  
 [• *Serializer pro pole s HTML obsahem v TinyMCE*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz)  
-[• *Výběr mezi CharField a TextField pro dlouhé texty*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-1)  
-[• *Použití TextField pro krátké texty v Django Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-2)  
-[• *Varování v PyCharmu u TextField v Django Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-3)  
+[• *Výběr mezi `CharField` a `TextField` pro dlouhé texty*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-1)  
+[• *Použití `TextField` pro krátké texty v Django Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-2)  
+[• *Varování v PyCharmu u `TextField` v Django Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-3)  
 [• *Účel specifikace polí v Serializeru a validační možnosti*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-4)  
 [• *Výhody a nevýhody specifikace polí v Serializeru*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-5)  
-[• *Základní Vue komponenta pro vykreslení pole content*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-6)  
+[• *Základní Vue komponenta pro vykreslení pole `content`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-6)  
 [• *Přidání polí pro předchozí a následující článek do pohledu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-7)  
-[• *Základní Vue kód pro komponentu ConnectedArticles*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-8)  
+[• *Základní Vue kód pro komponentu `ConnectedArticles`*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-8)  
 [• *Přidání tagů do komponenty s tagy v článku*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-9)  
-[• *Chyba při použití TaggableManager v Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-10)  
+[• *Chyba při použití `TaggableManager` v Django*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-10)  
 [• *Optimalizace dotazů pro získání tagů a dat článku*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-11)  
 [• *Význam a řešení chyb v konzoli*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-12)  
-[• *Chyba s bullet-icon.svg v HTML obsahu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-13)  
-[• *Řešení problému s bullet-icon.svg a úprava odrážek*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-14)  
+[• *Chyba s `bullet-icon.svg` v HTML obsahu*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-13)  
+[• *Řešení problému s `bullet-icon.svg` a úprava odrážek*](https://github.com/Sudip2708/learning-VUE-with-the-help-of-AI/blob/main/django-to-vue/zacatek_prace_na_projektu_10.md#dotaz-14)
 
-### 8. - 9. 8. 2024 | Vytvoření této GitHub Repository :-)
+### 8. - 9. 8. 2024 | Vytvoření této GitHub repozitáře :-)
+Během této doby se mi ozvali z inzerátu, díky kterému jsem se o Vue vůbec dozvěděl, a momentálně to vypadá, že by mě mohli přijmout. 
+Takže na chvíli přerušuji práci na integraci Vue do svého Django projektu a začínám se naplno věnovat přípravě na práci, kterou ode mě budou očekávat, abych mohl na pohovoru zazářit. :-)
+
+[*zpět na začátek*](#top)
+
